@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
          BarChart, Bar, ScatterChart, Scatter, Cell } from 'recharts';
 import { Shield, AlertTriangle, CheckCircle, XCircle, Eye, Bot, Users, TrendingDown, Zap, Brain } from 'lucide-react';
@@ -41,6 +42,9 @@ interface ContentItem {
 const SoulMathModerationSystem: React.FC = () => {
   const [moderationQueue, setModerationQueue] = useState<ContentItem[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [isScraping, setIsScraping] = useState(false);
+  const [scrapingStatus, setScrapingStatus] = useState<any>(null);
+  const [selectedSubreddits, setSelectedSubreddits] = useState<string[]>(['politics', 'worldnews']);
   const [activeFilters, setActiveFilters] = useState({
     harassment: true,
     manipulation: true,
@@ -263,6 +267,81 @@ const SoulMathModerationSystem: React.FC = () => {
     }, 2000);
   };
 
+  const startScraping = async () => {
+    setIsScraping(true);
+    try {
+      await axios.post('http://localhost:8001/api/scrape', {
+        subreddits: selectedSubreddits
+      });
+      // Start polling for status
+      pollScrapingStatus();
+    } catch (error) {
+      console.error('Failed to start scraping:', error);
+      setIsScraping(false);
+    }
+  };
+
+  const pollScrapingStatus = async () => {
+    const interval = setInterval(async () => {
+      try {
+        const response = await axios.get('http://localhost:8001/api/status');
+        setScrapingStatus(response.data);
+        
+        if (response.data.status === 'idle') {
+          clearInterval(interval);
+          setIsScraping(false);
+          loadScrapedContent();
+        }
+      } catch (error) {
+        console.error('Failed to get status:', error);
+      }
+    }, 2000);
+  };
+
+  const loadScrapedContent = async () => {
+    setIsProcessing(true);
+    try {
+      const response = await axios.get('http://localhost:8001/api/content?limit=20&min_risk=0.3');
+      const items = response.data.items.map((item: any, index: number) => ({
+        id: index + 1,
+        text: item.text,
+        user: item.author,
+        timestamp: new Date(item.timestamp).toLocaleTimeString(),
+        context: `r/${item.subreddit || 'unknown'}`,
+        analysis: {
+          psi: item.analysis.psi,
+          rho: item.analysis.rho,
+          coherence: item.analysis.coherence,
+          toxicityRisk: item.analysis.toxicity_risk,
+          manipulationRisk: item.analysis.manipulation_risk,
+          extremismRisk: item.analysis.extremism_risk,
+          spamRisk: item.analysis.spam_risk,
+          harassmentRisk: item.analysis.harassment_risk,
+          discourseCollapse: item.analysis.discourse_collapse,
+          escalationRisk: item.analysis.escalation_risk,
+          behaviorDrift: 0,
+          overallRisk: item.analysis.overall_risk,
+          textLength: item.text.split(' ').length,
+          sentenceCount: item.text.split('.').length - 1,
+          witnessMultiplier: 1.1
+        },
+        action: determineAction({
+          overallRisk: item.analysis.overall_risk,
+          toxicityRisk: item.analysis.toxicity_risk,
+          extremismRisk: item.analysis.extremism_risk,
+          spamRisk: item.analysis.spam_risk,
+          discourseCollapse: item.analysis.discourse_collapse
+        }),
+        confidence: 0.85
+      }));
+      setModerationQueue(items);
+    } catch (error) {
+      console.error('Failed to load content:', error);
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
   const determineAction = (analysis: ModerationAnalysis): ModerationAction => {
     const { overallRisk, toxicityRisk, extremismRisk, spamRisk, discourseCollapse } = analysis;
     
@@ -347,18 +426,63 @@ const SoulMathModerationSystem: React.FC = () => {
                 {isProcessing ? 'Processing...' : 'Reprocess Queue'}
               </button>
               <button
-                onClick={() => {
-                  setSystemStats(prev => ({
-                    ...prev,
-                    processed: prev.processed + 47,
-                    flagged: prev.flagged + 8,
-                    escalated: prev.escalated + 2
-                  }));
-                }}
-                className="px-4 py-2 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                onClick={startScraping}
+                disabled={isScraping}
+                className="px-4 py-2 bg-purple-600 rounded-lg font-semibold hover:bg-purple-700 disabled:opacity-50 transition-colors"
               >
-                Simulate Live Feed
+                {isScraping ? 'Scraping Reddit...' : 'Scrape Reddit'}
               </button>
+              <button
+                onClick={loadScrapedContent}
+                disabled={isProcessing}
+                className="px-4 py-2 bg-green-600 rounded-lg font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
+              >
+                Load Scraped Data
+              </button>
+            </div>
+          </div>
+          
+          {/* Scraping Status */}
+          {scrapingStatus && (
+            <div className="mb-4 p-3 bg-slate-700 rounded-lg">
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-300">
+                  Status: <span className={isScraping ? 'text-yellow-400' : 'text-green-400'}>
+                    {scrapingStatus.status}
+                  </span>
+                </span>
+                <span className="text-sm text-gray-300">
+                  Items scraped: <span className="text-blue-400 font-bold">
+                    {scrapingStatus.items_scraped}
+                  </span>
+                </span>
+              </div>
+            </div>
+          )}
+          
+          {/* Subreddit Selection */}
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-400 mb-2">Select Subreddits to Scrape:</h3>
+            <div className="flex flex-wrap gap-2">
+              {['politics', 'worldnews', 'news', 'science', 'technology', 'unpopularopinion', 'changemyview'].map(sub => (
+                <button
+                  key={sub}
+                  onClick={() => {
+                    setSelectedSubreddits(prev =>
+                      prev.includes(sub)
+                        ? prev.filter(s => s !== sub)
+                        : [...prev, sub]
+                    );
+                  }}
+                  className={`px-3 py-1 rounded-lg text-sm transition-colors ${
+                    selectedSubreddits.includes(sub)
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-slate-700 text-gray-400 hover:bg-slate-600'
+                  }`}
+                >
+                  r/{sub}
+                </button>
+              ))}
             </div>
           </div>
           
