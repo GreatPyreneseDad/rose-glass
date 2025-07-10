@@ -1,0 +1,28 @@
+# Core dependencies
+streamlit>=1.28.0
+pandas>=2.1.0
+numpy>=1.24.0
+plotly>=5.17.0
+sqlalchemy>=2.0.0
+aiosqlite>=0.19.0
+python-dotenv>=1.0.0
+
+# Tiingo API
+websocket-client>=1.6.0
+aiohttp>=3.9.0
+requests>=2.31.0
+
+# NLP dependencies
+spacy>=3.7.0
+transformers>=4.35.0
+torch>=2.1.0
+nltk>=3.8.0
+
+# Data processing
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Testing and development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.10.0
