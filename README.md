@@ -52,6 +52,12 @@ Each project has its own setup instructions:
 1. **Market Sentiment**: See [setup guide](./gct-market-sentiment/README.md#-quick-start)
 2. **Moderation System**: See [setup guide](./soulmath-moderation-system/README.md)
 
+## 📚 API Documentation
+
+Both the market sentiment engine and moderation backend expose OpenAPI-compliant
+endpoints. When running either service locally, navigate to `/docs` to view
+interactive Swagger documentation or `/openapi.json` for the raw specification.
+
 ## 🤝 Contributing
 
 We welcome contributions to GCT implementations! Please:

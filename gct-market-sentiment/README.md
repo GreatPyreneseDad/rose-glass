@@ -96,6 +96,10 @@ streamlit run app.py
 2. Click "Backfill Historical Data" to load past news
 3. Monitor real-time signals as they emerge
 
+### API Docs
+When the dashboard is running you can access the underlying API specification at
+`/docs` for an interactive view or `/openapi.json` for machine consumption.
+
 ### Interpreting Signals
 
 1. **Coherence Score (C)**: Overall narrative strength (0-1)

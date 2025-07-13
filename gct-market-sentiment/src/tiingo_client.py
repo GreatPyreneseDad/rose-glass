@@ -7,8 +7,9 @@ import json
 import asyncio
 import aiohttp
 import websockets
+import time
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Callable
+from typing import Dict, List, Optional, Callable, Tuple
 import requests
 from dotenv import load_dotenv
 
@@ -17,7 +18,7 @@ load_dotenv()
 
 class TiingoClient:
     """Client for Tiingo REST and WebSocket APIs"""
-    
+
     def __init__(self, api_token: Optional[str] = None):
         self.api_token = api_token or os.getenv('TIINGO_API_TOKEN')
         if not self.api_token:
@@ -25,6 +26,8 @@ class TiingoClient:
             
         self.rest_base_url = "https://api.tiingo.com"
         self.ws_url = f"wss://api.tiingo.com/iex?token={self.api_token}"
+        # simple in-memory cache for historical requests
+        self._news_cache: Dict[Tuple[str, str, str, int], Tuple[float, List[Dict]]] = {}
         
     def get_historical_news(self, tickers: List[str] = None, 
                            start_date: datetime = None,
@@ -48,7 +51,7 @@ class TiingoClient:
             end_date = datetime.now()
             
         url = f"{self.rest_base_url}/tiingo/news"
-        
+
         params = {
             'token': self.api_token,
             'startDate': start_date.strftime('%Y-%m-%d'),
@@ -56,14 +59,26 @@ class TiingoClient:
             'limit': limit,
             'sortBy': 'publishedDate'
         }
-        
+
         if tickers:
             params['tickers'] = ','.join(tickers)
-            
+
+        cache_key = (
+            params.get('tickers', ''),
+            params['startDate'],
+            params['endDate'],
+            limit,
+        )
+
+        # check cached value (valid for 1 hour)
+        cached = self._news_cache.get(cache_key)
+        if cached and time.time() - cached[0] < 3600:
+            return cached[1]
+
         try:
             response = requests.get(url, params=params)
             response.raise_for_status()
-            
+
             articles = response.json()
             
             # Convert to our format
@@ -80,6 +95,7 @@ class TiingoClient:
                     'raw_data': article
                 })
                 
+            self._news_cache[cache_key] = (time.time(), processed_articles)
             return processed_articles
             
         except requests.RequestException as e:
