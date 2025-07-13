@@ -4,6 +4,7 @@ Database module for GCT Market Sentiment system
 
 import sqlite3
 import json
+import os
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 from contextlib import contextmanager
@@ -15,6 +16,8 @@ class GCTDatabase:
     
     def __init__(self, db_path: str = "data/gct_market.db"):
         self.db_path = db_path
+        # Ensure parent directory exists
+        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.init_database()
         
     @contextmanager
