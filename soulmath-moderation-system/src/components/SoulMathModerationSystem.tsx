@@ -302,13 +302,8 @@ const SoulMathModerationSystem: React.FC = () => {
     setIsProcessing(true);
     try {
       const response = await axios.get('http://localhost:8001/api/content?limit=20&min_risk=0.3');
-      const items = response.data.items.map((item: any, index: number) => ({
-        id: index + 1,
-        text: item.text,
-        user: item.author,
-        timestamp: new Date(item.timestamp).toLocaleTimeString(),
-        context: `r/${item.subreddit || 'unknown'}`,
-        analysis: {
+      const items = response.data.items.map((item: any, index: number) => {
+        const analysis: ModerationAnalysis = {
           psi: item.analysis.psi,
           rho: item.analysis.rho,
           coherence: item.analysis.coherence,
@@ -324,16 +319,19 @@ const SoulMathModerationSystem: React.FC = () => {
           textLength: item.text.split(' ').length,
           sentenceCount: item.text.split('.').length - 1,
           witnessMultiplier: 1.1
-        },
-        action: determineAction({
-          overallRisk: item.analysis.overall_risk,
-          toxicityRisk: item.analysis.toxicity_risk,
-          extremismRisk: item.analysis.extremism_risk,
-          spamRisk: item.analysis.spam_risk,
-          discourseCollapse: item.analysis.discourse_collapse
-        }),
-        confidence: 0.85
-      }));
+        };
+
+        return {
+          id: index + 1,
+          text: item.text,
+          user: item.author,
+          timestamp: new Date(item.timestamp).toLocaleTimeString(),
+          context: `r/${item.subreddit || 'unknown'}`,
+          analysis,
+          action: determineAction(analysis),
+          confidence: 0.85
+        };
+      });
       setModerationQueue(items);
     } catch (error) {
       console.error('Failed to load content:', error);

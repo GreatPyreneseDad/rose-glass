@@ -52,6 +52,20 @@ Each project has its own setup instructions:
 1. **Market Sentiment**: See [setup guide](./gct-market-sentiment/README.md#-quick-start)
 2. **Moderation System**: See [setup guide](./soulmath-moderation-system/README.md)
 
+## 📚 API Documentation
+
+Both the market sentiment engine and moderation backend expose OpenAPI-compliant
+endpoints. When running either service locally, navigate to `/docs` to view
+interactive Swagger documentation or `/openapi.json` for the raw specification.
+
+## 🛠 CI/CD & Containers
+
+Automated GitHub Actions run on each commit to lint, format, audit, and test both
+projects. A second workflow builds and publishes Docker images to GitHub Container
+Registry so deployments stay reproducible. Dockerfiles are provided so each
+service can be run locally using `docker-compose up`. This launches the market
+sentiment dashboard on port `8501` and the moderation dashboard on port `3000`.
+
 ## 🤝 Contributing
 
 We welcome contributions to GCT implementations! Please:

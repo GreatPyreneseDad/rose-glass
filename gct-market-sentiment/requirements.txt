@@ -33,14 +33,4 @@ prometheus-client>=0.19.0  # For metrics
 # Testing and development
 pytest>=7.4.0
 pytest-asyncio>=0.21.0
-pytest-mock>=3.12.0
-black>=23.10.0
 
-# Database and caching
-redis>=5.0.0
-influxdb-client>=1.38.0  # For time-series data
-
-# Additional for production
-uvicorn>=0.24.0  # For async API server
-fastapi>=0.104.0  # If adding API endpoints
-pydantic>=2.5.0  # For data validation
