@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  sentiment:
+    build: ./gct-market-sentiment
+    ports:
+      - "8501:8501"
+  moderation:
+    build: ./soulmath-moderation-system
+    ports:
+      - "3000:3000"
