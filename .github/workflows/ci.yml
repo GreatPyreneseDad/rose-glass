@@ -17,8 +17,7 @@ jobs:
           python-version: '3.11'
       - name: Install Python dependencies
         run: |
-          pip install -r gct-market-sentiment/requirements.txt
-          pip install pip-audit flake8 bandit
+          pip install -r gct-market-sentiment/requirements-dev.txt
       - name: Python formatting check
         run: black --check gct-market-sentiment
       - name: Python lint
