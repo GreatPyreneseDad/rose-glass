@@ -10,7 +10,7 @@ import json
 import pandas as pd
 from pathlib import Path
 
-from creative_flow_engine import CreativeState, CreativeMetrics, BiometricData
+from .creative_flow_engine import CreativeState, CreativeMetrics, BiometricData
 
 
 class CreativeFlowDatabase:

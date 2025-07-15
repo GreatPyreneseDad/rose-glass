@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 import colorsys
 
-from creative_flow_engine import CreativeState, CreativeMetrics, BiometricData
+from .creative_flow_engine import CreativeState, CreativeMetrics, BiometricData
 
 
 class CreativeFlowVisualizer:
