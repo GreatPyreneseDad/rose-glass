@@ -1,0 +1,2296 @@
+{
+  "timestamp": "2025-07-11T00:22:31.012894",
+  "market_summary": {
+    "avg_coherence": 0.4045336012742881,
+    "avg_truth_cost": 0.17479606573614936,
+    "avg_fear_greed": 0.3295937761419496,
+    "high_coherence_count": 3,
+    "high_truth_cost_count": 0,
+    "extreme_emotions": 8,
+    "market_health": "HEALTHY"
+  },
+  "coherence_data": {
+    "CNC": {
+      "coherence": 0.6177163332283522,
+      "psi": 1.0,
+      "rho": 0.14218925461544074,
+      "q_raw": 0.37529778421860005,
+      "f": 1.0,
+      "trend_strength": -0.31629293917571216,
+      "volatility": 120.65760492303856,
+      "price": 32.4900016784668,
+      "daily_change": 0.49489588107112636,
+      "monthly_change": -41.21584691627592
+    },
+    "NVDA": {
+      "coherence": 0.464916393522408,
+      "psi": 0.5856542930958798,
+      "rho": 0.4190994352250829,
+      "q_raw": 0.4300002047363305,
+      "f": 0.38745117039426535,
+      "trend_strength": 0.05856542930958798,
+      "volatility": 27.721371872664857,
+      "price": 164.10499572753906,
+      "daily_change": -0.1308493105501447,
+      "monthly_change": 14.895325648493184
+    },
+    "ANET": {
+      "coherence": 0.4669337767217523,
+      "psi": 0.665094168662101,
+      "rho": 0.27677593367915454,
+      "q_raw": 0.5047116887893399,
+      "f": 0.41715204130753825,
+      "trend_strength": 0.0665094168662101,
+      "volatility": 52.26061794514436,
+      "price": 106.30999755859375,
+      "daily_change": 0.19792562440411085,
+      "monthly_change": 12.843645676370006
+    },
+    "ACN": {
+      "coherence": 0.3379237823571981,
+      "psi": 0.11509393971846187,
+      "rho": 0.4030549565584085,
+      "q_raw": 0.4633777803175154,
+      "f": 0.4490177870531697,
+      "trend_strength": -0.011509393971846187,
+      "volatility": 29.621024812038776,
+      "price": 288.2699890136719,
+      "daily_change": -1.2909257022809915,
+      "monthly_change": -9.695511587205639
+    },
+    "CZR": {
+      "coherence": 0.45314289963827786,
+      "psi": 0.5165502015686797,
+      "rho": 0.30090495487097557,
+      "q_raw": 0.6350288252890468,
+      "f": 0.4045029382428597,
+      "trend_strength": 0.05165502015686797,
+      "volatility": 46.46617038451812,
+      "price": 31.520000457763672,
+      "daily_change": 6.342783761229804,
+      "monthly_change": 12.974913579672995
+    },
+    "AXON": {
+      "coherence": 0.2966888825369162,
+      "psi": 0.014812476038434007,
+      "rho": 0.32565275841109065,
+      "q_raw": 0.5009840065019244,
+      "f": 0.4717625545083697,
+      "trend_strength": -0.0014812476038434008,
+      "volatility": 41.41511006258028,
+      "price": 733.0399780273438,
+      "daily_change": -8.611039456633316,
+      "monthly_change": -5.822499637330281
+    },
+    "BBY": {
+      "coherence": 0.3412733446409966,
+      "psi": 0.344075328492574,
+      "rho": 0.3239583622958884,
+      "q_raw": 0.3004109659760046,
+      "f": 0.4039052210462849,
+      "trend_strength": 0.0344075328492574,
+      "volatility": 41.736328885787294,
+      "price": 73.70999908447266,
+      "daily_change": 1.570896230456707,
+      "monthly_change": 2.867372521737353
+    },
+    "AVGO": {
+      "coherence": 0.35289759566714174,
+      "psi": 0.4455874406678838,
+      "rho": 0.37480353210855066,
+      "q_raw": 0.20695319175082272,
+      "f": 0.3269483274202343,
+      "trend_strength": 0.04455874406678838,
+      "volatility": 33.361290080392294,
+      "price": 275.3699951171875,
+      "daily_change": -1.5797609967279147,
+      "monthly_change": 9.13689639261263
+    },
+    "AMD": {
+      "coherence": 0.3676559322008239,
+      "psi": 0.3724491801574273,
+      "rho": 0.3046371868833004,
+      "q_raw": 0.41273108044419415,
+      "f": 0.40991902999883373,
+      "trend_strength": 0.03724491801574273,
+      "volatility": 45.651866748827175,
+      "price": 144.16000366210938,
+      "daily_change": 0.811191372104458,
+      "monthly_change": 19.002810292591125
+    },
+    "TECH": {
+      "coherence": 0.3069333330228013,
+      "psi": 0.25008723156259893,
+      "rho": 0.3892753585294273,
+      "q_raw": 0.24156336288479796,
+      "f": 0.33405941709116926,
+      "trend_strength": 0.02500872315625989,
+      "volatility": 31.377513530664693,
+      "price": 54.415000915527344,
+      "daily_change": 3.3130867804185726,
+      "monthly_change": 5.5781915966824425
+    },
+    "SPY": {
+      "coherence": 0.37492326807801774,
+      "psi": 0.22015468999224597,
+      "rho": 0.6872252930188696,
+      "q_raw": 0.08698589455458094,
+      "f": 0.42656047131883457,
+      "trend_strength": 0.022015468999224595,
+      "volatility": 9.102537702218777,
+      "price": 625.8300170898438,
+      "daily_change": 0.26113502898680957,
+      "monthly_change": 4.376768247129552
+    },
+    "BA": {
+      "coherence": 0.5140234603104249,
+      "psi": 0.6021070958184465,
+      "rho": 0.37774857638058196,
+      "q_raw": 0.6511962086366208,
+      "f": 0.44913758461696074,
+      "trend_strength": 0.06021070958184465,
+      "volatility": 32.94526902425699,
+      "price": 226.0500030517578,
+      "daily_change": -0.26472131519253,
+      "monthly_change": 5.63084254755038
+    },
+    "AAPL": {
+      "coherence": 0.35392017575867546,
+      "psi": 0.37859595050165795,
+      "rho": 0.5304029149871639,
+      "q_raw": 0.00048577341828282,
+      "f": 0.4056168071418616,
+      "trend_strength": 0.0378595950501658,
+      "volatility": 17.707183416373226,
+      "price": 212.4199981689453,
+      "daily_change": 0.9073220806375305,
+      "monthly_change": 6.861857064800956
+    },
+    "CCL": {
+      "coherence": 0.5369707128145995,
+      "psi": 1.0,
+      "rho": 0.33265931329100173,
+      "q_raw": 0.18257235728612153,
+      "f": 0.5032922368503734,
+      "trend_strength": 0.11173278725676662,
+      "volatility": 40.12156942831334,
+      "price": 29.110000610351562,
+      "daily_change": 0.17206175267752435,
+      "monthly_change": 21.95223957640401
+    },
+    "APO": {
+      "coherence": 0.4153788135676599,
+      "psi": 0.4126723711918805,
+      "rho": 0.4320975236371361,
+      "q_raw": 0.380217642776437,
+      "f": 0.42952158281833774,
+      "trend_strength": 0.04126723711918805,
+      "volatility": 26.285847305145545,
+      "price": 148.14999389648438,
+      "daily_change": 1.0366152649907217,
+      "monthly_change": 7.331736004264458
+    },
+    "META": {
+      "coherence": 0.30549383531130103,
+      "psi": 0.18143107600070646,
+      "rho": 0.44617909535251327,
+      "q_raw": 0.19178868954816908,
+      "f": 0.39426522997850655,
+      "trend_strength": 0.018143107600070645,
+      "volatility": 24.82504942146287,
+      "price": 727.4600219726562,
+      "daily_change": -0.5590822074444453,
+      "monthly_change": 4.880823256083264
+    },
+    "BLDR": {
+      "coherence": 0.554820048110191,
+      "psi": 0.8452997611986192,
+      "rho": 0.299250711523181,
+      "q_raw": 0.5648053062691238,
+      "f": 0.49246922519913106,
+      "trend_strength": 0.08452997611986192,
+      "volatility": 46.83359213483684,
+      "price": 135.13999938964844,
+      "daily_change": 1.7927123992837701,
+      "monthly_change": 18.170687887715808
+    },
+    "CHTR": {
+      "coherence": 0.3423362394402157,
+      "psi": 0.24971921059512997,
+      "rho": 0.4184839002680854,
+      "q_raw": 0.2572303274591914,
+      "f": 0.45214620344706374,
+      "trend_strength": 0.024971921059512996,
+      "volatility": 27.791563754753245,
+      "price": 401.4949951171875,
+      "daily_change": -0.4524973157516009,
+      "monthly_change": 0.4264705309847798
+    },
+    "QQQ": {
+      "coherence": 0.35853728164250337,
+      "psi": 0.23299078745948526,
+      "rho": 0.6357103147928524,
+      "q_raw": 0.0850961904230263,
+      "f": 0.4045385644109841,
+      "trend_strength": 0.023299078745948526,
+      "volatility": 11.460870674274085,
+      "price": 555.469970703125,
+      "daily_change": -0.25499540447119856,
+      "monthly_change": 4.448424858826571
+    },
+    "GOOGL": {
+      "coherence": 0.27003226866237134,
+      "psi": 0.14019937610901861,
+      "rho": 0.44245737212725483,
+      "q_raw": 0.05401570822157863,
+      "f": 0.42216051273586785,
+      "trend_strength": 0.01401993761090186,
+      "volatility": 25.202094619519222,
+      "price": 177.6300048828125,
+      "daily_change": 1.1387575837821569,
+      "monthly_change": 0.15787920477061915
+    },
+    "AES": {
+      "coherence": 0.6566756073521576,
+      "psi": 0.7600234525862941,
+      "rho": 0.21327818381303962,
+      "q_raw": 1.0,
+      "f": 0.8234255821617871,
+      "trend_strength": 0.07600234525862941,
+      "volatility": 73.77424189588967,
+      "price": 12.404999732971191,
+      "daily_change": -5.233005436453526,
+      "monthly_change": 8.057493271943732
+    },
+    "APTV": {
+      "coherence": 0.35190282093827097,
+      "psi": 0.30901063147676494,
+      "rho": 0.3858306508823853,
+      "q_raw": 0.22443123520668348,
+      "f": 0.492820945945946,
+      "trend_strength": 0.030901063147676492,
+      "volatility": 31.83621351559418,
+      "price": 70.58000183105469,
+      "daily_change": -0.9959308112703567,
+      "monthly_change": 0.5556338169014942
+    },
+    "BX": {
+      "coherence": 0.592617160888218,
+      "psi": 0.7246761917662867,
+      "rho": 0.433580105448712,
+      "q_raw": 0.6719853232582618,
+      "f": 0.5537160353603304,
+      "trend_strength": 0.07246761917662867,
+      "volatility": 26.127577692481996,
+      "price": 164.0399932861328,
+      "daily_change": 3.189275980686982,
+      "monthly_change": 16.01951622763968
+    },
+    "ALGN": {
+      "coherence": 0.45553773234951106,
+      "psi": 0.5166371751197188,
+      "rho": 0.4198501010359224,
+      "q_raw": 0.3803985867431736,
+      "f": 0.4925591607709197,
+      "trend_strength": 0.051663717511971886,
+      "volatility": 27.63604903429283,
+      "price": 204.375,
+      "daily_change": 1.7398422103914113,
+      "monthly_change": 10.187084703310411
+    },
+    "AMAT": {
+      "coherence": 0.49143471967615304,
+      "psi": 0.6609822423440028,
+      "rho": 0.42060506333129033,
+      "q_raw": 0.41690305774941927,
+      "f": 0.41788958211840643,
+      "trend_strength": 0.06609822423440029,
+      "volatility": 27.550545021011708,
+      "price": 198.02000427246094,
+      "daily_change": 0.010103167909564394,
+      "monthly_change": 14.601546366489124
+    },
+    "ALB": {
+      "coherence": 0.6656185261613463,
+      "psi": 0.9362624851461123,
+      "rho": 0.2711560611419743,
+      "q_raw": 0.9242296622126046,
+      "f": 0.5927351491619968,
+      "trend_strength": 0.09362624851461124,
+      "volatility": 53.75826273537814,
+      "price": 74.26000213623047,
+      "daily_change": 3.483834901863513,
+      "monthly_change": 14.850181235754212
+    },
+    "AMGN": {
+      "coherence": 0.2964349034901185,
+      "psi": 0.26481449407445007,
+      "rho": 0.4220872502428709,
+      "q_raw": 0.12137738538813501,
+      "f": 0.33044451558647575,
+      "trend_strength": 0.02648144940744501,
+      "volatility": 27.383568180493274,
+      "price": 300.260009765625,
+      "daily_change": 1.3741204263043614,
+      "monthly_change": 2.895724025128555
+    },
+    "BG": {
+      "coherence": 0.5007766533780784,
+      "psi": 0.5433124229798746,
+      "rho": 0.35877096587493246,
+      "q_raw": 0.595329837773203,
+      "f": 0.5554283458349782,
+      "trend_strength": -0.05433124229798746,
+      "volatility": 35.74587104958766,
+      "price": 76.55000305175781,
+      "daily_change": 1.3907325188845199,
+      "monthly_change": 1.4310346012799835
+    },
+    "DIA": {
+      "coherence": 0.3809479561471717,
+      "psi": 0.25136249908538777,
+      "rho": 0.6558242979552669,
+      "q_raw": 0.04115911415225715,
+      "f": 0.5028004710226195,
+      "trend_strength": 0.02513624990853878,
+      "volatility": 10.495972873155395,
+      "price": 446.4800109863281,
+      "daily_change": 0.4725698907333641,
+      "monthly_change": 4.224776479894589
+    },
+    "ADSK": {
+      "coherence": 0.469491409365339,
+      "psi": 0.15758067099900264,
+      "rho": 0.42833239960450853,
+      "q_raw": 0.7829253237138012,
+      "f": 0.6856621172076272,
+      "trend_strength": 0.015758067099900262,
+      "volatility": 26.692708789871062,
+      "price": 286.19000244140625,
+      "daily_change": -4.60333251953125,
+      "monthly_change": -3.5650459830620598
+    },
+    "TSLA": {
+      "coherence": 0.3301382313899833,
+      "psi": 0.5054035072921282,
+      "rho": 0.22377829911906116,
+      "q_raw": 0.14875242500193564,
+      "f": 0.4081660223311971,
+      "trend_strength": -0.05054035072921283,
+      "volatility": 69.3741711271074,
+      "price": 309.93499755859375,
+      "daily_change": 3.294454313541099,
+      "monthly_change": -5.053149369632452
+    },
+    "MSFT": {
+      "coherence": 0.37668260074015547,
+      "psi": 0.21562589443040517,
+      "rho": 0.6396112082533251,
+      "q_raw": 0.21168053606989368,
+      "f": 0.3888768136052883,
+      "trend_strength": 0.021562589443040518,
+      "volatility": 11.268995511533909,
+      "price": 501.5199890136719,
+      "daily_change": -0.30414448194491345,
+      "monthly_change": 6.114847910596448
+    },
+    "KMX": {
+      "coherence": 0.34772099637620474,
+      "psi": 0.1310896698527576,
+      "rho": 0.35818307059568477,
+      "q_raw": 0.6628447417404171,
+      "f": 0.34185112946794294,
+      "trend_strength": 0.01310896698527576,
+      "volatility": 35.83736821156435,
+      "price": 66.94000244140625,
+      "daily_change": -0.2978804737269968,
+      "monthly_change": -1.31210285363868
+    },
+    "IWM": {
+      "coherence": 0.4026041520473095,
+      "psi": 0.32930882427824737,
+      "rho": 0.5708962993521888,
+      "q_raw": 0.17164745706857443,
+      "f": 0.49106561772231894,
+      "trend_strength": 0.032930882427824736,
+      "volatility": 15.032632060664138,
+      "price": 224.8000030517578,
+      "daily_change": 0.6311847736970416,
+      "monthly_change": 5.519626301698822
+    },
+    "CF": {
+      "coherence": 0.23920042465614139,
+      "psi": 0.04637494134947087,
+      "rho": 0.3719970047064281,
+      "q_raw": 0.21009627178106283,
+      "f": 0.3583479324157957,
+      "trend_strength": 0.004637494134947087,
+      "volatility": 33.763873759638365,
+      "price": 95.76000213623047,
+      "daily_change": -1.7443022411366218,
+      "monthly_change": 0.5459935784592804
+    },
+    "ADBE": {
+      "coherence": 0.3181311794206777,
+      "psi": 0.24088308749032483,
+      "rho": 0.4057843610818951,
+      "q_raw": 0.18369331851497916,
+      "f": 0.4369614057300794,
+      "trend_strength": -0.024088308749032485,
+      "volatility": 29.287261703916716,
+      "price": 371.3299865722656,
+      "daily_change": -0.17742511342671746,
+      "monthly_change": -10.05474521215017
+    },
+    "AMZN": {
+      "coherence": 0.3293386952348226,
+      "psi": 0.24913906377848127,
+      "rho": 0.4835625497483396,
+      "q_raw": 0.10984741662544706,
+      "f": 0.4377936392584348,
+      "trend_strength": 0.024913906377848127,
+      "volatility": 21.359695887137246,
+      "price": 222.27999877929688,
+      "daily_change": 0.3294947946213854,
+      "monthly_change": 4.258912739693429
+    },
+    "BAX": {
+      "coherence": 0.3804343598950387,
+      "psi": 0.09876942810609454,
+      "rho": 0.40910584546372525,
+      "q_raw": 0.4516418688995394,
+      "f": 0.6887170202209243,
+      "trend_strength": -0.009876942810609454,
+      "volatility": 28.88710396530711,
+      "price": 29.690000534057617,
+      "daily_change": -0.13454089739182742,
+      "monthly_change": -5.445857023079466
+    },
+    "APA": {
+      "coherence": 0.3422604279644569,
+      "psi": 0.2724572680671378,
+      "rho": 0.29976293421540134,
+      "q_raw": 0.47180543314927165,
+      "f": 0.38116640324920414,
+      "trend_strength": 0.02724572680671378,
+      "volatility": 46.71938961482327,
+      "price": 20.40999984741211,
+      "daily_change": 0.8399213350611298,
+      "monthly_change": 4.079547231825429
+    },
+    "BF-B": {
+      "coherence": 0.31470485729780817,
+      "psi": 0.4906037130784441,
+      "rho": 0.24903050133277105,
+      "q_raw": 0.14100077809795053,
+      "f": 0.3230721867742676,
+      "trend_strength": 0.04906037130784441,
+      "volatility": 60.311447364733354,
+      "price": 29.100000381469727,
+      "daily_change": 2.320674525381049,
+      "monthly_change": 5.818183205344461
+    },
+    "ADM": {
+      "coherence": 0.3107058602442195,
+      "psi": 0.2560542396199908,
+      "rho": 0.4205844769307668,
+      "q_raw": 0.17888486507875,
+      "f": 0.35968636131621107,
+      "trend_strength": 0.02560542396199908,
+      "volatility": 27.55287248343271,
+      "price": 54.89500045776367,
+      "daily_change": 1.6009655709972859,
+      "monthly_change": 12.790225031876668
+    }
+  },
+  "truth_cost_data": {
+    "CNC": {
+      "truth_cost": 0.2669802471363584,
+      "coherence_deviation": 0.0177163332283522,
+      "we_imbalance_cost": 0.2630243548681988,
+      "volatility_cost": 0.6032880246151928,
+      "wisdom_emotion_ratio": 0.2991582526503947
+    },
+    "NVDA": {
+      "truth_cost": 0.12260833163052975,
+      "coherence_deviation": 0.135083606477592,
+      "we_imbalance_cost": 0.0899761041016522,
+      "volatility_cost": 0.1386068593633243,
+      "wisdom_emotion_ratio": 0.7907533459040463
+    },
+    "ANET": {
+      "truth_cost": 0.21372911268428024,
+      "coherence_deviation": 0.1330662232782477,
+      "we_imbalance_cost": 0.27370565485088205,
+      "volatility_cost": 0.2613030897257218,
+      "wisdom_emotion_ratio": 0.45769899740696673
+    },
+    "ACN": {
+      "truth_cost": 0.18882164313298788,
+      "coherence_deviation": 0.26207621764280187,
+      "we_imbalance_cost": 0.13186539619269663,
+      "volatility_cost": 0.14810512406019388,
+      "wisdom_emotion_ratio": 0.7154257243358974
+    },
+    "CZR": {
+      "truth_cost": 0.24096061008848224,
+      "coherence_deviation": 0.14685710036172211,
+      "we_imbalance_cost": 0.3750617145567206,
+      "volatility_cost": 0.23233085192259062,
+      "wisdom_emotion_ratio": 0.409378441386494
+    },
+    "AXON": {
+      "truth_cost": 0.2523024644469275,
+      "coherence_deviation": 0.30331111746308376,
+      "we_imbalance_cost": 0.22951784122607852,
+      "volatility_cost": 0.20707555031290142,
+      "wisdom_emotion_ratio": 0.5418659313524475
+    },
+    "BBY": {
+      "truth_cost": 0.18330287639491608,
+      "coherence_deviation": 0.25872665535900335,
+      "we_imbalance_cost": 0.05735906974211263,
+      "volatility_cost": 0.20868164442893647,
+      "wisdom_emotion_ratio": 0.8090646606199648
+    },
+    "AVGO": {
+      "truth_cost": 0.14888289685373174,
+      "coherence_deviation": 0.24710240433285824,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.16680645040196146,
+      "wisdom_emotion_ratio": 1.2210445832822852
+    },
+    "AMD": {
+      "truth_cost": 0.21166797919401617,
+      "coherence_deviation": 0.2323440677991761,
+      "we_imbalance_cost": 0.1675085065036832,
+      "volatility_cost": 0.22825933374413587,
+      "wisdom_emotion_ratio": 0.5941461294278946
+    },
+    "TECH": {
+      "truth_cost": 0.1642929370868765,
+      "coherence_deviation": 0.2930666669771987,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.15688756765332346,
+      "wisdom_emotion_ratio": 1.1396871000497837
+    },
+    "SPY": {
+      "truth_cost": 0.10368449932212107,
+      "coherence_deviation": 0.22507673192198224,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.045512688511093885,
+      "wisdom_emotion_ratio": 3.6752787939213745
+    },
+    "BA": {
+      "truth_cost": 0.1809286909946151,
+      "coherence_deviation": 0.08597653968957508,
+      "we_imbalance_cost": 0.3237339052746653,
+      "volatility_cost": 0.16472634512128492,
+      "wisdom_emotion_ratio": 0.5028627301862646
+    },
+    "AAPL": {
+      "truth_cost": 0.12499270482108965,
+      "coherence_deviation": 0.24607982424132452,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.08853591708186613,
+      "wisdom_emotion_ratio": 5.278388143357416
+    },
+    "CCL": {
+      "truth_cost": 0.08539406901663019,
+      "coherence_deviation": 0.06302928718540046,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.2006078471415667,
+      "wisdom_emotion_ratio": 1.1772535590031694
+    },
+    "APO": {
+      "truth_cost": 0.1247071368795967,
+      "coherence_deviation": 0.1846211864323401,
+      "we_imbalance_cost": 0.03809963782980782,
+      "volatility_cost": 0.13142923652572772,
+      "wisdom_emotion_ratio": 0.8997951869050698
+    },
+    "META": {
+      "truth_cost": 0.1550400400076739,
+      "coherence_deviation": 0.29450616468869895,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.12412524710731436,
+      "wisdom_emotion_ratio": 1.52911717052301
+    },
+    "BLDR": {
+      "truth_cost": 0.18149273307677682,
+      "coherence_deviation": 0.045179951889808945,
+      "we_imbalance_cost": 0.31056788039532657,
+      "volatility_cost": 0.23416796067418422,
+      "wisdom_emotion_ratio": 0.4501328564938372
+    },
+    "CHTR": {
+      "truth_cost": 0.14475284985604359,
+      "coherence_deviation": 0.2576637605597843,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.13895781877376623,
+      "wisdom_emotion_ratio": 1.1714680084542695
+    },
+    "QQQ": {
+      "truth_cost": 0.11377639335440977,
+      "coherence_deviation": 0.2414627183574966,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.05730435337137043,
+      "wisdom_emotion_ratio": 3.4344862168150216
+    },
+    "GOOGL": {
+      "truth_cost": 0.16979023446433028,
+      "coherence_deviation": 0.32996773133762863,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.1260104730975961,
+      "wisdom_emotion_ratio": 2.8728067885822544
+    },
+    "AES": {
+      "truth_cost": 0.3751648283811413,
+      "coherence_deviation": 0.0566756073521576,
+      "we_imbalance_cost": 0.8061107419881458,
+      "volatility_cost": 0.36887120947944835,
+      "wisdom_emotion_ratio": 0.1938892580118542
+    },
+    "APTV": {
+      "truth_cost": 0.14699319189808288,
+      "coherence_deviation": 0.248097179061729,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.1591810675779709,
+      "wisdom_emotion_ratio": 1.1892524794555814
+    },
+    "BX": {
+      "truth_cost": 0.13051535568188632,
+      "coherence_deviation": 0.007382839111781947,
+      "we_imbalance_cost": 0.2945695116615018,
+      "volatility_cost": 0.13063788846240998,
+      "wisdom_emotion_ratio": 0.5616429385195204
+    },
+    "ALGN": {
+      "truth_cost": 0.11362238578480055,
+      "coherence_deviation": 0.14446226765048892,
+      "we_imbalance_cost": 0.04794468391055249,
+      "volatility_cost": 0.13818024517146416,
+      "wisdom_emotion_ratio": 0.8739619820330132
+    },
+    "AMAT": {
+      "truth_cost": 0.10805238865012848,
+      "coherence_deviation": 0.10856528032384694,
+      "we_imbalance_cost": 0.07766819663024051,
+      "volatility_cost": 0.13775272510505854,
+      "wisdom_emotion_ratio": 0.8137020221211158
+    },
+    "ALB": {
+      "truth_cost": 0.31074912883502676,
+      "coherence_deviation": 0.06561852616134634,
+      "we_imbalance_cost": 0.67954774755807,
+      "volatility_cost": 0.2687913136768907,
+      "wisdom_emotion_ratio": 0.26474146487439754
+    },
+    "AMGN": {
+      "truth_cost": 0.1625013908746925,
+      "coherence_deviation": 0.3035650965098815,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.13691784090246636,
+      "wisdom_emotion_ratio": 1.9066412294229453
+    },
+    "BG": {
+      "truth_cost": 0.17975497709649302,
+      "coherence_deviation": 0.09922334662192156,
+      "we_imbalance_cost": 0.2881561062444764,
+      "volatility_cost": 0.17872935524793832,
+      "wisdom_emotion_ratio": 0.5159723434620584
+    },
+    "DIA": {
+      "truth_cost": 0.10336477685086441,
+      "coherence_deviation": 0.21905204385282828,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.05247986436577698,
+      "wisdom_emotion_ratio": 4.645993295536561
+    },
+    "ADSK": {
+      "truth_cost": 0.21317423716566808,
+      "coherence_deviation": 0.13050859063466097,
+      "we_imbalance_cost": 0.40310579242332367,
+      "volatility_cost": 0.1334635439493553,
+      "wisdom_emotion_ratio": 0.48512868314031027
+    },
+    "TSLA": {
+      "truth_cost": 0.21648627638169682,
+      "coherence_deviation": 0.26986176861001665,
+      "we_imbalance_cost": 0.014934374156763608,
+      "volatility_cost": 0.346870855635537,
+      "wisdom_emotion_ratio": 0.8996024827388913
+    },
+    "MSFT": {
+      "truth_cost": 0.10623045297123868,
+      "coherence_deviation": 0.2233173992598445,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.05634497755766955,
+      "wisdom_emotion_ratio": 2.052137154018157
+    },
+    "KMX": {
+      "truth_cost": 0.2601522351864934,
+      "coherence_deviation": 0.25227900362379524,
+      "we_imbalance_cost": 0.35161527139876253,
+      "volatility_cost": 0.17918684105782176,
+      "wisdom_emotion_ratio": 0.46953600254030237
+    },
+    "IWM": {
+      "truth_cost": 0.10150728727207241,
+      "coherence_deviation": 0.1973958479526905,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.0751631603033207,
+      "wisdom_emotion_ratio": 2.1016073756511267
+    },
+    "CF": {
+      "truth_cost": 0.19496564077700096,
+      "coherence_deviation": 0.3607995753438586,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.16881936879819182,
+      "wisdom_emotion_ratio": 1.1996177915001476
+    },
+    "ADBE": {
+      "truth_cost": 0.156678420787604,
+      "coherence_deviation": 0.2818688205793223,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.14643630851958359,
+      "wisdom_emotion_ratio": 1.4303627706356061
+    },
+    "AMZN": {
+      "truth_cost": 0.1403040657367768,
+      "coherence_deviation": 0.27066130476517736,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.10679847943568622,
+      "wisdom_emotion_ratio": 2.304353122494912
+    },
+    "BAX": {
+      "truth_cost": 0.16616616689212327,
+      "coherence_deviation": 0.21956564010496127,
+      "we_imbalance_cost": 0.1166975163405937,
+      "volatility_cost": 0.14443551982653555,
+      "wisdom_emotion_ratio": 0.7416149290477956
+    },
+    "APA": {
+      "truth_cost": 0.24051484476050178,
+      "coherence_deviation": 0.2577395720355431,
+      "we_imbalance_cost": 0.22446643841349875,
+      "volatility_cost": 0.23359694807411635,
+      "wisdom_emotion_ratio": 0.5242393947962842
+    },
+    "BF-B": {
+      "truth_cost": 0.20458522812797675,
+      "coherence_deviation": 0.2852951427021918,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.30155723682366675,
+      "wisdom_emotion_ratio": 1.0333182460994252
+    },
+    "ADM": {
+      "truth_cost": 0.15704696462746126,
+      "coherence_deviation": 0.2892941397557805,
+      "we_imbalance_cost": 0,
+      "volatility_cost": 0.13776436241716356,
+      "wisdom_emotion_ratio": 1.5080935884132847
+    }
+  },
+  "emotional_data": {
+    "CNC": {
+      "fear_greed_index": 0.25930303107278363,
+      "emotional_state": "FEAR",
+      "rsi": 42.76103672911816,
+      "momentum": -0.00012653386076380557,
+      "intraday_volatility": 0.00186828316528906
+    },
+    "NVDA": {
+      "fear_greed_index": 0.488951323283113,
+      "emotional_state": "NEUTRAL",
+      "rsi": 64.73389355742296,
+      "momentum": 0.00018065399749264688,
+      "intraday_volatility": 0.0007058711425326321
+    },
+    "ANET": {
+      "fear_greed_index": 0.38075056681899855,
+      "emotional_state": "FEAR",
+      "rsi": 66.66648238344547,
+      "momentum": 0.00020500746445774784,
+      "intraday_volatility": 0.0014279136695514842
+    },
+    "ACN": {
+      "fear_greed_index": 0.18973621280132635,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 31.283955657444338,
+      "momentum": -0.0003607710278067111,
+      "intraday_volatility": 0.001388109012820981
+    },
+    "CZR": {
+      "fear_greed_index": 0.7032950829311848,
+      "emotional_state": "GREED",
+      "rsi": 85.90846406589847,
+      "momentum": 0.00197046460488993,
+      "intraday_volatility": 0.002242177559083775
+    },
+    "AXON": {
+      "fear_greed_index": 0.02637145488001289,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 25.91721717492932,
+      "momentum": -0.0013425346442985004,
+      "intraday_volatility": 0.003372485707619399
+    },
+    "BBY": {
+      "fear_greed_index": 0.18070645350567294,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 30.487721670522703,
+      "momentum": -0.0004050447433726345,
+      "intraday_volatility": 0.0013882629323190342
+    },
+    "AVGO": {
+      "fear_greed_index": 0.3758088790812108,
+      "emotional_state": "FEAR",
+      "rsi": 52.591438412333936,
+      "momentum": -3.599922478101739e-05,
+      "intraday_volatility": 0.0008164138810965961
+    },
+    "AMD": {
+      "fear_greed_index": 0.38538057013446686,
+      "emotional_state": "FEAR",
+      "rsi": 58.9970740715324,
+      "momentum": 0.00038926231946579776,
+      "intraday_volatility": 0.0014182643029086461
+    },
+    "TECH": {
+      "fear_greed_index": 0.04511813726434434,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 23.793037223729115,
+      "momentum": -0.0011750731627122868,
+      "intraday_volatility": 0.002435524884456752
+    },
+    "SPY": {
+      "fear_greed_index": 0.4969810728716914,
+      "emotional_state": "NEUTRAL",
+      "rsi": 39.50650181198039,
+      "momentum": -5.715892046202301e-05,
+      "intraday_volatility": 0.0004074114862373658
+    },
+    "BA": {
+      "fear_greed_index": 0.3798946557841042,
+      "emotional_state": "FEAR",
+      "rsi": 62.72827314037435,
+      "momentum": 0.0002780655757532076,
+      "intraday_volatility": 0.0015342147353507821
+    },
+    "AAPL": {
+      "fear_greed_index": 0.3842848820476752,
+      "emotional_state": "FEAR",
+      "rsi": 31.118888580635527,
+      "momentum": -0.00020162172803151837,
+      "intraday_volatility": 0.0005720713112237591
+    },
+    "CCL": {
+      "fear_greed_index": 0.2727611509733299,
+      "emotional_state": "FEAR",
+      "rsi": 43.74630969350327,
+      "momentum": -5.651852071453245e-05,
+      "intraday_volatility": 0.0012451943263977925
+    },
+    "APO": {
+      "fear_greed_index": 0.26115642561300206,
+      "emotional_state": "FEAR",
+      "rsi": 39.546467829963866,
+      "momentum": -4.988651917926338e-05,
+      "intraday_volatility": 0.0012595680633228697
+    },
+    "META": {
+      "fear_greed_index": 0.6721066875439098,
+      "emotional_state": "GREED",
+      "rsi": 87.44179382477255,
+      "momentum": 0.00030657269201584775,
+      "intraday_volatility": 0.00046551149433196257
+    },
+    "BLDR": {
+      "fear_greed_index": 0.2069748758623683,
+      "emotional_state": "FEAR",
+      "rsi": 44.41431250096853,
+      "momentum": -0.0005084537442702486,
+      "intraday_volatility": 0.001906299995667126
+    },
+    "CHTR": {
+      "fear_greed_index": 0.15054230544419192,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 23.70995189537578,
+      "momentum": -0.0005043339220403195,
+      "intraday_volatility": 0.0009873436548397188
+    },
+    "QQQ": {
+      "fear_greed_index": 0.528428083281558,
+      "emotional_state": "NEUTRAL",
+      "rsi": 34.02007395668251,
+      "momentum": -7.954044222891847e-05,
+      "intraday_volatility": 0.0002792526806353793
+    },
+    "GOOGL": {
+      "fear_greed_index": 0.4946210429461248,
+      "emotional_state": "NEUTRAL",
+      "rsi": 58.82377309508686,
+      "momentum": 0.00010345591417385003,
+      "intraday_volatility": 0.0006184216586630333
+    },
+    "AES": {
+      "fear_greed_index": 0.07004156271512284,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 26.562458090569066,
+      "momentum": -0.0010643054103772291,
+      "intraday_volatility": 0.002593823943254367
+    },
+    "APTV": {
+      "fear_greed_index": 0.24922669876733528,
+      "emotional_state": "FEAR",
+      "rsi": 39.534780564402375,
+      "momentum": -0.000129184286172479,
+      "intraday_volatility": 0.0011281875531286506
+    },
+    "BX": {
+      "fear_greed_index": 0.43645741087813816,
+      "emotional_state": "NEUTRAL",
+      "rsi": 72.78927099660567,
+      "momentum": 0.0004539306525888076,
+      "intraday_volatility": 0.0010153003811435306
+    },
+    "ALGN": {
+      "fear_greed_index": 0.3424209855497966,
+      "emotional_state": "FEAR",
+      "rsi": 54.77785490436076,
+      "momentum": 0.00018724947224476227,
+      "intraday_volatility": 0.0018091830756641002
+    },
+    "AMAT": {
+      "fear_greed_index": 0.3608284676902687,
+      "emotional_state": "FEAR",
+      "rsi": 46.063275931117346,
+      "momentum": -5.2293683598279385e-05,
+      "intraday_volatility": 0.0007987932689083536
+    },
+    "ALB": {
+      "fear_greed_index": 0.23911745809500928,
+      "emotional_state": "FEAR",
+      "rsi": 37.99025382685022,
+      "momentum": -0.00016568868923694247,
+      "intraday_volatility": 0.0023158996759224996
+    },
+    "AMGN": {
+      "fear_greed_index": 0.4433470670177093,
+      "emotional_state": "NEUTRAL",
+      "rsi": 60.91019724001745,
+      "momentum": 0.000112753224089851,
+      "intraday_volatility": 0.0007657412707895517
+    },
+    "BG": {
+      "fear_greed_index": 0.3007193475122044,
+      "emotional_state": "FEAR",
+      "rsi": 45.85517421313536,
+      "momentum": 8.769216581865542e-05,
+      "intraday_volatility": 0.0010971281064557745
+    },
+    "DIA": {
+      "fear_greed_index": 0.41683726507281654,
+      "emotional_state": "NEUTRAL",
+      "rsi": 32.367683915671535,
+      "momentum": -0.00011177045410556974,
+      "intraday_volatility": 0.0005337505463959064
+    },
+    "ADSK": {
+      "fear_greed_index": 0.1602499935580878,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 39.05017016845067,
+      "momentum": -0.0007126701129817614,
+      "intraday_volatility": 0.0015068877907280277
+    },
+    "TSLA": {
+      "fear_greed_index": 0.37434692289974103,
+      "emotional_state": "FEAR",
+      "rsi": 66.19009767305117,
+      "momentum": 0.00017184419920391694,
+      "intraday_volatility": 0.0014145573044846954
+    },
+    "MSFT": {
+      "fear_greed_index": 0.47619799789648387,
+      "emotional_state": "NEUTRAL",
+      "rsi": 51.12141396950223,
+      "momentum": -7.626666283132762e-05,
+      "intraday_volatility": 0.0005393156114683093
+    },
+    "KMX": {
+      "fear_greed_index": 0.3113649154684185,
+      "emotional_state": "FEAR",
+      "rsi": 48.44461022006714,
+      "momentum": 0.00010687389872144719,
+      "intraday_volatility": 0.0014666278951389997
+    },
+    "IWM": {
+      "fear_greed_index": 0.3261321441445547,
+      "emotional_state": "FEAR",
+      "rsi": 38.85589710050142,
+      "momentum": -0.00012563704778963589,
+      "intraday_volatility": 0.0008039749749712605
+    },
+    "CF": {
+      "fear_greed_index": 0.25756627159839957,
+      "emotional_state": "FEAR",
+      "rsi": 39.743598103721475,
+      "momentum": -7.776348475176571e-05,
+      "intraday_volatility": 0.001059154359965022
+    },
+    "ADBE": {
+      "fear_greed_index": 0.295526857626365,
+      "emotional_state": "FEAR",
+      "rsi": 29.214685293308477,
+      "momentum": -0.0002730447827513545,
+      "intraday_volatility": 0.0007529012021021431
+    },
+    "AMZN": {
+      "fear_greed_index": 0.43379925344976333,
+      "emotional_state": "NEUTRAL",
+      "rsi": 45.34079483247174,
+      "momentum": 5.6448347128359076e-05,
+      "intraday_volatility": 0.0006517259577922643
+    },
+    "BAX": {
+      "fear_greed_index": 0.2071640919326474,
+      "emotional_state": "FEAR",
+      "rsi": 35.07479894669419,
+      "momentum": -0.0003204020327162345,
+      "intraday_volatility": 0.0019272204659709314
+    },
+    "APA": {
+      "fear_greed_index": 0.44456315819258724,
+      "emotional_state": "NEUTRAL",
+      "rsi": 65.33338080536299,
+      "momentum": 0.0006570867718433219,
+      "intraday_volatility": 0.001494730366905286
+    },
+    "BF-B": {
+      "fear_greed_index": 0.17138148182238316,
+      "emotional_state": "EXTREME_FEAR",
+      "rsi": 32.727379916146774,
+      "momentum": -0.0005120043861737145,
+      "intraday_volatility": 0.0019481830614230212
+    },
+    "ADM": {
+      "fear_greed_index": 0.31288257579103274,
+      "emotional_state": "FEAR",
+      "rsi": 40.86949598954428,
+      "momentum": 2.315103433907691e-05,
+      "intraday_volatility": 0.0009079964183211541
+    }
+  },
+  "alerts": [
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "ACN",
+      "message": "ACN: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:23.537364"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "AXON",
+      "message": "AXON: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:23.815316"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "BBY",
+      "message": "BBY: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:24.054963"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "TECH",
+      "message": "TECH: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:24.650621"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "CHTR",
+      "message": "CHTR: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:26.281580"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "AES",
+      "message": "AES: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:26.932637"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "ADSK",
+      "message": "ADSK: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:28.783275"
+    },
+    {
+      "type": "EXTREME_FEAR",
+      "ticker": "BF-B",
+      "message": "BF-B: Extreme fear detected - potential bounce",
+      "severity": "critical",
+      "timestamp": "2025-07-11 00:22:30.801783"
+    }
+  ],
+  "indices": {
+    "SPY": {
+      "coherence": {
+        "coherence": 0.37492326807801774,
+        "psi": 0.22015468999224597,
+        "rho": 0.6872252930188696,
+        "q_raw": 0.08698589455458094,
+        "f": 0.42656047131883457,
+        "trend_strength": 0.022015468999224595,
+        "volatility": 9.102537702218777,
+        "price": 625.8300170898438,
+        "daily_change": 0.26113502898680957,
+        "monthly_change": 4.376768247129552
+      },
+      "truth_cost": {
+        "truth_cost": 0.10368449932212107,
+        "coherence_deviation": 0.22507673192198224,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.045512688511093885,
+        "wisdom_emotion_ratio": 3.6752787939213745
+      },
+      "emotions": {
+        "fear_greed_index": 0.4969810728716914,
+        "emotional_state": "NEUTRAL",
+        "rsi": 39.50650181198039,
+        "momentum": -5.715892046202301e-05,
+        "intraday_volatility": 0.0004074114862373658
+      }
+    },
+    "QQQ": {
+      "coherence": {
+        "coherence": 0.35853728164250337,
+        "psi": 0.23299078745948526,
+        "rho": 0.6357103147928524,
+        "q_raw": 0.0850961904230263,
+        "f": 0.4045385644109841,
+        "trend_strength": 0.023299078745948526,
+        "volatility": 11.460870674274085,
+        "price": 555.469970703125,
+        "daily_change": -0.25499540447119856,
+        "monthly_change": 4.448424858826571
+      },
+      "truth_cost": {
+        "truth_cost": 0.11377639335440977,
+        "coherence_deviation": 0.2414627183574966,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.05730435337137043,
+        "wisdom_emotion_ratio": 3.4344862168150216
+      },
+      "emotions": {
+        "fear_greed_index": 0.528428083281558,
+        "emotional_state": "NEUTRAL",
+        "rsi": 34.02007395668251,
+        "momentum": -7.954044222891847e-05,
+        "intraday_volatility": 0.0002792526806353793
+      }
+    },
+    "DIA": {
+      "coherence": {
+        "coherence": 0.3809479561471717,
+        "psi": 0.25136249908538777,
+        "rho": 0.6558242979552669,
+        "q_raw": 0.04115911415225715,
+        "f": 0.5028004710226195,
+        "trend_strength": 0.02513624990853878,
+        "volatility": 10.495972873155395,
+        "price": 446.4800109863281,
+        "daily_change": 0.4725698907333641,
+        "monthly_change": 4.224776479894589
+      },
+      "truth_cost": {
+        "truth_cost": 0.10336477685086441,
+        "coherence_deviation": 0.21905204385282828,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.05247986436577698,
+        "wisdom_emotion_ratio": 4.645993295536561
+      },
+      "emotions": {
+        "fear_greed_index": 0.41683726507281654,
+        "emotional_state": "NEUTRAL",
+        "rsi": 32.367683915671535,
+        "momentum": -0.00011177045410556974,
+        "intraday_volatility": 0.0005337505463959064
+      }
+    },
+    "IWM": {
+      "coherence": {
+        "coherence": 0.4026041520473095,
+        "psi": 0.32930882427824737,
+        "rho": 0.5708962993521888,
+        "q_raw": 0.17164745706857443,
+        "f": 0.49106561772231894,
+        "trend_strength": 0.032930882427824736,
+        "volatility": 15.032632060664138,
+        "price": 224.8000030517578,
+        "daily_change": 0.6311847736970416,
+        "monthly_change": 5.519626301698822
+      },
+      "truth_cost": {
+        "truth_cost": 0.10150728727207241,
+        "coherence_deviation": 0.1973958479526905,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.0751631603033207,
+        "wisdom_emotion_ratio": 2.1016073756511267
+      },
+      "emotions": {
+        "fear_greed_index": 0.3261321441445547,
+        "emotional_state": "FEAR",
+        "rsi": 38.85589710050142,
+        "momentum": -0.00012563704778963589,
+        "intraday_volatility": 0.0008039749749712605
+      }
+    }
+  },
+  "mag7": {
+    "NVDA": {
+      "coherence": {
+        "coherence": 0.464916393522408,
+        "psi": 0.5856542930958798,
+        "rho": 0.4190994352250829,
+        "q_raw": 0.4300002047363305,
+        "f": 0.38745117039426535,
+        "trend_strength": 0.05856542930958798,
+        "volatility": 27.721371872664857,
+        "price": 164.10499572753906,
+        "daily_change": -0.1308493105501447,
+        "monthly_change": 14.895325648493184
+      },
+      "truth_cost": {
+        "truth_cost": 0.12260833163052975,
+        "coherence_deviation": 0.135083606477592,
+        "we_imbalance_cost": 0.0899761041016522,
+        "volatility_cost": 0.1386068593633243,
+        "wisdom_emotion_ratio": 0.7907533459040463
+      },
+      "emotions": {
+        "fear_greed_index": 0.488951323283113,
+        "emotional_state": "NEUTRAL",
+        "rsi": 64.73389355742296,
+        "momentum": 0.00018065399749264688,
+        "intraday_volatility": 0.0007058711425326321
+      }
+    },
+    "AAPL": {
+      "coherence": {
+        "coherence": 0.35392017575867546,
+        "psi": 0.37859595050165795,
+        "rho": 0.5304029149871639,
+        "q_raw": 0.00048577341828282,
+        "f": 0.4056168071418616,
+        "trend_strength": 0.0378595950501658,
+        "volatility": 17.707183416373226,
+        "price": 212.4199981689453,
+        "daily_change": 0.9073220806375305,
+        "monthly_change": 6.861857064800956
+      },
+      "truth_cost": {
+        "truth_cost": 0.12499270482108965,
+        "coherence_deviation": 0.24607982424132452,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.08853591708186613,
+        "wisdom_emotion_ratio": 5.278388143357416
+      },
+      "emotions": {
+        "fear_greed_index": 0.3842848820476752,
+        "emotional_state": "FEAR",
+        "rsi": 31.118888580635527,
+        "momentum": -0.00020162172803151837,
+        "intraday_volatility": 0.0005720713112237591
+      }
+    },
+    "META": {
+      "coherence": {
+        "coherence": 0.30549383531130103,
+        "psi": 0.18143107600070646,
+        "rho": 0.44617909535251327,
+        "q_raw": 0.19178868954816908,
+        "f": 0.39426522997850655,
+        "trend_strength": 0.018143107600070645,
+        "volatility": 24.82504942146287,
+        "price": 727.4600219726562,
+        "daily_change": -0.5590822074444453,
+        "monthly_change": 4.880823256083264
+      },
+      "truth_cost": {
+        "truth_cost": 0.1550400400076739,
+        "coherence_deviation": 0.29450616468869895,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.12412524710731436,
+        "wisdom_emotion_ratio": 1.52911717052301
+      },
+      "emotions": {
+        "fear_greed_index": 0.6721066875439098,
+        "emotional_state": "GREED",
+        "rsi": 87.44179382477255,
+        "momentum": 0.00030657269201584775,
+        "intraday_volatility": 0.00046551149433196257
+      }
+    },
+    "GOOGL": {
+      "coherence": {
+        "coherence": 0.27003226866237134,
+        "psi": 0.14019937610901861,
+        "rho": 0.44245737212725483,
+        "q_raw": 0.05401570822157863,
+        "f": 0.42216051273586785,
+        "trend_strength": 0.01401993761090186,
+        "volatility": 25.202094619519222,
+        "price": 177.6300048828125,
+        "daily_change": 1.1387575837821569,
+        "monthly_change": 0.15787920477061915
+      },
+      "truth_cost": {
+        "truth_cost": 0.16979023446433028,
+        "coherence_deviation": 0.32996773133762863,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.1260104730975961,
+        "wisdom_emotion_ratio": 2.8728067885822544
+      },
+      "emotions": {
+        "fear_greed_index": 0.4946210429461248,
+        "emotional_state": "NEUTRAL",
+        "rsi": 58.82377309508686,
+        "momentum": 0.00010345591417385003,
+        "intraday_volatility": 0.0006184216586630333
+      }
+    },
+    "TSLA": {
+      "coherence": {
+        "coherence": 0.3301382313899833,
+        "psi": 0.5054035072921282,
+        "rho": 0.22377829911906116,
+        "q_raw": 0.14875242500193564,
+        "f": 0.4081660223311971,
+        "trend_strength": -0.05054035072921283,
+        "volatility": 69.3741711271074,
+        "price": 309.93499755859375,
+        "daily_change": 3.294454313541099,
+        "monthly_change": -5.053149369632452
+      },
+      "truth_cost": {
+        "truth_cost": 0.21648627638169682,
+        "coherence_deviation": 0.26986176861001665,
+        "we_imbalance_cost": 0.014934374156763608,
+        "volatility_cost": 0.346870855635537,
+        "wisdom_emotion_ratio": 0.8996024827388913
+      },
+      "emotions": {
+        "fear_greed_index": 0.37434692289974103,
+        "emotional_state": "FEAR",
+        "rsi": 66.19009767305117,
+        "momentum": 0.00017184419920391694,
+        "intraday_volatility": 0.0014145573044846954
+      }
+    },
+    "MSFT": {
+      "coherence": {
+        "coherence": 0.37668260074015547,
+        "psi": 0.21562589443040517,
+        "rho": 0.6396112082533251,
+        "q_raw": 0.21168053606989368,
+        "f": 0.3888768136052883,
+        "trend_strength": 0.021562589443040518,
+        "volatility": 11.268995511533909,
+        "price": 501.5199890136719,
+        "daily_change": -0.30414448194491345,
+        "monthly_change": 6.114847910596448
+      },
+      "truth_cost": {
+        "truth_cost": 0.10623045297123868,
+        "coherence_deviation": 0.2233173992598445,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.05634497755766955,
+        "wisdom_emotion_ratio": 2.052137154018157
+      },
+      "emotions": {
+        "fear_greed_index": 0.47619799789648387,
+        "emotional_state": "NEUTRAL",
+        "rsi": 51.12141396950223,
+        "momentum": -7.626666283132762e-05,
+        "intraday_volatility": 0.0005393156114683093
+      }
+    },
+    "AMZN": {
+      "coherence": {
+        "coherence": 0.3293386952348226,
+        "psi": 0.24913906377848127,
+        "rho": 0.4835625497483396,
+        "q_raw": 0.10984741662544706,
+        "f": 0.4377936392584348,
+        "trend_strength": 0.024913906377848127,
+        "volatility": 21.359695887137246,
+        "price": 222.27999877929688,
+        "daily_change": 0.3294947946213854,
+        "monthly_change": 4.258912739693429
+      },
+      "truth_cost": {
+        "truth_cost": 0.1403040657367768,
+        "coherence_deviation": 0.27066130476517736,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.10679847943568622,
+        "wisdom_emotion_ratio": 2.304353122494912
+      },
+      "emotions": {
+        "fear_greed_index": 0.43379925344976333,
+        "emotional_state": "NEUTRAL",
+        "rsi": 45.34079483247174,
+        "momentum": 5.6448347128359076e-05,
+        "intraday_volatility": 0.0006517259577922643
+      }
+    }
+  },
+  "volatile": {
+    "CNC": {
+      "coherence": {
+        "coherence": 0.6177163332283522,
+        "psi": 1.0,
+        "rho": 0.14218925461544074,
+        "q_raw": 0.37529778421860005,
+        "f": 1.0,
+        "trend_strength": -0.31629293917571216,
+        "volatility": 120.65760492303856,
+        "price": 32.4900016784668,
+        "daily_change": 0.49489588107112636,
+        "monthly_change": -41.21584691627592
+      },
+      "truth_cost": {
+        "truth_cost": 0.2669802471363584,
+        "coherence_deviation": 0.0177163332283522,
+        "we_imbalance_cost": 0.2630243548681988,
+        "volatility_cost": 0.6032880246151928,
+        "wisdom_emotion_ratio": 0.2991582526503947
+      },
+      "emotions": {
+        "fear_greed_index": 0.25930303107278363,
+        "emotional_state": "FEAR",
+        "rsi": 42.76103672911816,
+        "momentum": -0.00012653386076380557,
+        "intraday_volatility": 0.00186828316528906
+      }
+    },
+    "ANET": {
+      "coherence": {
+        "coherence": 0.4669337767217523,
+        "psi": 0.665094168662101,
+        "rho": 0.27677593367915454,
+        "q_raw": 0.5047116887893399,
+        "f": 0.41715204130753825,
+        "trend_strength": 0.0665094168662101,
+        "volatility": 52.26061794514436,
+        "price": 106.30999755859375,
+        "daily_change": 0.19792562440411085,
+        "monthly_change": 12.843645676370006
+      },
+      "truth_cost": {
+        "truth_cost": 0.21372911268428024,
+        "coherence_deviation": 0.1330662232782477,
+        "we_imbalance_cost": 0.27370565485088205,
+        "volatility_cost": 0.2613030897257218,
+        "wisdom_emotion_ratio": 0.45769899740696673
+      },
+      "emotions": {
+        "fear_greed_index": 0.38075056681899855,
+        "emotional_state": "FEAR",
+        "rsi": 66.66648238344547,
+        "momentum": 0.00020500746445774784,
+        "intraday_volatility": 0.0014279136695514842
+      }
+    },
+    "ACN": {
+      "coherence": {
+        "coherence": 0.3379237823571981,
+        "psi": 0.11509393971846187,
+        "rho": 0.4030549565584085,
+        "q_raw": 0.4633777803175154,
+        "f": 0.4490177870531697,
+        "trend_strength": -0.011509393971846187,
+        "volatility": 29.621024812038776,
+        "price": 288.2699890136719,
+        "daily_change": -1.2909257022809915,
+        "monthly_change": -9.695511587205639
+      },
+      "truth_cost": {
+        "truth_cost": 0.18882164313298788,
+        "coherence_deviation": 0.26207621764280187,
+        "we_imbalance_cost": 0.13186539619269663,
+        "volatility_cost": 0.14810512406019388,
+        "wisdom_emotion_ratio": 0.7154257243358974
+      },
+      "emotions": {
+        "fear_greed_index": 0.18973621280132635,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 31.283955657444338,
+        "momentum": -0.0003607710278067111,
+        "intraday_volatility": 0.001388109012820981
+      }
+    },
+    "CZR": {
+      "coherence": {
+        "coherence": 0.45314289963827786,
+        "psi": 0.5165502015686797,
+        "rho": 0.30090495487097557,
+        "q_raw": 0.6350288252890468,
+        "f": 0.4045029382428597,
+        "trend_strength": 0.05165502015686797,
+        "volatility": 46.46617038451812,
+        "price": 31.520000457763672,
+        "daily_change": 6.342783761229804,
+        "monthly_change": 12.974913579672995
+      },
+      "truth_cost": {
+        "truth_cost": 0.24096061008848224,
+        "coherence_deviation": 0.14685710036172211,
+        "we_imbalance_cost": 0.3750617145567206,
+        "volatility_cost": 0.23233085192259062,
+        "wisdom_emotion_ratio": 0.409378441386494
+      },
+      "emotions": {
+        "fear_greed_index": 0.7032950829311848,
+        "emotional_state": "GREED",
+        "rsi": 85.90846406589847,
+        "momentum": 0.00197046460488993,
+        "intraday_volatility": 0.002242177559083775
+      }
+    },
+    "AXON": {
+      "coherence": {
+        "coherence": 0.2966888825369162,
+        "psi": 0.014812476038434007,
+        "rho": 0.32565275841109065,
+        "q_raw": 0.5009840065019244,
+        "f": 0.4717625545083697,
+        "trend_strength": -0.0014812476038434008,
+        "volatility": 41.41511006258028,
+        "price": 733.0399780273438,
+        "daily_change": -8.611039456633316,
+        "monthly_change": -5.822499637330281
+      },
+      "truth_cost": {
+        "truth_cost": 0.2523024644469275,
+        "coherence_deviation": 0.30331111746308376,
+        "we_imbalance_cost": 0.22951784122607852,
+        "volatility_cost": 0.20707555031290142,
+        "wisdom_emotion_ratio": 0.5418659313524475
+      },
+      "emotions": {
+        "fear_greed_index": 0.02637145488001289,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 25.91721717492932,
+        "momentum": -0.0013425346442985004,
+        "intraday_volatility": 0.003372485707619399
+      }
+    },
+    "BBY": {
+      "coherence": {
+        "coherence": 0.3412733446409966,
+        "psi": 0.344075328492574,
+        "rho": 0.3239583622958884,
+        "q_raw": 0.3004109659760046,
+        "f": 0.4039052210462849,
+        "trend_strength": 0.0344075328492574,
+        "volatility": 41.736328885787294,
+        "price": 73.70999908447266,
+        "daily_change": 1.570896230456707,
+        "monthly_change": 2.867372521737353
+      },
+      "truth_cost": {
+        "truth_cost": 0.18330287639491608,
+        "coherence_deviation": 0.25872665535900335,
+        "we_imbalance_cost": 0.05735906974211263,
+        "volatility_cost": 0.20868164442893647,
+        "wisdom_emotion_ratio": 0.8090646606199648
+      },
+      "emotions": {
+        "fear_greed_index": 0.18070645350567294,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 30.487721670522703,
+        "momentum": -0.0004050447433726345,
+        "intraday_volatility": 0.0013882629323190342
+      }
+    },
+    "AVGO": {
+      "coherence": {
+        "coherence": 0.35289759566714174,
+        "psi": 0.4455874406678838,
+        "rho": 0.37480353210855066,
+        "q_raw": 0.20695319175082272,
+        "f": 0.3269483274202343,
+        "trend_strength": 0.04455874406678838,
+        "volatility": 33.361290080392294,
+        "price": 275.3699951171875,
+        "daily_change": -1.5797609967279147,
+        "monthly_change": 9.13689639261263
+      },
+      "truth_cost": {
+        "truth_cost": 0.14888289685373174,
+        "coherence_deviation": 0.24710240433285824,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.16680645040196146,
+        "wisdom_emotion_ratio": 1.2210445832822852
+      },
+      "emotions": {
+        "fear_greed_index": 0.3758088790812108,
+        "emotional_state": "FEAR",
+        "rsi": 52.591438412333936,
+        "momentum": -3.599922478101739e-05,
+        "intraday_volatility": 0.0008164138810965961
+      }
+    },
+    "AMD": {
+      "coherence": {
+        "coherence": 0.3676559322008239,
+        "psi": 0.3724491801574273,
+        "rho": 0.3046371868833004,
+        "q_raw": 0.41273108044419415,
+        "f": 0.40991902999883373,
+        "trend_strength": 0.03724491801574273,
+        "volatility": 45.651866748827175,
+        "price": 144.16000366210938,
+        "daily_change": 0.811191372104458,
+        "monthly_change": 19.002810292591125
+      },
+      "truth_cost": {
+        "truth_cost": 0.21166797919401617,
+        "coherence_deviation": 0.2323440677991761,
+        "we_imbalance_cost": 0.1675085065036832,
+        "volatility_cost": 0.22825933374413587,
+        "wisdom_emotion_ratio": 0.5941461294278946
+      },
+      "emotions": {
+        "fear_greed_index": 0.38538057013446686,
+        "emotional_state": "FEAR",
+        "rsi": 58.9970740715324,
+        "momentum": 0.00038926231946579776,
+        "intraday_volatility": 0.0014182643029086461
+      }
+    },
+    "TECH": {
+      "coherence": {
+        "coherence": 0.3069333330228013,
+        "psi": 0.25008723156259893,
+        "rho": 0.3892753585294273,
+        "q_raw": 0.24156336288479796,
+        "f": 0.33405941709116926,
+        "trend_strength": 0.02500872315625989,
+        "volatility": 31.377513530664693,
+        "price": 54.415000915527344,
+        "daily_change": 3.3130867804185726,
+        "monthly_change": 5.5781915966824425
+      },
+      "truth_cost": {
+        "truth_cost": 0.1642929370868765,
+        "coherence_deviation": 0.2930666669771987,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.15688756765332346,
+        "wisdom_emotion_ratio": 1.1396871000497837
+      },
+      "emotions": {
+        "fear_greed_index": 0.04511813726434434,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 23.793037223729115,
+        "momentum": -0.0011750731627122868,
+        "intraday_volatility": 0.002435524884456752
+      }
+    },
+    "BA": {
+      "coherence": {
+        "coherence": 0.5140234603104249,
+        "psi": 0.6021070958184465,
+        "rho": 0.37774857638058196,
+        "q_raw": 0.6511962086366208,
+        "f": 0.44913758461696074,
+        "trend_strength": 0.06021070958184465,
+        "volatility": 32.94526902425699,
+        "price": 226.0500030517578,
+        "daily_change": -0.26472131519253,
+        "monthly_change": 5.63084254755038
+      },
+      "truth_cost": {
+        "truth_cost": 0.1809286909946151,
+        "coherence_deviation": 0.08597653968957508,
+        "we_imbalance_cost": 0.3237339052746653,
+        "volatility_cost": 0.16472634512128492,
+        "wisdom_emotion_ratio": 0.5028627301862646
+      },
+      "emotions": {
+        "fear_greed_index": 0.3798946557841042,
+        "emotional_state": "FEAR",
+        "rsi": 62.72827314037435,
+        "momentum": 0.0002780655757532076,
+        "intraday_volatility": 0.0015342147353507821
+      }
+    },
+    "CCL": {
+      "coherence": {
+        "coherence": 0.5369707128145995,
+        "psi": 1.0,
+        "rho": 0.33265931329100173,
+        "q_raw": 0.18257235728612153,
+        "f": 0.5032922368503734,
+        "trend_strength": 0.11173278725676662,
+        "volatility": 40.12156942831334,
+        "price": 29.110000610351562,
+        "daily_change": 0.17206175267752435,
+        "monthly_change": 21.95223957640401
+      },
+      "truth_cost": {
+        "truth_cost": 0.08539406901663019,
+        "coherence_deviation": 0.06302928718540046,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.2006078471415667,
+        "wisdom_emotion_ratio": 1.1772535590031694
+      },
+      "emotions": {
+        "fear_greed_index": 0.2727611509733299,
+        "emotional_state": "FEAR",
+        "rsi": 43.74630969350327,
+        "momentum": -5.651852071453245e-05,
+        "intraday_volatility": 0.0012451943263977925
+      }
+    },
+    "APO": {
+      "coherence": {
+        "coherence": 0.4153788135676599,
+        "psi": 0.4126723711918805,
+        "rho": 0.4320975236371361,
+        "q_raw": 0.380217642776437,
+        "f": 0.42952158281833774,
+        "trend_strength": 0.04126723711918805,
+        "volatility": 26.285847305145545,
+        "price": 148.14999389648438,
+        "daily_change": 1.0366152649907217,
+        "monthly_change": 7.331736004264458
+      },
+      "truth_cost": {
+        "truth_cost": 0.1247071368795967,
+        "coherence_deviation": 0.1846211864323401,
+        "we_imbalance_cost": 0.03809963782980782,
+        "volatility_cost": 0.13142923652572772,
+        "wisdom_emotion_ratio": 0.8997951869050698
+      },
+      "emotions": {
+        "fear_greed_index": 0.26115642561300206,
+        "emotional_state": "FEAR",
+        "rsi": 39.546467829963866,
+        "momentum": -4.988651917926338e-05,
+        "intraday_volatility": 0.0012595680633228697
+      }
+    },
+    "BLDR": {
+      "coherence": {
+        "coherence": 0.554820048110191,
+        "psi": 0.8452997611986192,
+        "rho": 0.299250711523181,
+        "q_raw": 0.5648053062691238,
+        "f": 0.49246922519913106,
+        "trend_strength": 0.08452997611986192,
+        "volatility": 46.83359213483684,
+        "price": 135.13999938964844,
+        "daily_change": 1.7927123992837701,
+        "monthly_change": 18.170687887715808
+      },
+      "truth_cost": {
+        "truth_cost": 0.18149273307677682,
+        "coherence_deviation": 0.045179951889808945,
+        "we_imbalance_cost": 0.31056788039532657,
+        "volatility_cost": 0.23416796067418422,
+        "wisdom_emotion_ratio": 0.4501328564938372
+      },
+      "emotions": {
+        "fear_greed_index": 0.2069748758623683,
+        "emotional_state": "FEAR",
+        "rsi": 44.41431250096853,
+        "momentum": -0.0005084537442702486,
+        "intraday_volatility": 0.001906299995667126
+      }
+    },
+    "CHTR": {
+      "coherence": {
+        "coherence": 0.3423362394402157,
+        "psi": 0.24971921059512997,
+        "rho": 0.4184839002680854,
+        "q_raw": 0.2572303274591914,
+        "f": 0.45214620344706374,
+        "trend_strength": 0.024971921059512996,
+        "volatility": 27.791563754753245,
+        "price": 401.4949951171875,
+        "daily_change": -0.4524973157516009,
+        "monthly_change": 0.4264705309847798
+      },
+      "truth_cost": {
+        "truth_cost": 0.14475284985604359,
+        "coherence_deviation": 0.2576637605597843,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.13895781877376623,
+        "wisdom_emotion_ratio": 1.1714680084542695
+      },
+      "emotions": {
+        "fear_greed_index": 0.15054230544419192,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 23.70995189537578,
+        "momentum": -0.0005043339220403195,
+        "intraday_volatility": 0.0009873436548397188
+      }
+    },
+    "AES": {
+      "coherence": {
+        "coherence": 0.6566756073521576,
+        "psi": 0.7600234525862941,
+        "rho": 0.21327818381303962,
+        "q_raw": 1.0,
+        "f": 0.8234255821617871,
+        "trend_strength": 0.07600234525862941,
+        "volatility": 73.77424189588967,
+        "price": 12.404999732971191,
+        "daily_change": -5.233005436453526,
+        "monthly_change": 8.057493271943732
+      },
+      "truth_cost": {
+        "truth_cost": 0.3751648283811413,
+        "coherence_deviation": 0.0566756073521576,
+        "we_imbalance_cost": 0.8061107419881458,
+        "volatility_cost": 0.36887120947944835,
+        "wisdom_emotion_ratio": 0.1938892580118542
+      },
+      "emotions": {
+        "fear_greed_index": 0.07004156271512284,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 26.562458090569066,
+        "momentum": -0.0010643054103772291,
+        "intraday_volatility": 0.002593823943254367
+      }
+    },
+    "APTV": {
+      "coherence": {
+        "coherence": 0.35190282093827097,
+        "psi": 0.30901063147676494,
+        "rho": 0.3858306508823853,
+        "q_raw": 0.22443123520668348,
+        "f": 0.492820945945946,
+        "trend_strength": 0.030901063147676492,
+        "volatility": 31.83621351559418,
+        "price": 70.58000183105469,
+        "daily_change": -0.9959308112703567,
+        "monthly_change": 0.5556338169014942
+      },
+      "truth_cost": {
+        "truth_cost": 0.14699319189808288,
+        "coherence_deviation": 0.248097179061729,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.1591810675779709,
+        "wisdom_emotion_ratio": 1.1892524794555814
+      },
+      "emotions": {
+        "fear_greed_index": 0.24922669876733528,
+        "emotional_state": "FEAR",
+        "rsi": 39.534780564402375,
+        "momentum": -0.000129184286172479,
+        "intraday_volatility": 0.0011281875531286506
+      }
+    },
+    "BX": {
+      "coherence": {
+        "coherence": 0.592617160888218,
+        "psi": 0.7246761917662867,
+        "rho": 0.433580105448712,
+        "q_raw": 0.6719853232582618,
+        "f": 0.5537160353603304,
+        "trend_strength": 0.07246761917662867,
+        "volatility": 26.127577692481996,
+        "price": 164.0399932861328,
+        "daily_change": 3.189275980686982,
+        "monthly_change": 16.01951622763968
+      },
+      "truth_cost": {
+        "truth_cost": 0.13051535568188632,
+        "coherence_deviation": 0.007382839111781947,
+        "we_imbalance_cost": 0.2945695116615018,
+        "volatility_cost": 0.13063788846240998,
+        "wisdom_emotion_ratio": 0.5616429385195204
+      },
+      "emotions": {
+        "fear_greed_index": 0.43645741087813816,
+        "emotional_state": "NEUTRAL",
+        "rsi": 72.78927099660567,
+        "momentum": 0.0004539306525888076,
+        "intraday_volatility": 0.0010153003811435306
+      }
+    },
+    "ALGN": {
+      "coherence": {
+        "coherence": 0.45553773234951106,
+        "psi": 0.5166371751197188,
+        "rho": 0.4198501010359224,
+        "q_raw": 0.3803985867431736,
+        "f": 0.4925591607709197,
+        "trend_strength": 0.051663717511971886,
+        "volatility": 27.63604903429283,
+        "price": 204.375,
+        "daily_change": 1.7398422103914113,
+        "monthly_change": 10.187084703310411
+      },
+      "truth_cost": {
+        "truth_cost": 0.11362238578480055,
+        "coherence_deviation": 0.14446226765048892,
+        "we_imbalance_cost": 0.04794468391055249,
+        "volatility_cost": 0.13818024517146416,
+        "wisdom_emotion_ratio": 0.8739619820330132
+      },
+      "emotions": {
+        "fear_greed_index": 0.3424209855497966,
+        "emotional_state": "FEAR",
+        "rsi": 54.77785490436076,
+        "momentum": 0.00018724947224476227,
+        "intraday_volatility": 0.0018091830756641002
+      }
+    },
+    "AMAT": {
+      "coherence": {
+        "coherence": 0.49143471967615304,
+        "psi": 0.6609822423440028,
+        "rho": 0.42060506333129033,
+        "q_raw": 0.41690305774941927,
+        "f": 0.41788958211840643,
+        "trend_strength": 0.06609822423440029,
+        "volatility": 27.550545021011708,
+        "price": 198.02000427246094,
+        "daily_change": 0.010103167909564394,
+        "monthly_change": 14.601546366489124
+      },
+      "truth_cost": {
+        "truth_cost": 0.10805238865012848,
+        "coherence_deviation": 0.10856528032384694,
+        "we_imbalance_cost": 0.07766819663024051,
+        "volatility_cost": 0.13775272510505854,
+        "wisdom_emotion_ratio": 0.8137020221211158
+      },
+      "emotions": {
+        "fear_greed_index": 0.3608284676902687,
+        "emotional_state": "FEAR",
+        "rsi": 46.063275931117346,
+        "momentum": -5.2293683598279385e-05,
+        "intraday_volatility": 0.0007987932689083536
+      }
+    },
+    "ALB": {
+      "coherence": {
+        "coherence": 0.6656185261613463,
+        "psi": 0.9362624851461123,
+        "rho": 0.2711560611419743,
+        "q_raw": 0.9242296622126046,
+        "f": 0.5927351491619968,
+        "trend_strength": 0.09362624851461124,
+        "volatility": 53.75826273537814,
+        "price": 74.26000213623047,
+        "daily_change": 3.483834901863513,
+        "monthly_change": 14.850181235754212
+      },
+      "truth_cost": {
+        "truth_cost": 0.31074912883502676,
+        "coherence_deviation": 0.06561852616134634,
+        "we_imbalance_cost": 0.67954774755807,
+        "volatility_cost": 0.2687913136768907,
+        "wisdom_emotion_ratio": 0.26474146487439754
+      },
+      "emotions": {
+        "fear_greed_index": 0.23911745809500928,
+        "emotional_state": "FEAR",
+        "rsi": 37.99025382685022,
+        "momentum": -0.00016568868923694247,
+        "intraday_volatility": 0.0023158996759224996
+      }
+    },
+    "AMGN": {
+      "coherence": {
+        "coherence": 0.2964349034901185,
+        "psi": 0.26481449407445007,
+        "rho": 0.4220872502428709,
+        "q_raw": 0.12137738538813501,
+        "f": 0.33044451558647575,
+        "trend_strength": 0.02648144940744501,
+        "volatility": 27.383568180493274,
+        "price": 300.260009765625,
+        "daily_change": 1.3741204263043614,
+        "monthly_change": 2.895724025128555
+      },
+      "truth_cost": {
+        "truth_cost": 0.1625013908746925,
+        "coherence_deviation": 0.3035650965098815,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.13691784090246636,
+        "wisdom_emotion_ratio": 1.9066412294229453
+      },
+      "emotions": {
+        "fear_greed_index": 0.4433470670177093,
+        "emotional_state": "NEUTRAL",
+        "rsi": 60.91019724001745,
+        "momentum": 0.000112753224089851,
+        "intraday_volatility": 0.0007657412707895517
+      }
+    },
+    "BG": {
+      "coherence": {
+        "coherence": 0.5007766533780784,
+        "psi": 0.5433124229798746,
+        "rho": 0.35877096587493246,
+        "q_raw": 0.595329837773203,
+        "f": 0.5554283458349782,
+        "trend_strength": -0.05433124229798746,
+        "volatility": 35.74587104958766,
+        "price": 76.55000305175781,
+        "daily_change": 1.3907325188845199,
+        "monthly_change": 1.4310346012799835
+      },
+      "truth_cost": {
+        "truth_cost": 0.17975497709649302,
+        "coherence_deviation": 0.09922334662192156,
+        "we_imbalance_cost": 0.2881561062444764,
+        "volatility_cost": 0.17872935524793832,
+        "wisdom_emotion_ratio": 0.5159723434620584
+      },
+      "emotions": {
+        "fear_greed_index": 0.3007193475122044,
+        "emotional_state": "FEAR",
+        "rsi": 45.85517421313536,
+        "momentum": 8.769216581865542e-05,
+        "intraday_volatility": 0.0010971281064557745
+      }
+    },
+    "ADSK": {
+      "coherence": {
+        "coherence": 0.469491409365339,
+        "psi": 0.15758067099900264,
+        "rho": 0.42833239960450853,
+        "q_raw": 0.7829253237138012,
+        "f": 0.6856621172076272,
+        "trend_strength": 0.015758067099900262,
+        "volatility": 26.692708789871062,
+        "price": 286.19000244140625,
+        "daily_change": -4.60333251953125,
+        "monthly_change": -3.5650459830620598
+      },
+      "truth_cost": {
+        "truth_cost": 0.21317423716566808,
+        "coherence_deviation": 0.13050859063466097,
+        "we_imbalance_cost": 0.40310579242332367,
+        "volatility_cost": 0.1334635439493553,
+        "wisdom_emotion_ratio": 0.48512868314031027
+      },
+      "emotions": {
+        "fear_greed_index": 0.1602499935580878,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 39.05017016845067,
+        "momentum": -0.0007126701129817614,
+        "intraday_volatility": 0.0015068877907280277
+      }
+    },
+    "KMX": {
+      "coherence": {
+        "coherence": 0.34772099637620474,
+        "psi": 0.1310896698527576,
+        "rho": 0.35818307059568477,
+        "q_raw": 0.6628447417404171,
+        "f": 0.34185112946794294,
+        "trend_strength": 0.01310896698527576,
+        "volatility": 35.83736821156435,
+        "price": 66.94000244140625,
+        "daily_change": -0.2978804737269968,
+        "monthly_change": -1.31210285363868
+      },
+      "truth_cost": {
+        "truth_cost": 0.2601522351864934,
+        "coherence_deviation": 0.25227900362379524,
+        "we_imbalance_cost": 0.35161527139876253,
+        "volatility_cost": 0.17918684105782176,
+        "wisdom_emotion_ratio": 0.46953600254030237
+      },
+      "emotions": {
+        "fear_greed_index": 0.3113649154684185,
+        "emotional_state": "FEAR",
+        "rsi": 48.44461022006714,
+        "momentum": 0.00010687389872144719,
+        "intraday_volatility": 0.0014666278951389997
+      }
+    },
+    "CF": {
+      "coherence": {
+        "coherence": 0.23920042465614139,
+        "psi": 0.04637494134947087,
+        "rho": 0.3719970047064281,
+        "q_raw": 0.21009627178106283,
+        "f": 0.3583479324157957,
+        "trend_strength": 0.004637494134947087,
+        "volatility": 33.763873759638365,
+        "price": 95.76000213623047,
+        "daily_change": -1.7443022411366218,
+        "monthly_change": 0.5459935784592804
+      },
+      "truth_cost": {
+        "truth_cost": 0.19496564077700096,
+        "coherence_deviation": 0.3607995753438586,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.16881936879819182,
+        "wisdom_emotion_ratio": 1.1996177915001476
+      },
+      "emotions": {
+        "fear_greed_index": 0.25756627159839957,
+        "emotional_state": "FEAR",
+        "rsi": 39.743598103721475,
+        "momentum": -7.776348475176571e-05,
+        "intraday_volatility": 0.001059154359965022
+      }
+    },
+    "ADBE": {
+      "coherence": {
+        "coherence": 0.3181311794206777,
+        "psi": 0.24088308749032483,
+        "rho": 0.4057843610818951,
+        "q_raw": 0.18369331851497916,
+        "f": 0.4369614057300794,
+        "trend_strength": -0.024088308749032485,
+        "volatility": 29.287261703916716,
+        "price": 371.3299865722656,
+        "daily_change": -0.17742511342671746,
+        "monthly_change": -10.05474521215017
+      },
+      "truth_cost": {
+        "truth_cost": 0.156678420787604,
+        "coherence_deviation": 0.2818688205793223,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.14643630851958359,
+        "wisdom_emotion_ratio": 1.4303627706356061
+      },
+      "emotions": {
+        "fear_greed_index": 0.295526857626365,
+        "emotional_state": "FEAR",
+        "rsi": 29.214685293308477,
+        "momentum": -0.0002730447827513545,
+        "intraday_volatility": 0.0007529012021021431
+      }
+    },
+    "BAX": {
+      "coherence": {
+        "coherence": 0.3804343598950387,
+        "psi": 0.09876942810609454,
+        "rho": 0.40910584546372525,
+        "q_raw": 0.4516418688995394,
+        "f": 0.6887170202209243,
+        "trend_strength": -0.009876942810609454,
+        "volatility": 28.88710396530711,
+        "price": 29.690000534057617,
+        "daily_change": -0.13454089739182742,
+        "monthly_change": -5.445857023079466
+      },
+      "truth_cost": {
+        "truth_cost": 0.16616616689212327,
+        "coherence_deviation": 0.21956564010496127,
+        "we_imbalance_cost": 0.1166975163405937,
+        "volatility_cost": 0.14443551982653555,
+        "wisdom_emotion_ratio": 0.7416149290477956
+      },
+      "emotions": {
+        "fear_greed_index": 0.2071640919326474,
+        "emotional_state": "FEAR",
+        "rsi": 35.07479894669419,
+        "momentum": -0.0003204020327162345,
+        "intraday_volatility": 0.0019272204659709314
+      }
+    },
+    "APA": {
+      "coherence": {
+        "coherence": 0.3422604279644569,
+        "psi": 0.2724572680671378,
+        "rho": 0.29976293421540134,
+        "q_raw": 0.47180543314927165,
+        "f": 0.38116640324920414,
+        "trend_strength": 0.02724572680671378,
+        "volatility": 46.71938961482327,
+        "price": 20.40999984741211,
+        "daily_change": 0.8399213350611298,
+        "monthly_change": 4.079547231825429
+      },
+      "truth_cost": {
+        "truth_cost": 0.24051484476050178,
+        "coherence_deviation": 0.2577395720355431,
+        "we_imbalance_cost": 0.22446643841349875,
+        "volatility_cost": 0.23359694807411635,
+        "wisdom_emotion_ratio": 0.5242393947962842
+      },
+      "emotions": {
+        "fear_greed_index": 0.44456315819258724,
+        "emotional_state": "NEUTRAL",
+        "rsi": 65.33338080536299,
+        "momentum": 0.0006570867718433219,
+        "intraday_volatility": 0.001494730366905286
+      }
+    },
+    "BF-B": {
+      "coherence": {
+        "coherence": 0.31470485729780817,
+        "psi": 0.4906037130784441,
+        "rho": 0.24903050133277105,
+        "q_raw": 0.14100077809795053,
+        "f": 0.3230721867742676,
+        "trend_strength": 0.04906037130784441,
+        "volatility": 60.311447364733354,
+        "price": 29.100000381469727,
+        "daily_change": 2.320674525381049,
+        "monthly_change": 5.818183205344461
+      },
+      "truth_cost": {
+        "truth_cost": 0.20458522812797675,
+        "coherence_deviation": 0.2852951427021918,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.30155723682366675,
+        "wisdom_emotion_ratio": 1.0333182460994252
+      },
+      "emotions": {
+        "fear_greed_index": 0.17138148182238316,
+        "emotional_state": "EXTREME_FEAR",
+        "rsi": 32.727379916146774,
+        "momentum": -0.0005120043861737145,
+        "intraday_volatility": 0.0019481830614230212
+      }
+    },
+    "ADM": {
+      "coherence": {
+        "coherence": 0.3107058602442195,
+        "psi": 0.2560542396199908,
+        "rho": 0.4205844769307668,
+        "q_raw": 0.17888486507875,
+        "f": 0.35968636131621107,
+        "trend_strength": 0.02560542396199908,
+        "volatility": 27.55287248343271,
+        "price": 54.89500045776367,
+        "daily_change": 1.6009655709972859,
+        "monthly_change": 12.790225031876668
+      },
+      "truth_cost": {
+        "truth_cost": 0.15704696462746126,
+        "coherence_deviation": 0.2892941397557805,
+        "we_imbalance_cost": 0,
+        "volatility_cost": 0.13776436241716356,
+        "wisdom_emotion_ratio": 1.5080935884132847
+      },
+      "emotions": {
+        "fear_greed_index": 0.31288257579103274,
+        "emotional_state": "FEAR",
+        "rsi": 40.86949598954428,
+        "momentum": 2.315103433907691e-05,
+        "intraday_volatility": 0.0009079964183211541
+      }
+    }
+  }
+}

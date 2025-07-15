@@ -1,0 +1,71 @@
+
+TRUTH COST ANALYSIS REPORT
+Generated: 2025-07-10 01:18:36
+============================================================
+
+THEORETICAL FOUNDATION:
+Truth Cost measures the energy required to maintain patterns that
+deviate from natural market coherence. High truth costs indicate
+unsustainable behaviors that will eventually revert.
+
+KEY METRICS:
+
+============================================================
+TICKER: NVDA
+============================================================
+Current Coherence:      0.520
+Current Truth Cost:     0.087
+30-Day Avg Cost:        0.079
+Cumulative Energy:      3.56
+Cost Acceleration:      +0.009
+Wisdom/Emotion Ratio:   0.59
+Current Volatility:     27.2%
+
+PATTERNS DETECTED:
+
+============================================================
+TICKER: TSLA
+============================================================
+Current Coherence:      0.319
+Current Truth Cost:     0.076
+30-Day Avg Cost:        0.156
+Cumulative Energy:      5.89
+Cost Acceleration:      -0.039
+Wisdom/Emotion Ratio:   1.14
+Current Volatility:     58.0%
+
+PATTERNS DETECTED:
+
+============================================================
+TICKER: SPY
+============================================================
+Current Coherence:      0.376
+Current Truth Cost:     0.056
+30-Day Avg Cost:        0.064
+Cumulative Energy:      2.39
+Cost Acceleration:      +0.001
+Wisdom/Emotion Ratio:   3.26
+Current Volatility:     10.0%
+
+PATTERNS DETECTED:
+  • 🧘 WISDOM DOMINANCE: Rational market, sustainable patterns
+
+
+============================================================
+MARKET-WIDE SUMMARY:
+============================================================
+Average Truth Cost:     0.073
+High Cost Warnings:     0 tickers
+Market Sustainability:  HIGH
+
+INTERPRETATION GUIDE:
+• Truth Cost < 0.2:  Natural, sustainable market behavior
+• Truth Cost 0.2-0.4: Moderate strain, watch for reversals  
+• Truth Cost > 0.4:  High strain, unsustainable patterns
+• Truth Cost > 0.6:  Extreme - expect significant corrections
+
+INVESTMENT IMPLICATIONS:
+- High truth cost stocks likely to revert to mean
+- Low truth cost with high coherence = sustainable trends
+- Rising cumulative costs signal exhaustion points
+- Wisdom/Emotion < 1 indicates emotional extremes

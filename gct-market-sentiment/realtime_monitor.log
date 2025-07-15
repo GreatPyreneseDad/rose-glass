@@ -1,0 +1,668 @@
+2025-07-10 01:30:16,746 - INFO - Market Monitor starting...
+2025-07-10 01:30:16,746 - INFO - Fetching most volatile stocks...
+2025-07-10 01:30:16,746 - ERROR - Error getting volatile stocks: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-07-10 01:30:16,746 - INFO - Starting analysis cycle...
+2025-07-10 01:30:17,973 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 01:30:20,160 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 01:30:23,807 - INFO - Dashboard updated successfully
+2025-07-10 01:30:23,807 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 01:35:23,877 - INFO - Starting analysis cycle...
+2025-07-10 01:35:24,719 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 01:35:26,274 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 01:35:29,050 - INFO - Dashboard updated successfully
+2025-07-10 01:35:29,051 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 01:40:29,105 - INFO - Starting analysis cycle...
+2025-07-10 01:40:29,787 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 01:40:31,415 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 01:40:34,077 - INFO - Dashboard updated successfully
+2025-07-10 01:40:34,077 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 01:45:34,147 - INFO - Starting analysis cycle...
+2025-07-10 01:45:34,792 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 01:45:36,267 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 01:45:39,447 - INFO - Dashboard updated successfully
+2025-07-10 01:45:39,448 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 01:50:39,518 - INFO - Starting analysis cycle...
+2025-07-10 01:50:40,249 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 01:50:42,330 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 01:50:45,885 - INFO - Dashboard updated successfully
+2025-07-10 01:50:45,885 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 02:13:21,673 - INFO - Starting analysis cycle...
+2025-07-10 02:13:22,221 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 02:13:24,170 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 02:13:27,252 - INFO - Dashboard updated successfully
+2025-07-10 02:13:27,252 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 02:18:43,066 - INFO - Starting analysis cycle...
+2025-07-10 02:18:43,839 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 02:18:45,326 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 02:18:48,389 - INFO - Dashboard updated successfully
+2025-07-10 02:18:48,389 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 02:36:59,052 - INFO - Starting analysis cycle...
+2025-07-10 02:37:00,118 - ERROR - $BBBY: possibly delisted; no price data found  (period=1d) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 02:37:01,677 - INFO - CRITICAL ALERT: BB: Extreme fear detected - potential bounce
+2025-07-10 02:37:04,768 - INFO - Dashboard updated successfully
+2025-07-10 02:37:04,768 - INFO - Analysis cycle completed. Processed 19 tickers
+2025-07-10 02:37:04,768 - INFO - Fetching most volatile stocks...
+2025-07-10 02:37:30,320 - INFO - Found 30 volatile stocks
+2025-07-10 02:42:30,376 - INFO - Starting analysis cycle...
+2025-07-10 02:42:33,860 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 02:42:36,865 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 02:42:40,919 - INFO - Dashboard updated successfully
+2025-07-10 02:42:40,919 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 02:47:40,998 - INFO - Starting analysis cycle...
+2025-07-10 02:47:44,707 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 02:47:47,944 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 02:47:52,210 - INFO - Dashboard updated successfully
+2025-07-10 02:47:52,211 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 02:52:52,303 - INFO - Starting analysis cycle...
+2025-07-10 02:52:55,724 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 02:52:59,022 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 02:53:03,356 - INFO - Dashboard updated successfully
+2025-07-10 02:53:03,356 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 02:58:03,449 - INFO - Starting analysis cycle...
+2025-07-10 02:58:06,663 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 02:58:09,626 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 02:58:13,164 - INFO - Dashboard updated successfully
+2025-07-10 02:58:13,164 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:03:13,252 - INFO - Starting analysis cycle...
+2025-07-10 03:03:16,743 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:03:19,876 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:03:23,750 - INFO - Dashboard updated successfully
+2025-07-10 03:03:23,751 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:08:23,824 - INFO - Starting analysis cycle...
+2025-07-10 03:08:27,614 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:08:30,861 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:08:34,266 - INFO - Dashboard updated successfully
+2025-07-10 03:08:34,266 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:13:34,350 - INFO - Starting analysis cycle...
+2025-07-10 03:13:37,639 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:13:40,494 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:13:44,216 - INFO - Dashboard updated successfully
+2025-07-10 03:13:44,216 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:18:44,304 - INFO - Starting analysis cycle...
+2025-07-10 03:18:47,964 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:18:50,962 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:18:54,870 - INFO - Dashboard updated successfully
+2025-07-10 03:18:54,870 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:35:23,059 - INFO - Starting analysis cycle...
+2025-07-10 03:35:26,311 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:35:28,906 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:35:32,557 - INFO - Dashboard updated successfully
+2025-07-10 03:35:32,557 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:37:32,596 - INFO - Fetching most volatile stocks...
+2025-07-10 03:37:47,465 - INFO - Found 30 volatile stocks
+2025-07-10 03:40:47,517 - INFO - Starting analysis cycle...
+2025-07-10 03:40:50,887 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:40:53,690 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:40:57,978 - INFO - Dashboard updated successfully
+2025-07-10 03:40:57,978 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 03:59:29,932 - INFO - Starting analysis cycle...
+2025-07-10 03:59:33,179 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 03:59:36,366 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 03:59:40,524 - INFO - Dashboard updated successfully
+2025-07-10 03:59:40,525 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:04:40,616 - INFO - Starting analysis cycle...
+2025-07-10 04:04:44,157 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:04:47,668 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:04:52,124 - INFO - Dashboard updated successfully
+2025-07-10 04:04:52,125 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:09:52,209 - INFO - Starting analysis cycle...
+2025-07-10 04:09:55,774 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:09:58,837 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:10:02,578 - INFO - Dashboard updated successfully
+2025-07-10 04:10:02,578 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:15:02,651 - INFO - Starting analysis cycle...
+2025-07-10 04:15:05,682 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:15:08,286 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:15:11,834 - INFO - Dashboard updated successfully
+2025-07-10 04:15:11,834 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:20:11,917 - INFO - Starting analysis cycle...
+2025-07-10 04:20:15,818 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:20:18,412 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:20:21,744 - INFO - Dashboard updated successfully
+2025-07-10 04:20:21,745 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:25:21,836 - INFO - Starting analysis cycle...
+2025-07-10 04:25:25,223 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:25:28,232 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:25:32,767 - INFO - Dashboard updated successfully
+2025-07-10 04:25:32,768 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:30:32,820 - INFO - Starting analysis cycle...
+2025-07-10 04:30:36,463 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:30:39,292 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:30:43,170 - INFO - Dashboard updated successfully
+2025-07-10 04:30:43,170 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:35:43,260 - INFO - Starting analysis cycle...
+2025-07-10 04:35:46,542 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:35:49,285 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:35:53,232 - INFO - Dashboard updated successfully
+2025-07-10 04:35:53,232 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:37:53,269 - INFO - Fetching most volatile stocks...
+2025-07-10 04:38:07,055 - INFO - Found 30 volatile stocks
+2025-07-10 04:41:07,111 - INFO - Starting analysis cycle...
+2025-07-10 04:41:10,686 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:41:13,884 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:41:17,421 - INFO - Dashboard updated successfully
+2025-07-10 04:41:17,421 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:46:17,492 - INFO - Starting analysis cycle...
+2025-07-10 04:46:21,254 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:46:25,767 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:46:30,242 - INFO - Dashboard updated successfully
+2025-07-10 04:46:30,242 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:51:30,314 - INFO - Starting analysis cycle...
+2025-07-10 04:51:33,837 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:51:36,869 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:51:40,818 - INFO - Dashboard updated successfully
+2025-07-10 04:51:40,819 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 04:56:40,902 - INFO - Starting analysis cycle...
+2025-07-10 04:56:44,723 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 04:56:48,665 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 04:56:53,607 - INFO - Dashboard updated successfully
+2025-07-10 04:56:53,607 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:14:48,340 - INFO - Starting analysis cycle...
+2025-07-10 05:14:51,959 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:14:55,409 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:14:59,837 - INFO - Dashboard updated successfully
+2025-07-10 05:14:59,837 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:19:59,896 - INFO - Starting analysis cycle...
+2025-07-10 05:20:03,515 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:20:06,140 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:20:10,109 - INFO - Dashboard updated successfully
+2025-07-10 05:20:10,109 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:25:10,182 - INFO - Starting analysis cycle...
+2025-07-10 05:25:13,290 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:25:19,047 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:25:25,014 - INFO - Dashboard updated successfully
+2025-07-10 05:25:25,014 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:30:25,094 - INFO - Starting analysis cycle...
+2025-07-10 05:30:28,866 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:30:32,372 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:30:36,221 - INFO - Dashboard updated successfully
+2025-07-10 05:30:36,222 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:35:36,281 - INFO - Starting analysis cycle...
+2025-07-10 05:35:40,042 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:35:42,741 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:35:46,824 - INFO - Dashboard updated successfully
+2025-07-10 05:35:46,825 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:38:16,862 - INFO - Fetching most volatile stocks...
+2025-07-10 05:38:35,108 - INFO - Found 30 volatile stocks
+2025-07-10 05:41:05,146 - INFO - Starting analysis cycle...
+2025-07-10 05:41:08,957 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:41:12,926 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:41:16,978 - INFO - Dashboard updated successfully
+2025-07-10 05:41:16,978 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:46:17,057 - INFO - Starting analysis cycle...
+2025-07-10 05:46:20,654 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:46:24,199 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:46:28,287 - INFO - Dashboard updated successfully
+2025-07-10 05:46:28,287 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:51:28,365 - INFO - Starting analysis cycle...
+2025-07-10 05:51:32,009 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:51:34,872 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:51:38,381 - INFO - Dashboard updated successfully
+2025-07-10 05:51:38,381 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 05:56:38,457 - INFO - Starting analysis cycle...
+2025-07-10 05:56:42,351 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 05:56:45,449 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 05:56:49,471 - INFO - Dashboard updated successfully
+2025-07-10 05:56:49,471 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:01:49,549 - INFO - Starting analysis cycle...
+2025-07-10 06:01:52,979 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:01:56,426 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:02:00,748 - INFO - Dashboard updated successfully
+2025-07-10 06:02:00,748 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:07:00,805 - INFO - Starting analysis cycle...
+2025-07-10 06:07:04,162 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:07:06,952 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:07:10,819 - INFO - Dashboard updated successfully
+2025-07-10 06:07:10,819 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:12:10,837 - INFO - Starting analysis cycle...
+2025-07-10 06:12:14,216 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:12:17,552 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:12:21,480 - INFO - Dashboard updated successfully
+2025-07-10 06:12:21,481 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:17:21,544 - INFO - Starting analysis cycle...
+2025-07-10 06:17:24,833 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:17:27,751 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:17:32,307 - INFO - Dashboard updated successfully
+2025-07-10 06:17:32,308 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:22:32,368 - INFO - Starting analysis cycle...
+2025-07-10 06:22:35,854 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:22:38,961 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:22:43,132 - INFO - Dashboard updated successfully
+2025-07-10 06:22:43,133 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:27:43,194 - INFO - Starting analysis cycle...
+2025-07-10 06:27:46,375 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:27:49,431 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:27:53,696 - INFO - Dashboard updated successfully
+2025-07-10 06:27:53,696 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:32:53,772 - INFO - Starting analysis cycle...
+2025-07-10 06:32:57,737 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:33:00,781 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:33:05,038 - INFO - Dashboard updated successfully
+2025-07-10 06:33:05,038 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:38:05,117 - INFO - Starting analysis cycle...
+2025-07-10 06:38:09,724 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:38:13,256 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:38:17,692 - INFO - Dashboard updated successfully
+2025-07-10 06:38:17,692 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:38:47,694 - INFO - Fetching most volatile stocks...
+2025-07-10 06:39:06,071 - INFO - Found 30 volatile stocks
+2025-07-10 06:43:36,182 - INFO - Starting analysis cycle...
+2025-07-10 06:43:39,738 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:43:42,862 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:43:46,619 - INFO - Dashboard updated successfully
+2025-07-10 06:43:46,619 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:48:46,709 - INFO - Starting analysis cycle...
+2025-07-10 06:48:50,430 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:48:53,714 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:48:57,537 - INFO - Dashboard updated successfully
+2025-07-10 06:48:57,537 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:53:57,627 - INFO - Starting analysis cycle...
+2025-07-10 06:54:01,457 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:54:04,693 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:54:09,220 - INFO - Dashboard updated successfully
+2025-07-10 06:54:09,220 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 06:59:09,312 - INFO - Starting analysis cycle...
+2025-07-10 06:59:12,945 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 06:59:16,688 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 06:59:20,965 - INFO - Dashboard updated successfully
+2025-07-10 06:59:20,965 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:04:21,035 - INFO - Starting analysis cycle...
+2025-07-10 07:04:25,142 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:04:28,009 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:04:32,506 - INFO - Dashboard updated successfully
+2025-07-10 07:04:32,506 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:09:32,621 - INFO - Starting analysis cycle...
+2025-07-10 07:09:37,218 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:09:40,910 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:09:45,450 - INFO - Dashboard updated successfully
+2025-07-10 07:09:45,450 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:14:45,534 - INFO - Starting analysis cycle...
+2025-07-10 07:14:49,332 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:14:52,800 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:14:57,111 - INFO - Dashboard updated successfully
+2025-07-10 07:14:57,111 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:19:57,202 - INFO - Starting analysis cycle...
+2025-07-10 07:20:00,966 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:20:04,321 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:20:08,464 - INFO - Dashboard updated successfully
+2025-07-10 07:20:08,465 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:25:08,559 - INFO - Starting analysis cycle...
+2025-07-10 07:25:12,926 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:25:23,832 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:25:28,124 - INFO - Dashboard updated successfully
+2025-07-10 07:25:28,124 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:30:28,193 - INFO - Starting analysis cycle...
+2025-07-10 07:30:32,674 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:30:36,245 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:30:40,657 - INFO - Dashboard updated successfully
+2025-07-10 07:30:40,658 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:35:40,724 - INFO - Starting analysis cycle...
+2025-07-10 07:35:44,698 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:35:48,078 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:35:52,300 - INFO - Dashboard updated successfully
+2025-07-10 07:35:52,301 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:39:22,363 - INFO - Fetching most volatile stocks...
+2025-07-10 07:39:37,591 - INFO - Found 30 volatile stocks
+2025-07-10 07:41:07,620 - INFO - Starting analysis cycle...
+2025-07-10 07:41:10,818 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:41:14,208 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:41:18,565 - INFO - Dashboard updated successfully
+2025-07-10 07:41:18,565 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:46:18,639 - INFO - Starting analysis cycle...
+2025-07-10 07:46:21,682 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:46:24,326 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:46:28,394 - INFO - Dashboard updated successfully
+2025-07-10 07:46:28,394 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:51:28,453 - INFO - Starting analysis cycle...
+2025-07-10 07:51:32,330 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:51:35,459 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:51:40,049 - INFO - Dashboard updated successfully
+2025-07-10 07:51:40,049 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 07:56:40,101 - INFO - Starting analysis cycle...
+2025-07-10 07:56:44,144 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 07:56:47,427 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 07:56:51,082 - INFO - Dashboard updated successfully
+2025-07-10 07:56:51,083 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:01:51,146 - INFO - Starting analysis cycle...
+2025-07-10 08:01:55,128 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:01:58,424 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:02:03,306 - INFO - Dashboard updated successfully
+2025-07-10 08:02:03,307 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:07:03,396 - INFO - Starting analysis cycle...
+2025-07-10 08:07:07,399 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:07:10,494 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:07:14,575 - INFO - Dashboard updated successfully
+2025-07-10 08:07:14,575 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:12:14,644 - INFO - Starting analysis cycle...
+2025-07-10 08:12:18,389 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:12:21,605 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:12:26,105 - INFO - Dashboard updated successfully
+2025-07-10 08:12:26,105 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:17:26,143 - INFO - Starting analysis cycle...
+2025-07-10 08:17:29,895 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:17:33,063 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:17:38,524 - INFO - Dashboard updated successfully
+2025-07-10 08:17:38,525 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:22:38,592 - INFO - Starting analysis cycle...
+2025-07-10 08:22:42,818 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:22:46,487 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:22:50,780 - INFO - Dashboard updated successfully
+2025-07-10 08:22:50,781 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:27:50,855 - INFO - Starting analysis cycle...
+2025-07-10 08:27:54,906 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:27:58,903 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:28:03,530 - INFO - Dashboard updated successfully
+2025-07-10 08:28:03,531 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:33:03,580 - INFO - Starting analysis cycle...
+2025-07-10 08:33:07,113 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:33:10,270 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:33:14,484 - INFO - Dashboard updated successfully
+2025-07-10 08:33:14,485 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:38:14,552 - INFO - Starting analysis cycle...
+2025-07-10 08:38:19,258 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:38:22,993 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:38:27,563 - INFO - Dashboard updated successfully
+2025-07-10 08:38:27,563 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:39:57,583 - INFO - Fetching most volatile stocks...
+2025-07-10 08:40:12,700 - INFO - Found 30 volatile stocks
+2025-07-10 08:43:42,746 - INFO - Starting analysis cycle...
+2025-07-10 08:43:46,567 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:43:49,681 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:43:54,576 - INFO - Dashboard updated successfully
+2025-07-10 08:43:54,576 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:48:54,628 - INFO - Starting analysis cycle...
+2025-07-10 08:49:01,523 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:49:05,390 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:49:09,421 - INFO - Dashboard updated successfully
+2025-07-10 08:49:09,422 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:54:09,512 - INFO - Starting analysis cycle...
+2025-07-10 08:54:13,713 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:54:16,952 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:54:21,874 - INFO - Dashboard updated successfully
+2025-07-10 08:54:21,874 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 08:59:21,925 - INFO - Starting analysis cycle...
+2025-07-10 08:59:25,539 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 08:59:28,378 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 08:59:32,486 - INFO - Dashboard updated successfully
+2025-07-10 08:59:32,486 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:04:32,545 - INFO - Starting analysis cycle...
+2025-07-10 09:04:36,694 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 09:04:40,017 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 09:04:44,505 - INFO - Dashboard updated successfully
+2025-07-10 09:04:44,505 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:09:44,556 - INFO - Starting analysis cycle...
+2025-07-10 09:09:48,598 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 09:09:51,789 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 09:09:56,206 - INFO - Dashboard updated successfully
+2025-07-10 09:09:56,206 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:14:56,265 - INFO - Starting analysis cycle...
+2025-07-10 09:15:00,099 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 09:15:03,664 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 09:15:08,326 - INFO - Dashboard updated successfully
+2025-07-10 09:15:08,326 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:20:08,402 - INFO - Starting analysis cycle...
+2025-07-10 09:20:12,929 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 09:20:16,697 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 09:20:21,510 - INFO - Dashboard updated successfully
+2025-07-10 09:20:21,511 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:25:21,581 - INFO - Starting analysis cycle...
+2025-07-10 09:25:25,980 - INFO - CRITICAL ALERT: ANET: Extreme fear detected - potential bounce
+2025-07-10 09:25:29,176 - INFO - CRITICAL ALERT: AMD: Extreme fear detected - potential bounce
+2025-07-10 09:25:34,308 - INFO - Dashboard updated successfully
+2025-07-10 09:25:34,309 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:47:32,433 - INFO - Starting analysis cycle...
+2025-07-10 09:47:49,303 - INFO - Dashboard updated successfully
+2025-07-10 09:47:49,304 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 09:47:49,304 - INFO - Fetching most volatile stocks...
+2025-07-10 09:48:28,049 - ERROR - $MMM: possibly delisted; no price data found  (period=1mo)
+2025-07-10 09:48:38,059 - ERROR - $AOS: possibly delisted; no price data found  (period=1mo)
+2025-07-10 10:06:36,205 - ERROR - $MO: possibly delisted; no price data found  (period=1mo)
+2025-07-10 10:18:50,449 - ERROR - $ADSK: possibly delisted; no price data found  (period=1mo)
+2025-07-10 10:18:58,526 - INFO - Found 30 volatile stocks
+2025-07-10 11:19:50,675 - INFO - Starting analysis cycle...
+2025-07-10 11:19:52,845 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 11:19:57,019 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 11:36:40,430 - ERROR - $AMD: possibly delisted; no price data found  (period=30d)
+2025-07-10 11:36:40,436 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 11:48:52,731 - ERROR - $ADM: possibly delisted; no price data found  (period=1d)
+2025-07-10 11:48:53,285 - INFO - Dashboard updated successfully
+2025-07-10 11:48:53,286 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 11:48:53,286 - INFO - Fetching most volatile stocks...
+2025-07-10 11:48:54,587 - ERROR - $TEMPLATE:MMM: possibly delisted; no price data found  (period=1mo) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 11:49:10,269 - INFO - Found 30 volatile stocks
+2025-07-10 12:06:32,740 - INFO - Starting analysis cycle...
+2025-07-10 12:06:33,781 - INFO - CRITICAL ALERT: BA: Extreme fear detected - potential bounce
+2025-07-10 12:20:50,435 - ERROR - $CCL: possibly delisted; no price data found  (period=30d)
+2025-07-10 12:20:50,441 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 12:20:50,970 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 12:20:51,206 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 12:20:51,646 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 12:20:51,826 - INFO - CRITICAL ALERT: CNC: Extreme fear detected - potential bounce
+2025-07-10 12:20:53,765 - INFO - CRITICAL ALERT: AAPL: Extreme fear detected - potential bounce
+2025-07-10 12:20:54,145 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 12:20:54,333 - INFO - CRITICAL ALERT: BLDR: Extreme fear detected - potential bounce
+2025-07-10 12:20:54,705 - INFO - CRITICAL ALERT: APTV: Extreme fear detected - potential bounce
+2025-07-10 12:20:55,756 - INFO - CRITICAL ALERT: CRL: Extreme fear detected - potential bounce
+2025-07-10 12:20:55,956 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 12:20:56,328 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 12:20:56,679 - INFO - CRITICAL ALERT: CF: Extreme fear detected - potential bounce
+2025-07-10 12:20:56,879 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 12:20:57,244 - INFO - CRITICAL ALERT: BAX: Extreme fear detected - potential bounce
+2025-07-10 12:36:33,369 - ERROR - $APO: possibly delisted; no price data found  (period=1d)
+2025-07-10 12:36:34,562 - INFO - Dashboard updated successfully
+2025-07-10 12:36:34,562 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 13:00:40,016 - INFO - Starting analysis cycle...
+2025-07-10 13:00:40,869 - INFO - CRITICAL ALERT: CZR: Extreme fear detected - potential bounce
+2025-07-10 13:00:42,845 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 13:06:44,895 - ERROR - $ADSK: possibly delisted; no price data found  (period=1d)
+2025-07-10 13:06:49,247 - INFO - CRITICAL ALERT: APTV: Extreme fear detected - potential bounce
+2025-07-10 13:06:50,918 - INFO - CRITICAL ALERT: CRL: Extreme fear detected - potential bounce
+2025-07-10 13:06:51,305 - INFO - CRITICAL ALERT: TSLA: Extreme fear detected - potential bounce
+2025-07-10 13:11:25,310 - ERROR - $BF-B: possibly delisted; no price data found  (period=30d)
+2025-07-10 13:11:25,314 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 13:21:50,778 - ERROR - $AVGO: possibly delisted; no price data found  (period=1d)
+2025-07-10 13:21:52,766 - INFO - CRITICAL ALERT: BAX: Extreme fear detected - potential bounce
+2025-07-10 13:21:54,184 - INFO - Dashboard updated successfully
+2025-07-10 13:21:54,185 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 13:21:54,185 - INFO - Fetching most volatile stocks...
+2025-07-10 13:21:55,008 - ERROR - $TEMPLATE:MMM: possibly delisted; no price data found  (period=1mo) (Yahoo error = "No data found, symbol may be delisted")
+2025-07-10 13:39:14,413 - ERROR - $MO: possibly delisted; no price data found  (period=1mo)
+2025-07-10 13:42:28,602 - ERROR - $BKR: possibly delisted; no price data found  (period=1mo)
+2025-07-10 13:42:35,056 - INFO - Found 30 volatile stocks
+2025-07-10 14:21:09,756 - INFO - Starting analysis cycle...
+2025-07-10 14:22:51,413 - ERROR - $APA: possibly delisted; no price data found  (period=30d)
+2025-07-10 14:22:51,416 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 14:39:20,846 - ERROR - $AMZN: possibly delisted; no price data found  (period=1d)
+2025-07-10 14:39:23,020 - INFO - CRITICAL ALERT: KMX: Extreme fear detected - potential bounce
+2025-07-10 14:45:33,932 - ERROR - $CF: possibly delisted; no price data found  (period=30d)
+2025-07-10 14:45:33,936 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 14:45:46,426 - ERROR - $CHTR: possibly delisted; no price data found  (period=1d)
+2025-07-10 14:46:11,624 - ERROR - $MSFT: possibly delisted; no price data found  (period=1d)
+2025-07-10 14:46:14,798 - INFO - Dashboard updated successfully
+2025-07-10 14:46:14,798 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 15:40:22,941 - INFO - Fetching most volatile stocks...
+2025-07-10 15:50:56,608 - ERROR - $AOS: possibly delisted; no price data found  (period=1mo)
+2025-07-10 16:08:15,332 - ERROR - $T: possibly delisted; no price data found  (period=1mo)
+2025-07-10 16:11:55,105 - ERROR - $BR: possibly delisted; no price data found  (period=1mo)
+2025-07-10 16:11:59,118 - INFO - Found 30 volatile stocks
+2025-07-10 16:11:59,118 - INFO - Starting analysis cycle...
+2025-07-10 16:11:59,619 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 16:12:00,861 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 16:12:01,122 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 16:12:01,725 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 16:24:51,352 - ERROR - $IWM: possibly delisted; no price data found  (period=30d)
+2025-07-10 16:24:51,357 - ERROR - Error calculating coherence: single positional indexer is out-of-bounds
+2025-07-10 16:24:51,676 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 16:24:53,355 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 16:24:53,796 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 16:24:54,378 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 16:24:55,943 - INFO - Dashboard updated successfully
+2025-07-10 16:24:55,943 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 16:51:49,097 - INFO - Starting analysis cycle...
+2025-07-10 16:51:50,829 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:02:24,082 - ERROR - $CCL: possibly delisted; no price data found  (period=1d)
+2025-07-10 17:02:24,836 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:02:25,241 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:02:26,040 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:02:29,196 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:02:31,733 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:02:32,319 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:02:33,134 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:02:35,244 - INFO - Dashboard updated successfully
+2025-07-10 17:02:35,244 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:07:35,293 - INFO - Starting analysis cycle...
+2025-07-10 17:07:35,954 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:07:37,308 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:07:37,522 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:07:37,898 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:07:40,634 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:07:42,838 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:07:43,330 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:07:44,067 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:07:45,870 - INFO - Dashboard updated successfully
+2025-07-10 17:07:45,871 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:12:15,902 - INFO - Fetching most volatile stocks...
+2025-07-10 17:12:31,318 - INFO - Found 30 volatile stocks
+2025-07-10 17:13:01,325 - INFO - Starting analysis cycle...
+2025-07-10 17:13:01,950 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:13:03,352 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:13:03,607 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:13:04,053 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:13:07,099 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:13:09,447 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:13:09,847 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:13:10,655 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:13:12,795 - INFO - Dashboard updated successfully
+2025-07-10 17:13:12,796 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:18:12,835 - INFO - Starting analysis cycle...
+2025-07-10 17:18:13,456 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:18:14,962 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:18:15,252 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:18:15,824 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:18:18,844 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:18:21,331 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:18:21,871 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:18:22,707 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:18:25,434 - INFO - Dashboard updated successfully
+2025-07-10 17:18:25,434 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:23:25,479 - INFO - Starting analysis cycle...
+2025-07-10 17:23:26,154 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:23:27,549 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:23:27,790 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:23:28,259 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:23:31,220 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:23:33,523 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:23:34,106 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:23:34,815 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:23:36,944 - INFO - Dashboard updated successfully
+2025-07-10 17:23:36,944 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:28:36,988 - INFO - Starting analysis cycle...
+2025-07-10 17:28:37,682 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:28:39,147 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:28:39,374 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:28:39,909 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:28:43,117 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:28:45,213 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:28:45,736 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:28:46,470 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:28:51,437 - INFO - Dashboard updated successfully
+2025-07-10 17:28:51,437 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:33:51,449 - INFO - Starting analysis cycle...
+2025-07-10 17:33:52,050 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:33:53,205 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:33:53,427 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:33:53,893 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:33:56,910 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:33:59,106 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:33:59,614 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:34:00,311 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:34:02,163 - INFO - Dashboard updated successfully
+2025-07-10 17:34:02,163 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:39:02,205 - INFO - Starting analysis cycle...
+2025-07-10 17:39:02,861 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:39:04,708 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:39:04,975 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:39:05,513 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:39:08,463 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:39:11,176 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:39:11,675 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:39:12,417 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:39:14,657 - INFO - Dashboard updated successfully
+2025-07-10 17:39:14,657 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:44:14,697 - INFO - Starting analysis cycle...
+2025-07-10 17:44:15,374 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:44:16,903 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:44:17,246 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:44:17,806 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:44:20,906 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:44:23,072 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:44:23,566 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:44:24,360 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:44:26,320 - INFO - Dashboard updated successfully
+2025-07-10 17:44:26,320 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:49:26,355 - INFO - Starting analysis cycle...
+2025-07-10 17:49:27,103 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:49:28,417 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:49:28,695 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:49:29,171 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:49:32,381 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 17:49:34,851 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 17:49:35,293 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 17:49:36,224 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 17:49:38,207 - INFO - Dashboard updated successfully
+2025-07-10 17:49:38,208 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 17:56:10,117 - INFO - Starting analysis cycle...
+2025-07-10 17:56:10,813 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 17:56:12,343 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 17:56:12,800 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 17:56:13,344 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 17:56:45,940 - ERROR - $CNC: possibly delisted; no price data found  (period=1d)
+2025-07-10 17:56:55,950 - ERROR - $NVDA: possibly delisted; no price data found  (period=1d)
+2025-07-10 18:01:01,087 - ERROR - $BG: possibly delisted; no price data found  (period=1d)
+2025-07-10 18:01:03,727 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 18:01:06,366 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 18:01:06,862 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 18:01:07,645 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 18:01:09,677 - INFO - Dashboard updated successfully
+2025-07-10 18:01:09,677 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 18:49:57,263 - INFO - Starting analysis cycle...
+2025-07-10 18:49:57,980 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-10 18:49:59,447 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-10 18:49:59,677 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-10 18:50:00,386 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-10 19:05:09,283 - ERROR - $CNC: possibly delisted; no price data found  (period=1d)
+2025-07-10 19:05:12,593 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-10 19:22:00,307 - ERROR - $ADBE: possibly delisted; no price data found  (period=1d)
+2025-07-10 19:22:01,186 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-10 19:22:01,771 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-10 19:22:02,632 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-10 19:22:04,388 - INFO - Dashboard updated successfully
+2025-07-10 19:22:04,388 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-10 19:22:04,388 - INFO - Fetching most volatile stocks...
+2025-07-11 00:18:52,366 - INFO - Fetching most volatile stocks...
+2025-07-11 00:19:02,896 - INFO - Found 30 volatile stocks
+2025-07-11 00:19:02,896 - INFO - Starting analysis cycle...
+2025-07-11 00:19:04,157 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-11 00:19:04,369 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-11 00:19:04,536 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-11 00:19:06,204 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-11 00:19:06,882 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-11 00:19:07,861 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-11 00:19:09,175 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-11 00:19:10,410 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-11 00:19:10,877 - INFO - Dashboard updated successfully
+2025-07-11 00:19:10,877 - INFO - Analysis cycle completed. Processed 41 tickers
+2025-07-11 00:22:10,917 - INFO - Market Monitor starting...
+2025-07-11 00:22:10,917 - INFO - Fetching most volatile stocks...
+2025-07-11 00:22:22,881 - INFO - Found 30 volatile stocks
+2025-07-11 00:22:22,883 - INFO - Starting analysis cycle...
+2025-07-11 00:22:23,537 - INFO - CRITICAL ALERT: ACN: Extreme fear detected - potential bounce
+2025-07-11 00:22:23,815 - INFO - CRITICAL ALERT: AXON: Extreme fear detected - potential bounce
+2025-07-11 00:22:24,054 - INFO - CRITICAL ALERT: BBY: Extreme fear detected - potential bounce
+2025-07-11 00:22:24,650 - INFO - CRITICAL ALERT: TECH: Extreme fear detected - potential bounce
+2025-07-11 00:22:26,281 - INFO - CRITICAL ALERT: CHTR: Extreme fear detected - potential bounce
+2025-07-11 00:22:26,932 - INFO - CRITICAL ALERT: AES: Extreme fear detected - potential bounce
+2025-07-11 00:22:28,783 - INFO - CRITICAL ALERT: ADSK: Extreme fear detected - potential bounce
+2025-07-11 00:22:30,801 - INFO - CRITICAL ALERT: BF-B: Extreme fear detected - potential bounce
+2025-07-11 00:22:31,576 - INFO - Dashboard updated successfully
+2025-07-11 00:22:31,577 - INFO - Analysis cycle completed. Processed 41 tickers

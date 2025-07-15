@@ -1,0 +1,26 @@
+[
+  {
+    "id": "json_1",
+    "timestamp": "2024-01-07T12:00:00Z",
+    "source": "Reuters",
+    "title": "Oil Prices Surge on Supply Concerns",
+    "body": "Crude oil prices jumped 3% today as geopolitical tensions raised concerns about supply disruptions.",
+    "tickers": [
+      "XOM",
+      "CVX",
+      "USO"
+    ]
+  },
+  {
+    "id": "json_2",
+    "timestamp": "2024-01-07T13:00:00Z",
+    "source": "WSJ",
+    "title": "Banking Sector Shows Resilience Despite Economic Headwinds",
+    "body": "Major banks reported better-than-expected earnings, demonstrating resilience in a challenging economic environment.",
+    "tickers": [
+      "JPM",
+      "BAC",
+      "WFC"
+    ]
+  }
+]
