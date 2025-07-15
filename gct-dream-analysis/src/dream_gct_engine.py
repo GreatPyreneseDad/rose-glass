@@ -41,6 +41,27 @@ class DreamSymbol:
     evolution: List[Tuple[datetime, float]]  # Track symbol coherence over time
 
 
+@dataclass
+class DreamGCTResult(GCTResult):
+    """Enhanced GCT result for dreams"""
+    dream_state: str
+    insights: List[str]
+    
+    def __init__(self, coherence: float, q_opt: float, dc_dt: float, 
+                 d2c_dt2: float, dream_state: str, components: Dict[str, float],
+                 insights: List[str]):
+        super().__init__(
+            coherence=coherence,
+            q_opt=q_opt,
+            dc_dt=dc_dt,
+            d2c_dt2=d2c_dt2,
+            sentiment="",  # Not used for dreams
+            components=components
+        )
+        self.dream_state = dream_state
+        self.insights = insights
+
+
 class DreamGCTEngine:
     """Specialized GCT engine for dream analysis"""
     
@@ -482,24 +503,3 @@ class DreamGCTEngine:
             'top_symbols': top_symbols,
             'total_dreams_analyzed': len(self.dream_history)
         }
-
-
-@dataclass
-class DreamGCTResult(GCTResult):
-    """Enhanced GCT result for dreams"""
-    dream_state: str
-    insights: List[str]
-    
-    def __init__(self, coherence: float, q_opt: float, dc_dt: float, 
-                 d2c_dt2: float, dream_state: str, components: Dict[str, float],
-                 insights: List[str]):
-        super().__init__(
-            coherence=coherence,
-            q_opt=q_opt,
-            dc_dt=dc_dt,
-            d2c_dt2=d2c_dt2,
-            sentiment="",  # Not used for dreams
-            components=components
-        )
-        self.dream_state = dream_state
-        self.insights = insights

@@ -1,0 +1,53 @@
+GCT MARKET COHERENCE REPORT
+Generated: 2025-01-10
+==========================
+
+TOP COHERENCE SIGNALS:
+
+1. NVIDIA (NVDA) - STRONGEST SIGNAL
+   - Coherence Score: 0.502 (HIGH)
+   - Trend Strength: +5.66% (BULLISH)
+   - Price: $162.88
+   - Analysis: Strong building coherence with high clarity (ψ=0.566) and emotion (q=0.613)
+   - Signal: BULLISH - Strong unified movement upward
+
+2. APPLE (AAPL) - MODERATE COHERENCE
+   - Coherence Score: 0.392
+   - Trend Strength: +4.04% (BULLISH)
+   - Price: $211.14
+   - Analysis: Good clarity with balanced wisdom factor
+   - Signal: MODERATE BULLISH
+
+3. NASDAQ ETF (QQQ) - STABLE
+   - Coherence Score: 0.369
+   - Trend Strength: +2.32%
+   - Price: $556.25
+   - Analysis: High wisdom (ρ=0.609) indicates market reflection
+
+4. TESLA (TSLA) - DIVERGENT PATTERN
+   - Coherence Score: 0.342
+   - Trend Strength: -4.93% (BEARISH)
+   - Price: $295.88
+   - Analysis: High volatility (55.23%) with negative trend
+   - Signal: FALLING COHERENCE - Potential breakdown
+
+KEY INSIGHTS:
+
+• Tech Sector Coherence: NVDA leading with strong coherence, while TSLA shows breakdown
+• Market Indices (SPY, QQQ): Stable with moderate coherence (~0.37)
+• Mega Tech Average: +1.07% daily change with mixed coherence signals
+
+COHERENCE INTERPRETATION:
+
+High Coherence (>0.5): NVDA shows strongest unified movement
+Moderate (0.3-0.5): Most stocks in stable range
+Low (<0.3): GOOGL approaching low coherence (0.265)
+
+RECOMMENDATIONS:
+
+1. Watch NVDA for continuation of bullish coherence pattern
+2. Monitor TSLA for potential reversal or further breakdown
+3. Market indices showing stability - no extreme signals
+
+Note: Coherence patterns are most reliable when sustained over multiple days.
+Always combine with other analysis methods before making investment decisions.

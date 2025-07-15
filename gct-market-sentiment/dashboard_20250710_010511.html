@@ -1,0 +1,205 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>GCT Market Coherence Dashboard</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f5f5f5;
+            }
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            .timestamp {
+                text-align: center;
+                color: #666;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+            .high-coherence {
+                background-color: #c8e6c9;
+            }
+            .low-coherence {
+                background-color: #ffcdd2;
+            }
+            .alerts {
+                margin-top: 30px;
+                padding: 15px;
+                background-color: #fff3cd;
+                border-left: 5px solid #ffc107;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>GCT Market Coherence Dashboard</h1>
+            <div class="timestamp">Generated: 2025-07-10 01:05:12</div>
+            
+            <img src="dashboard_20250710_010511.png" alt="Dashboard Charts">
+            
+            <h2>Coherence Data Table</h2>
+            <table>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Coherence</th>
+                    <th>ψ (Clarity)</th>
+                    <th>ρ (Wisdom)</th>
+                    <th>q (Emotion)</th>
+                    <th>f (Social)</th>
+                    <th>Trend</th>
+                    <th>Volatility</th>
+                    <th>Price</th>
+                </tr>
+    
+                <tr class="high-coherence">
+                    <td><strong>NVDA</strong></td>
+                    <td>0.502</td>
+                    <td>0.566</td>
+                    <td>0.417</td>
+                    <td>0.613</td>
+                    <td>0.426</td>
+                    <td>5.66%</td>
+                    <td>28.0%</td>
+                    <td>$162.88</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>AAPL</strong></td>
+                    <td>0.392</td>
+                    <td>0.404</td>
+                    <td>0.503</td>
+                    <td>0.163</td>
+                    <td>0.435</td>
+                    <td>4.04%</td>
+                    <td>19.8%</td>
+                    <td>$211.14</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>QQQ</strong></td>
+                    <td>0.369</td>
+                    <td>0.232</td>
+                    <td>0.609</td>
+                    <td>0.169</td>
+                    <td>0.416</td>
+                    <td>2.32%</td>
+                    <td>12.8%</td>
+                    <td>$556.25</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>SPY</strong></td>
+                    <td>0.367</td>
+                    <td>0.213</td>
+                    <td>0.657</td>
+                    <td>0.104</td>
+                    <td>0.427</td>
+                    <td>2.13%</td>
+                    <td>10.4%</td>
+                    <td>$624.06</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>MSFT</strong></td>
+                    <td>0.363</td>
+                    <td>0.205</td>
+                    <td>0.600</td>
+                    <td>0.232</td>
+                    <td>0.376</td>
+                    <td>2.05%</td>
+                    <td>13.3%</td>
+                    <td>$503.51</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>TSLA</strong></td>
+                    <td>0.342</td>
+                    <td>0.493</td>
+                    <td>0.266</td>
+                    <td>0.125</td>
+                    <td>0.446</td>
+                    <td>-4.93%</td>
+                    <td>55.2%</td>
+                    <td>$295.88</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>AMZN</strong></td>
+                    <td>0.311</td>
+                    <td>0.239</td>
+                    <td>0.455</td>
+                    <td>0.098</td>
+                    <td>0.417</td>
+                    <td>2.39%</td>
+                    <td>23.9%</td>
+                    <td>$222.54</td>
+                </tr>
+        
+                <tr class="">
+                    <td><strong>META</strong></td>
+                    <td>0.300</td>
+                    <td>0.160</td>
+                    <td>0.450</td>
+                    <td>0.189</td>
+                    <td>0.395</td>
+                    <td>1.60%</td>
+                    <td>24.4%</td>
+                    <td>$732.78</td>
+                </tr>
+        
+                <tr class="low-coherence">
+                    <td><strong>GOOGL</strong></td>
+                    <td>0.265</td>
+                    <td>0.149</td>
+                    <td>0.433</td>
+                    <td>0.049</td>
+                    <td>0.401</td>
+                    <td>1.49%</td>
+                    <td>26.2%</td>
+                    <td>$176.62</td>
+                </tr>
+        
+            </table>
+            
+            <div class="alerts">
+                <h3>Pattern Alerts</h3>
+                <ul>
+    <li>🟢 <strong>NVDA</strong>: Building coherence pattern detected (Score: 0.502)</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    </html>
+    
