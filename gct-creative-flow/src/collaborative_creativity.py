@@ -13,7 +13,7 @@ from scipy.spatial.distance import cosine
 from scipy.stats import pearsonr
 import itertools
 
-from creative_flow_engine import CreativeFlowEngine, CreativeState, CreativeMetrics
+from .creative_flow_engine import CreativeFlowEngine, CreativeState, CreativeMetrics
 
 
 @dataclass
