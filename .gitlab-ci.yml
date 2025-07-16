@@ -1,0 +1,40 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  NODE_ENV: test
+
+before_script:
+  - echo "Node version: $(node --version)"
+  - echo "Python version: $(python --version)"
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+
+# Install dependencies and run unit tests
+# Node tests run in soulmath-moderation-system
+# Python tests rely on requirements from submodules
+# Consider caching in a real project to speed up installs
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - cd soulmath-moderation-system && npm ci && CI=true npm test --silent && cd ..
+    - pip install -r gct-market-sentiment/requirements.txt
+    - pip install -r gct-dream-analysis/requirements.txt
+    - pip install -r gct-learning-path/requirements.txt
+    - pip install -r gct-creative-flow/requirements.txt
+    - pip install -r soulmath-fear-elevation/requirements.txt
+    - pytest -q
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying..."
+  only:
+    - main
