@@ -62,9 +62,11 @@ interactive Swagger documentation or `/openapi.json` for the raw specification.
 
 Automated GitHub Actions run on each commit to lint, format, audit, and test both
 projects. A second workflow builds and publishes Docker images to GitHub Container
-Registry so deployments stay reproducible. Dockerfiles are provided so each
-service can be run locally using `docker-compose up`. This launches the market
-sentiment dashboard on port `8501` and the moderation dashboard on port `3000`.
+Registry so deployments stay reproducible. For GitLab users, a `.gitlab-ci.yml`
+pipeline is also provided to mirror these steps. Dockerfiles are available so
+each service can be run locally using `docker-compose up`. This launches the
+market sentiment dashboard on port `8501` and the moderation dashboard on port
+`3000`.
 
 ## 🤝 Contributing
 
