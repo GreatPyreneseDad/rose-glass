@@ -9,13 +9,29 @@ app = FastAPI()
 @app.post("/generate-playlist")
 def generate_playlist(request: dict):
     """Return a coherent playlist based on the request parameters."""
-    # 1. Load user profile (placeholder)
-    user_profile = {}
+    track_ids = request.get("track_ids", [])
+    length = int(request.get("length", len(track_ids) or 0))
+    user_profile = request.get("user_profile", {})
 
     pipeline = DataPipeline(source_config={})
-    extractor = FeatureExtractor(audio_model=None, nlp_model=None)
+    extractor = FeatureExtractor()
     gct_model = GCTModel()
     optimizer = PlaylistOptimizer(gct_model, user_profile)
 
-    # TODO: fetch data, compute features, and build playlist
-    raise NotImplementedError
+    if not track_ids:
+        return {"playlist": [], "transition_scores": {}}
+
+    metadata = pipeline.fetch_audio_metadata(track_ids)
+    lyrics = pipeline.fetch_lyrics(track_ids)
+
+    audio_features = extractor.extract_audio_features(metadata)
+    lyric_features = extractor.extract_lyric_embeddings(lyrics)
+    features = audio_features.join(lyric_features, how="outer").fillna(0)
+
+    optimizer.set_features(features)
+
+    seed = track_ids[0]
+    playlist = optimizer.build_playlist(seed_track=seed, length=length)
+    scores = optimizer.score_transitions([(playlist[i], playlist[i + 1]) for i in range(len(playlist) - 1)])
+
+    return {"playlist": playlist, "transition_scores": scores}

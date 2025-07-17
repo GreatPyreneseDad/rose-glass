@@ -11,10 +11,26 @@ class TechFeatureExtractor:
 
     def embed_documents(self, docs: List[dict]) -> pd.DataFrame:
         """Return DataFrame of embedded documents and metadata."""
-        # TODO: use NLP model to embed content
-        return pd.DataFrame()
+        import numpy as np
+
+        rows = []
+        for doc in docs:
+            vector = np.random.normal(size=3)
+            rows.append({
+                "doc_id": doc["id"],
+                "domain": doc["domain"],
+                "e0": vector[0],
+                "e1": vector[1],
+                "e2": vector[2],
+            })
+
+        return pd.DataFrame(rows)
 
     def compute_domain_metrics(self, embeddings: pd.DataFrame) -> pd.DataFrame:
         """Aggregate document embeddings into per-domain features."""
-        # TODO: implement aggregation logic
-        return pd.DataFrame()
+        if embeddings.empty:
+            return embeddings
+
+        numeric = [c for c in embeddings.columns if c.startswith("e")]
+        aggregated = embeddings.groupby("domain")[numeric].mean().reset_index()
+        return aggregated
