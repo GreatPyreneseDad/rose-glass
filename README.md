@@ -16,7 +16,10 @@ A financial market sentiment engine that applies GCT to detect coherence shifts 
 
 [Full Documentation →](./gct-market-sentiment/README.md)
 
-### 2. [SoulMath Moderation System](./soulmath-moderation-system/)
+### 2. [GCT Stock Sentiment Analyzer](./gct-stock-analyzer/)
+A standalone script that evaluates a single stock and stores historical data to CSV for coherence-based sentiment metrics.
+
+### 3. [SoulMath Moderation System](./soulmath-moderation-system/)
 A Reddit content moderation system using GCT to analyze discourse quality and identify toxic behavior patterns.
 
 **Key Features:**
@@ -24,6 +27,9 @@ A Reddit content moderation system using GCT to analyze discourse quality and id
 - Coherence-based toxicity detection
 - Community discourse health metrics
 - React-based moderation dashboard
+
+### 4. [GCT Login Service](./gct-login-service/)
+A lightweight Express server that exposes a login page with links for Google and Apple authentication. It records crash logs under `gct-login-service/logs/`.
 
 ## 📚 Theory Documentation
 

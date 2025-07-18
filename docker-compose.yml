@@ -8,3 +8,7 @@ services:
     build: ./soulmath-moderation-system
     ports:
       - "3000:3000"
+  login:
+    build: ./gct-login-service
+    ports:
+      - "4000:4000"
