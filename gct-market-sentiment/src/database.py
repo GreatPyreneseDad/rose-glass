@@ -6,9 +6,13 @@ import sqlite3
 import json
 import os
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from contextlib import contextmanager
 import pandas as pd
+import time
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class GCTDatabase:
@@ -21,14 +25,34 @@ class GCTDatabase:
         self.init_database()
 
     @contextmanager
-    def get_connection(self):
-        """Context manager for database connections"""
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
-        try:
-            yield conn
-        finally:
-            conn.close()
+    def get_connection(self, max_retries: int = 3, retry_delay: float = 0.5):
+        """Context manager for database connections with retry logic"""
+        conn = None
+        for attempt in range(max_retries):
+            try:
+                conn = sqlite3.connect(self.db_path, timeout=30.0)
+                conn.row_factory = sqlite3.Row
+                # Enable WAL mode for better concurrency
+                conn.execute("PRAGMA journal_mode=WAL")
+                conn.execute("PRAGMA busy_timeout=5000")
+                yield conn
+                conn.commit()
+                break
+            except sqlite3.OperationalError as e:
+                if attempt < max_retries - 1:
+                    logger.warning(f"Database connection attempt {attempt + 1} failed: {e}")
+                    time.sleep(retry_delay * (attempt + 1))
+                else:
+                    logger.error(f"Failed to connect to database after {max_retries} attempts: {e}")
+                    raise
+            except Exception as e:
+                logger.error(f"Database error: {e}")
+                if conn:
+                    conn.rollback()
+                raise
+            finally:
+                if conn:
+                    conn.close()
 
     def init_database(self):
         """Initialize database schema"""
@@ -88,44 +112,124 @@ class GCTDatabase:
             """
             )
 
-            # Create indexes
+            # Create comprehensive indexes for better performance
+            
+            # News Articles indexes
             cursor.execute(
-                "CREATE INDEX IF NOT EXISTS idx_articles_timestamp ON NewsArticles(timestamp)"
+                "CREATE INDEX IF NOT EXISTS idx_articles_timestamp ON NewsArticles(timestamp DESC)"
             )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_articles_source_timestamp ON NewsArticles(source, timestamp DESC)"
+            )
+            
+            # GCT Scores indexes
             cursor.execute(
                 "CREATE INDEX IF NOT EXISTS idx_gct_article ON GCTScores(article_id)"
             )
             cursor.execute(
-                "CREATE INDEX IF NOT EXISTS idx_ticker_time ON TickerTimeline(ticker, timestamp)"
+                "CREATE INDEX IF NOT EXISTS idx_gct_timestamp ON GCTScores(timestamp DESC)"
             )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_gct_sentiment ON GCTScores(sentiment, timestamp DESC)"
+            )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_gct_coherence ON GCTScores(coherence DESC, timestamp DESC)"
+            )
+            
+            # Ticker Timeline indexes
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_ticker_time ON TickerTimeline(ticker, timestamp DESC)"
+            )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_ticker_sentiment_time ON TickerTimeline(ticker, sentiment, timestamp DESC)"
+            )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_ticker_coherence ON TickerTimeline(ticker, coherence DESC)"
+            )
+            
+            # Create summary statistics table for fast aggregations
+            cursor.execute(
+                """
+                CREATE TABLE IF NOT EXISTS TickerSummaryCache (
+                    ticker TEXT,
+                    period TEXT,  -- '1h', '24h', '7d'
+                    avg_coherence REAL,
+                    max_coherence REAL,
+                    min_coherence REAL,
+                    std_coherence REAL,
+                    avg_dc_dt REAL,
+                    bullish_count INTEGER,
+                    bearish_count INTEGER,
+                    neutral_count INTEGER,
+                    total_articles INTEGER,
+                    last_updated TIMESTAMP,
+                    PRIMARY KEY (ticker, period)
+                )
+                """
+            )
+            
+            # Create query performance tracking table
+            cursor.execute(
+                """
+                CREATE TABLE IF NOT EXISTS QueryPerformance (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    query_type TEXT,
+                    execution_time_ms REAL,
+                    rows_returned INTEGER,
+                    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+                """
+            )
+            
+            # Enable query optimizer
+            cursor.execute("PRAGMA optimize")
+            cursor.execute("PRAGMA analysis_limit=1000")
+            cursor.execute("ANALYZE")
 
             conn.commit()
 
     def insert_article(self, article: Dict) -> None:
-        """Insert a news article"""
-        with self.get_connection() as conn:
-            cursor = conn.cursor()
+        """Insert a news article with validation and error handling"""
+        # Validate required fields
+        required_fields = ['id', 'timestamp', 'source', 'title', 'body']
+        for field in required_fields:
+            if field not in article:
+                raise ValueError(f"Missing required field: {field}")
+        
+        # Validate data types
+        if not isinstance(article.get('timestamp'), (str, datetime)):
+            raise TypeError("timestamp must be string or datetime")
+            
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
 
-            tickers_json = json.dumps(article.get("tickers", []))
+                tickers_json = json.dumps(article.get("tickers", []))
 
-            cursor.execute(
-                """
-                INSERT OR REPLACE INTO NewsArticles 
-                (id, timestamp, source, title, body, tickers, raw_data)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            """,
-                (
-                    article["id"],
-                    article["timestamp"],
-                    article["source"],
-                    article["title"],
-                    article["body"],
-                    tickers_json,
-                    json.dumps(article),
-                ),
-            )
-
-            conn.commit()
+                cursor.execute(
+                    """
+                    INSERT OR REPLACE INTO NewsArticles 
+                    (id, timestamp, source, title, body, tickers, raw_data)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                    (
+                        article["id"],
+                        article["timestamp"],
+                        article["source"],
+                        article["title"],
+                        article["body"],
+                        tickers_json,
+                        json.dumps(article),
+                    ),
+                )
+                logger.info(f"Successfully inserted article: {article['id']}")
+                
+        except sqlite3.IntegrityError as e:
+            logger.warning(f"Article {article['id']} already exists or constraint violation: {e}")
+            raise
+        except Exception as e:
+            logger.error(f"Failed to insert article {article.get('id', 'unknown')}: {e}")
+            raise
 
     def insert_gct_score(self, score_data: Dict) -> None:
         """Insert GCT analysis results"""
@@ -236,22 +340,112 @@ class GCTDatabase:
             return articles
 
     def get_ticker_timeline(self, ticker: str, hours: int = 24) -> pd.DataFrame:
-        """Get timeline data for a specific ticker"""
+        """Get timeline data for a specific ticker with caching"""
+        import time
+        start_time = time.time()
+        
+        # Check cache first
+        cache_key = f"{ticker}_{hours}h"
+        cache_result = self._check_summary_cache(ticker, f"{hours}h")
+        
+        if cache_result and self._is_cache_fresh(cache_result, minutes=5):
+            logger.info(f"Cache hit for {cache_key}")
+            return cache_result
+        
         with self.get_connection() as conn:
             query = """
                 SELECT * FROM TickerTimeline 
                 WHERE ticker = ? 
-                AND timestamp > datetime('now', '-{} hours')
-                ORDER BY timestamp
-            """.format(
-                hours
-            )
+                AND timestamp > datetime('now', '-' || ? || ' hours')
+                ORDER BY timestamp DESC
+            """
 
-            df = pd.read_sql_query(query, conn, params=(ticker,))
+            df = pd.read_sql_query(query, conn, params=(ticker, str(hours)))
             if not df.empty:
                 df["timestamp"] = pd.to_datetime(df["timestamp"])
+                
+                # Update cache
+                self._update_summary_cache(ticker, f"{hours}h", df)
+            
+            # Log query performance
+            execution_time = (time.time() - start_time) * 1000
+            self._log_query_performance("get_ticker_timeline", execution_time, len(df))
 
             return df
+    
+    def get_ticker_timeline_optimized(self, ticker: str, period: str = "24h") -> pd.DataFrame:
+        """Optimized ticker timeline query using summary cache"""
+        with self.get_connection() as conn:
+            # First try to get from cache
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT * FROM TickerSummaryCache
+                WHERE ticker = ? AND period = ?
+                AND last_updated > datetime('now', '-5 minutes')
+                """,
+                (ticker, period)
+            )
+            
+            cache_result = cursor.fetchone()
+            if cache_result:
+                # Return cached summary
+                return pd.DataFrame([dict(cache_result)])
+            
+            # If not in cache, compute and store
+            hours = self._parse_period(period)
+            
+            query = """
+                WITH TickerStats AS (
+                    SELECT 
+                        ticker,
+                        AVG(coherence) as avg_coherence,
+                        MAX(coherence) as max_coherence,
+                        MIN(coherence) as min_coherence,
+                        AVG(dc_dt) as avg_dc_dt,
+                        COUNT(CASE WHEN sentiment = 'bullish' THEN 1 END) as bullish_count,
+                        COUNT(CASE WHEN sentiment = 'bearish' THEN 1 END) as bearish_count,
+                        COUNT(CASE WHEN sentiment = 'neutral' THEN 1 END) as neutral_count,
+                        COUNT(*) as total_articles,
+                        MAX(timestamp) as last_update
+                    FROM TickerTimeline
+                    WHERE ticker = ?
+                    AND timestamp > datetime('now', '-' || ? || ' hours')
+                )
+                SELECT * FROM TickerStats
+            """
+            
+            df = pd.read_sql_query(query, conn, params=(ticker, str(hours)))
+            
+            if not df.empty:
+                # Update cache
+                self._update_cache_table(ticker, period, df.iloc[0].to_dict())
+            
+            return df
+    
+    def _parse_period(self, period: str) -> int:
+        """Parse period string to hours"""
+        if period.endswith('h'):
+            return int(period[:-1])
+        elif period.endswith('d'):
+            return int(period[:-1]) * 24
+        else:
+            return 24  # default to 24 hours
+    
+    def _log_query_performance(self, query_type: str, execution_time_ms: float, rows: int):
+        """Log query performance metrics"""
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute(
+                    """
+                    INSERT INTO QueryPerformance (query_type, execution_time_ms, rows_returned)
+                    VALUES (?, ?, ?)
+                    """,
+                    (query_type, execution_time_ms, rows)
+                )
+        except Exception as e:
+            logger.warning(f"Failed to log query performance: {e}")
 
     def get_top_movers(self, sentiment: str = "bullish", limit: int = 10) -> List[Dict]:
         """Get top bullish or bearish tickers"""
@@ -322,3 +516,93 @@ class GCTDatabase:
             )
 
             return dict(cursor.fetchone())
+    
+    def _check_summary_cache(self, ticker: str, period: str) -> Optional[pd.DataFrame]:
+        """Check if summary cache exists and is fresh"""
+        try:
+            with self.get_connection() as conn:
+                query = """
+                    SELECT * FROM TickerSummaryCache
+                    WHERE ticker = ? AND period = ?
+                    AND last_updated > datetime('now', '-5 minutes')
+                """
+                df = pd.read_sql_query(query, conn, params=(ticker, period))
+                return df if not df.empty else None
+        except:
+            return None
+    
+    def _is_cache_fresh(self, cache_data: Any, minutes: int = 5) -> bool:
+        """Check if cache data is fresh"""
+        if isinstance(cache_data, pd.DataFrame) and not cache_data.empty:
+            if 'last_updated' in cache_data.columns:
+                last_updated = pd.to_datetime(cache_data['last_updated'].iloc[0])
+                return (datetime.now() - last_updated).total_seconds() < minutes * 60
+        return False
+    
+    def _update_summary_cache(self, ticker: str, period: str, df: pd.DataFrame):
+        """Update summary cache with computed statistics"""
+        if df.empty:
+            return
+            
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                
+                # Compute statistics
+                stats = {
+                    'ticker': ticker,
+                    'period': period,
+                    'avg_coherence': df['coherence'].mean() if 'coherence' in df else 0,
+                    'max_coherence': df['coherence'].max() if 'coherence' in df else 0,
+                    'min_coherence': df['coherence'].min() if 'coherence' in df else 0,
+                    'std_coherence': df['coherence'].std() if 'coherence' in df else 0,
+                    'avg_dc_dt': df['dc_dt'].mean() if 'dc_dt' in df else 0,
+                    'bullish_count': len(df[df['sentiment'] == 'bullish']) if 'sentiment' in df else 0,
+                    'bearish_count': len(df[df['sentiment'] == 'bearish']) if 'sentiment' in df else 0,
+                    'neutral_count': len(df[df['sentiment'] == 'neutral']) if 'sentiment' in df else 0,
+                    'total_articles': len(df),
+                    'last_updated': datetime.now()
+                }
+                
+                # Insert or update cache
+                cursor.execute(
+                    """
+                    INSERT OR REPLACE INTO TickerSummaryCache
+                    (ticker, period, avg_coherence, max_coherence, min_coherence, 
+                     std_coherence, avg_dc_dt, bullish_count, bearish_count, 
+                     neutral_count, total_articles, last_updated)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    tuple(stats.values())
+                )
+        except Exception as e:
+            logger.warning(f"Failed to update summary cache: {e}")
+    
+    def _update_cache_table(self, ticker: str, period: str, stats: dict):
+        """Update cache table with pre-computed statistics"""
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute(
+                    """
+                    INSERT OR REPLACE INTO TickerSummaryCache
+                    (ticker, period, avg_coherence, max_coherence, min_coherence,
+                     std_coherence, avg_dc_dt, bullish_count, bearish_count,
+                     neutral_count, total_articles, last_updated)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+                    """,
+                    (
+                        ticker, period,
+                        stats.get('avg_coherence', 0),
+                        stats.get('max_coherence', 0),
+                        stats.get('min_coherence', 0),
+                        stats.get('std_coherence', 0),
+                        stats.get('avg_dc_dt', 0),
+                        stats.get('bullish_count', 0),
+                        stats.get('bearish_count', 0),
+                        stats.get('neutral_count', 0),
+                        stats.get('total_articles', 0)
+                    )
+                )
+        except Exception as e:
+            logger.warning(f"Failed to update cache table: {e}")

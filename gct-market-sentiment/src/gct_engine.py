@@ -3,9 +3,16 @@ GCT (Grounded Coherence Theory) Engine for Market Sentiment Analysis
 """
 
 import numpy as np
-from typing import Dict, Tuple, List
+from typing import Dict, Tuple, List, Optional
 from dataclasses import dataclass
 from datetime import datetime
+
+# Import optimized engine for batch processing
+try:
+    from .optimized_gct_engine import OptimizedGCTEngine, BatchProcessor
+    OPTIMIZED_AVAILABLE = True
+except ImportError:
+    OPTIMIZED_AVAILABLE = False
 
 
 @dataclass
@@ -48,9 +55,15 @@ class GCTResult:
 class GCTEngine:
     """Core GCT computation engine"""
 
-    def __init__(self, params: GCTParameters = None):
+    def __init__(self, params: GCTParameters = None, use_optimized: bool = True):
         self.params = params or GCTParameters()
         self.history: List[Tuple[datetime, float]] = []
+        
+        # Use optimized engine if available and requested
+        self.use_optimized = use_optimized and OPTIMIZED_AVAILABLE
+        if self.use_optimized:
+            self.optimized_engine = OptimizedGCTEngine(params)
+            self.batch_processor = BatchProcessor(self.optimized_engine)
 
     def compute_coherence(self, variables: GCTVariables) -> Tuple[float, float]:
         """
@@ -60,10 +73,22 @@ class GCTEngine:
             coherence: Overall coherence score
             q_opt: Optimized emotional charge
         """
+        # Validate inputs to prevent division by zero
+        if self.params.ki == 0:
+            raise ValueError("ki parameter cannot be zero")
+        
+        # Ensure q_raw is within valid range
+        if variables.q_raw < 0:
+            raise ValueError("q_raw must be non-negative")
+            
         # Optimize emotional charge with wisdom modulation
-        q_opt = (variables.q_raw) / (
-            self.params.km + variables.q_raw + (variables.q_raw**2) / self.params.ki
-        )
+        denominator = self.params.km + variables.q_raw + (variables.q_raw**2) / self.params.ki
+        
+        # Additional safety check
+        if denominator == 0:
+            raise ValueError("Denominator in q_opt calculation cannot be zero")
+            
+        q_opt = variables.q_raw / denominator
 
         # Component contributions
         base = variables.psi
@@ -170,6 +195,22 @@ class GCTEngine:
     def reset_history(self):
         """Reset the coherence history"""
         self.history = []
+    
+    def analyze_batch(self, variables_list: List[GCTVariables]) -> List[GCTResult]:
+        """
+        Analyze multiple data points in batch for better performance
+        """
+        if self.use_optimized:
+            return self.optimized_engine.process_batch(variables_list)
+        else:
+            # Fallback to sequential processing
+            return [self.analyze(v) for v in variables_list]
+    
+    def get_batch_processor(self) -> Optional[BatchProcessor]:
+        """Get batch processor for streaming operations"""
+        if self.use_optimized:
+            return self.batch_processor
+        return None
 
 
 class SectorGCTEngine(GCTEngine):
