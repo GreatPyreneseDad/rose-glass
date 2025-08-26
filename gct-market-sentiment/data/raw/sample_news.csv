@@ -1,3 +1,0 @@
-id,timestamp,source,title,body,tickers
-sample_1,2024-01-07T10:00:00Z,Financial Times,Tech Stocks Rally as AI Innovation Accelerates,Major technology companies saw significant gains today as investors showed renewed confidence in artificial intelligence developments. NVIDIA and Microsoft led the charge.,"[""NVDA"", ""MSFT""]"
-sample_2,2024-01-07T11:30:00Z,Bloomberg,Federal Reserve Signals Cautious Approach to Rate Changes,"The Federal Reserve indicated a data-dependent approach to future rate decisions, causing mixed reactions in equity markets.","[""SPY"", ""TLT""]"

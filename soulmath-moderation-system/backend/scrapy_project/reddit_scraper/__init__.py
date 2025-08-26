@@ -1,1 +1,0 @@
-# Reddit Scraper for SoulMath Moderation System
