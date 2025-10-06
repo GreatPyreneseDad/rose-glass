@@ -268,6 +268,7 @@ class CoherenceTemporalDynamics:
             'coherence_collapse': len(self.coherence_history) > 2 and self.coherence_history[-1] < 1.0,
             'frantic_pace': derivatives['flow_rate'] > 120,
             'message_fragmentation': rhythm['average_message_tokens'] < 10,
+            'information_overload': self.detect_information_overload(),
             'interpretation': derivatives['interpretation']
         }
         
@@ -277,6 +278,43 @@ class CoherenceTemporalDynamics:
         indicators['crisis_detected'] = crisis_count >= 2
         
         return indicators
+    
+    def detect_information_overload(self) -> bool:
+        """
+        Detect when token volume is overwhelming user
+        
+        Returns:
+            True if information overload detected
+        """
+        if len(self.reading_history) < 3:
+            return False
+            
+        # Check for sustained high assistant token output
+        recent_assistant = [
+            r for r in self.reading_history[-3:]
+            if r.speaker == 'assistant'
+        ]
+        
+        if len(recent_assistant) >= 2:
+            avg_tokens = np.mean([r.token_count for r in recent_assistant])
+            if avg_tokens > 150:  # Threshold for overload
+                # Check if coherence is declining
+                if len(self.coherence_history) >= 3:
+                    recent_coherence = self.coherence_history[-3:]
+                    if recent_coherence[-1] < recent_coherence[0]:
+                        return True
+                    
+                # Check if user messages are getting shorter (sign of overwhelm)
+                recent_user = [
+                    r for r in self.reading_history[-4:]
+                    if r.speaker == 'user'
+                ]
+                if len(recent_user) >= 2:
+                    user_token_trend = [r.token_count for r in recent_user]
+                    if user_token_trend[-1] < user_token_trend[0] * 0.5:
+                        return True
+        
+        return False
     
     def recommend_pacing_adjustment(self, current_coherence: float) -> Dict[str, any]:
         """
@@ -299,8 +337,16 @@ class CoherenceTemporalDynamics:
             'reasoning': []
         }
         
+        # Information overload response (highest priority)
+        if crisis.get('information_overload', False):
+            recommendations['adjust_pace'] = True
+            recommendations['target_flow_rate'] = 20  # Dramatic reduction
+            recommendations['message_length'] = 'minimal'
+            recommendations['pause_recommendation'] = True
+            recommendations['reasoning'].append("Information overload detected - user drowning in words")
+        
         # Crisis response
-        if crisis['crisis_detected']:
+        elif crisis['crisis_detected']:
             recommendations['adjust_pace'] = True
             recommendations['target_flow_rate'] = max(30, derivatives['flow_rate'] * 0.5)
             recommendations['message_length'] = 'shorten'

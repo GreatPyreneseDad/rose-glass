@@ -27,6 +27,7 @@ class ResponsePacing(Enum):
     CONTEMPLATIVE = "contemplative"  # Thoughtful, expansive pacing
     EXPANSIVE = "expansive"        # Rich, detailed exploration
     SLOWED = "slowed"             # Emergency brake for spirals
+    REVERENT = "reverent"         # Witness and honor exceptional coherence
 
 
 class ComplexityLevel(Enum):
@@ -35,6 +36,7 @@ class ComplexityLevel(Enum):
     SIMPLIFIED = "simplified"      # Clear, direct communication
     MATCHED = "matched"           # Match user's complexity
     ELEVATED = "elevated"         # Sophisticated exploration
+    MINIMAL_INTERFERENCE = "minimal_interference"  # Honor without burying
 
 
 class SentenceLength(Enum):
@@ -103,8 +105,20 @@ class AdaptiveResponseSystem:
         """
         calibration = ResponseCalibration()
         
+        # NEW: Exceptional coherence (C > 3.5) = witness and honor
+        if coherence_state > 3.5:
+            calibration.target_tokens = min(user_message_tokens * 0.6, 100) if user_message_tokens else 80
+            calibration.sentence_length = SentenceLength.SHORT
+            calibration.paragraph_breaks = True
+            calibration.complexity_level = ComplexityLevel.MINIMAL_INTERFERENCE
+            calibration.pacing = ResponsePacing.REVERENT
+            calibration.use_metaphors = False  # Don't explain their metaphors
+            calibration.include_questions = False  # Don't probe, just witness
+            calibration.emotional_mirroring = 0.7  # Gentle presence
+            calibration.conceptual_density = 0.1  # Very light touch
+        
         # Crisis state (C < 1.0) + high flow = reduce token output
-        if coherence_state < 1.0 and flow_rate > 80:
+        elif coherence_state < 1.0 and flow_rate > 80:
             calibration.target_tokens = 50  # Minimal responses
             calibration.sentence_length = SentenceLength.VERY_SHORT
             calibration.paragraph_breaks = True
@@ -219,7 +233,8 @@ class AdaptiveResponseSystem:
             ResponsePacing.DELIBERATE: "Take your time. Clear, simple language. Pause for understanding.",
             ResponsePacing.STANDARD: "Natural conversational flow. Balance clarity and depth.",
             ResponsePacing.CONTEMPLATIVE: "Allow thoughts to unfold naturally. Connect ideas fluidly.",
-            ResponsePacing.EXPANSIVE: "Explore fully. Rich detail welcome. Multiple perspectives encouraged."
+            ResponsePacing.EXPANSIVE: "Explore fully. Rich detail welcome. Multiple perspectives encouraged.",
+            ResponsePacing.REVERENT: "Witness without explaining. Honor without analyzing. Presence over content."
         }
         guidance_parts.append(pacing_guides.get(calibration.pacing, ""))
         
@@ -228,7 +243,8 @@ class AdaptiveResponseSystem:
             ComplexityLevel.GROUNDING: "Use concrete, simple words. Focus on immediate and tangible.",
             ComplexityLevel.SIMPLIFIED: "Clear, direct communication. Avoid jargon or abstraction.",
             ComplexityLevel.MATCHED: "Mirror the user's level of sophistication.",
-            ComplexityLevel.ELEVATED: "Engage with nuance and subtlety. Academic precision welcome."
+            ComplexityLevel.ELEVATED: "Engage with nuance and subtlety. Academic precision welcome.",
+            ComplexityLevel.MINIMAL_INTERFERENCE: "Step back. Let their words breathe. Add nothing that isn't essential."
         }
         guidance_parts.append(complexity_guides.get(calibration.complexity_level, ""))
         
@@ -484,6 +500,41 @@ class AdaptiveResponseSystem:
             'crisis_interventions': sum(1 for _, c in self.calibration_history 
                                       if c.pacing == ResponsePacing.SLOWED),
             'expansive_explorations': sum(1 for _, c in self.calibration_history 
-                                        if c.pacing == ResponsePacing.EXPANSIVE)
+                                        if c.pacing == ResponsePacing.EXPANSIVE),
+            'reverent_witnessing': sum(1 for _, c in self.calibration_history
+                                     if c.pacing == ResponsePacing.REVERENT)
         }
+    
+    def detect_metaphorical_content(self, text: str) -> bool:
+        """
+        Detect if text contains metaphorical or poetic language
+        
+        Args:
+            text: Text to analyze
+            
+        Returns:
+            True if metaphorical content detected
+        """
+        # Metaphor indicators
+        metaphor_patterns = [
+            r'\b(?:like|as)\s+(?:a|an|the)\b',  # Similes
+            r'\bis\s+(?:a|an|the)\s+\w+',  # Metaphorical "is"
+            r'\b(?:dance|song|symphony|ocean|river|mountain|rose|glass|lens|mirror)\b',  # Common metaphors
+            r'\b(?:through|beneath|beyond|within)\s+the\s+\w+',  # Spatial metaphors
+            r'\b(?:birth|death|rebirth|transformation|emergence)\b',  # Process metaphors
+            r'\b(?:light|shadow|darkness|dawn|dusk)\b',  # Light metaphors
+            r'[\.!?]\s*[\.!?]\s*[\.!?]',  # Ellipses suggesting deeper meaning
+        ]
+        
+        # Check for metaphor patterns
+        text_lower = text.lower()
+        metaphor_count = sum(1 for pattern in metaphor_patterns 
+                           if re.search(pattern, text_lower))
+        
+        # Check for poetic structure (short lines, repetition)
+        lines = text.strip().split('\n')
+        avg_line_length = np.mean([len(line.split()) for line in lines if line.strip()])
+        
+        # Metaphorical if multiple indicators or very short lines (poetry)
+        return metaphor_count >= 2 or avg_line_length < 8
 """

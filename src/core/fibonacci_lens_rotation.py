@@ -255,41 +255,60 @@ class FibonacciLensRotation:
         """
         Detect if current angle revealed new truth/insight
         
-        Truth discovery indicators:
-        - Sudden coherence jump (dC > threshold)
-        - Pattern recognition event
-        - Clarity increase in interpretation
-        - Resonance with previous discoveries
+        Multi-factor detection based on:
+        - Absolute jump magnitude
+        - Relative to baseline variance
+        - Token efficiency (high dC per token)
         """
-        # No history - can't detect jump
-        if len(self.angle_history) < 2:
+        # No history - can't detect
+        if len(self.angle_history) < 1:
             return False, None
         
-        # Check for coherence jump
-        last_coherence = self.angle_history[-2][1]
+        # Get current metrics
         current_coherence = current_reading['C']
-        coherence_jump = current_coherence - last_coherence
         
-        # Truth discovery conditions
+        # Calculate baseline variance for statistical detection
+        if len(self.angle_history) >= 5:
+            recent_coherences = [c for _, c in self.angle_history[-5:]]
+            baseline_variance = np.std(recent_coherences)
+        else:
+            baseline_variance = 0.1  # Default if not enough history
+        
+        # Check for coherence jump
+        if len(self.angle_history) >= 2:
+            last_coherence = self.angle_history[-2][1]
+            coherence_jump = current_coherence - last_coherence
+            
+            # Multi-factor detection
+            # 1. Statistical significance: jump > 3σ
+            if coherence_jump > (3 * baseline_variance) and baseline_variance > 0:
+                # 2. Check token efficiency if available
+                tokens_since_last = current_reading.get('tokens_processed', 10)
+                efficiency = coherence_jump / max(tokens_since_last, 1)
+                
+                if efficiency > 0.05:  # High coherence gain per token
+                    return True, TruthType.COHERENCE_JUMP
+            
+            # 3. Absolute threshold fallback for large jumps
+            if coherence_jump > 0.5:
+                return True, TruthType.COHERENCE_JUMP
+        
+        # Check other truth types with updated thresholds
         truth_type = None
         
-        # 1. Significant coherence jump
-        if coherence_jump > 0.3:
-            truth_type = TruthType.COHERENCE_JUMP
-        
-        # 2. Pattern recognition - high rotation gain
-        elif current_reading['rotation_gain'] > 0.5:
+        # Pattern recognition - high rotation gain relative to baseline
+        if current_reading['rotation_gain'] > 2 * baseline_variance:
             truth_type = TruthType.PATTERN_RECOGNITION
         
-        # 3. Resonance with previous truths
+        # Resonance with previous truths
         elif self.check_resonance(current_reading):
             truth_type = TruthType.RESONANCE_ALIGNMENT
         
-        # 4. Paradox resolution - opposite angles showing harmony
+        # Paradox resolution - opposite angles showing harmony
         elif self.check_paradox_resolution(current_reading):
             truth_type = TruthType.PARADOX_RESOLUTION
         
-        # 5. Emergent insight - unexplored angle with high coherence
+        # Emergent insight - unexplored angle with high coherence
         elif self.check_emergent_insight(current_reading):
             truth_type = TruthType.EMERGENT_INSIGHT
         
