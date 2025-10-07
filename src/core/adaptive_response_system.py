@@ -19,6 +19,12 @@ from dataclasses import dataclass
 from enum import Enum
 import re
 
+# Import the four critical context detectors
+from .trust_signal_detector import TrustSignalDetector, TrustSignal
+from .mission_mode_detector import MissionModeDetector, Mission
+from .token_multiplier_limiter import TokenMultiplierLimiter, TokenLimit
+from .essence_request_detector import EssenceRequestDetector, EssenceRequest
+
 
 class ResponsePacing(Enum):
     """Response pacing modes"""
@@ -28,6 +34,8 @@ class ResponsePacing(Enum):
     EXPANSIVE = "expansive"        # Rich, detailed exploration
     SLOWED = "slowed"             # Emergency brake for spirals
     REVERENT = "reverent"         # Witness and honor exceptional coherence
+    SYSTEMATIC = "systematic"      # Mission mode - thorough exploration
+    DISTILLED = "distilled"        # Essence mode - concentrated insights
 
 
 class ComplexityLevel(Enum):
@@ -85,6 +93,101 @@ class AdaptiveResponseSystem:
         """Initialize adaptive response system"""
         self.calibration_history: List[Tuple[float, ResponseCalibration]] = []
         self.response_templates = self._load_response_templates()
+        
+        # Initialize the four critical context detectors
+        self.trust_detector = TrustSignalDetector()
+        self.mission_detector = MissionModeDetector()
+        self.token_limiter = TokenMultiplierLimiter()
+        self.essence_detector = EssenceRequestDetector()
+    
+    def detect_context(self, 
+                      message: str, 
+                      coherence: float,
+                      conversation_state: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Run all context detectors on the message
+        
+        Args:
+            message: User message text
+            coherence: Current coherence value
+            conversation_state: Current conversation state
+            
+        Returns:
+            Context detection results
+        """
+        user_tokens = len(message.split())
+        
+        # Run all detectors
+        trust_signal = self.trust_detector.detect_trust_signals(
+            message, coherence, user_tokens
+        )
+        
+        mission = self.mission_detector.detect_mission(message)
+        
+        essence_request = self.essence_detector.detect_essence_request(message)
+        
+        # Build conversation state for token limiter
+        limiter_state = {
+            'crisis_detected': conversation_state.get('crisis_detected', False),
+            'information_overload': conversation_state.get('information_overload', False),
+            'trust_signal_detected': trust_signal is not None,
+            'mission_mode': mission is not None,
+            'recent_response_ratios': conversation_state.get('recent_response_ratios', [])
+        }
+        
+        token_limit = self.token_limiter.calculate_token_limit(
+            user_tokens, coherence, limiter_state
+        )
+        
+        # Determine primary context mode
+        primary_mode = self._determine_primary_mode(
+            trust_signal, mission, essence_request, coherence, conversation_state
+        )
+        
+        return {
+            'user_tokens': user_tokens,
+            'trust_signal': trust_signal,
+            'mission': mission,
+            'essence_request': essence_request,
+            'token_limit': token_limit,
+            'primary_mode': primary_mode,
+            'detections': {
+                'trust_detected': trust_signal is not None,
+                'mission_detected': mission is not None,
+                'essence_detected': essence_request is not None
+            }
+        }
+    
+    def _determine_primary_mode(self,
+                               trust_signal: Optional[TrustSignal],
+                               mission: Optional[Mission],
+                               essence_request: Optional[EssenceRequest],
+                               coherence: float,
+                               conversation_state: Dict[str, Any]) -> str:
+        """Determine which context mode takes precedence"""
+        # Priority order:
+        # 1. Crisis/Information overload (highest priority)
+        if conversation_state.get('crisis_detected') or conversation_state.get('information_overload'):
+            return 'crisis'
+        
+        # 2. Trust signal with high confidence
+        if trust_signal and self.trust_detector.should_trigger_reverent_mode(trust_signal, 'standard'):
+            return 'trust'
+        
+        # 3. Essence request (summaries are time-sensitive)
+        if essence_request and self.essence_detector.should_override_token_flow(essence_request):
+            return 'essence'
+        
+        # 4. Mission mode
+        if mission and self.mission_detector.should_override_coherence_mode(mission, coherence):
+            return 'mission'
+        
+        # 5. High coherence (C > 3.5)
+        if coherence > 3.5:
+            return 'exceptional_coherence'
+        
+        # 6. Default to coherence-based
+        return 'coherence_based'
         
     def calibrate_response_length(self,
                                   coherence_state: float,
@@ -198,6 +301,107 @@ class AdaptiveResponseSystem:
         
         return calibration
     
+    def calibrate_with_context(self,
+                              message: str,
+                              coherence: float,
+                              dC_dtokens: float,
+                              flow_rate: float,
+                              conversation_state: Dict[str, Any]) -> Tuple[ResponseCalibration, Dict[str, Any]]:
+        """
+        Enhanced calibration using context detection
+        
+        Args:
+            message: User message text
+            coherence: Current coherence value
+            dC_dtokens: Token-based derivative
+            flow_rate: Current token flow rate
+            conversation_state: Full conversation state
+            
+        Returns:
+            (calibration, context_results) tuple
+        """
+        # First, detect context
+        context = self.detect_context(message, coherence, conversation_state)
+        
+        # Start with base calibration
+        base_calibration = self.calibrate_response_length(
+            coherence, dC_dtokens, flow_rate, context['user_tokens']
+        )
+        
+        # Apply context-specific modifications based on primary mode
+        if context['primary_mode'] == 'crisis':
+            # Crisis overrides everything
+            calibration = self.get_crisis_response_kit()['calibration']
+            
+        elif context['primary_mode'] == 'trust':
+            # Trust signal calibration
+            trust_cal = self.trust_detector.get_reverent_response_calibration(
+                context['trust_signal']
+            )
+            calibration = self._merge_calibrations(base_calibration, trust_cal)
+            
+        elif context['primary_mode'] == 'essence':
+            # Essence request calibration
+            essence_cal = self.essence_detector.get_essence_response_calibration(
+                context['essence_request']
+            )
+            calibration = self._merge_calibrations(base_calibration, essence_cal)
+            
+        elif context['primary_mode'] == 'mission':
+            # Mission mode calibration
+            mission_cal = self.mission_detector.get_mission_response_calibration(
+                context['mission']
+            )
+            calibration = self._merge_calibrations(base_calibration, mission_cal)
+            
+        else:
+            # Use base calibration
+            calibration = base_calibration
+        
+        # Apply token limit from limiter
+        calibration.target_tokens = min(
+            calibration.target_tokens,
+            context['token_limit'].token_limit
+        )
+        
+        # Record calibration
+        self.calibration_history.append((coherence, calibration))
+        
+        return calibration, context
+    
+    def _merge_calibrations(self, 
+                           base: ResponseCalibration,
+                           override: Dict[str, Any]) -> ResponseCalibration:
+        """Merge calibration dictionaries"""
+        # Create new calibration from base
+        merged = ResponseCalibration(
+            target_tokens=override.get('target_tokens', base.target_tokens),
+            sentence_length=base.sentence_length,
+            paragraph_breaks=override.get('paragraph_breaks', base.paragraph_breaks),
+            complexity_level=base.complexity_level,
+            pacing=base.pacing,
+            use_metaphors=override.get('use_metaphors', base.use_metaphors),
+            include_questions=override.get('include_questions', base.include_questions),
+            emotional_mirroring=override.get('emotional_mirroring', base.emotional_mirroring),
+            conceptual_density=override.get('conceptual_density', base.conceptual_density)
+        )
+        
+        # Handle special pacing modes
+        if override.get('pacing') == 'SYSTEMATIC':
+            merged.pacing = ResponsePacing.SYSTEMATIC
+        elif override.get('pacing') == 'DISTILLED':
+            merged.pacing = ResponsePacing.DISTILLED
+        elif override.get('pacing') == 'REVERENT':
+            merged.pacing = ResponsePacing.REVERENT
+            
+        # Handle special complexity
+        if override.get('complexity') == 'MINIMAL_INTERFERENCE':
+            merged.complexity_level = ComplexityLevel.MINIMAL_INTERFERENCE
+        elif override.get('complexity') == 'SIMPLIFIED':
+            merged.complexity_level = ComplexityLevel.SIMPLIFIED
+            
+        return merged
+    
     def _adapt_to_user_length(self, 
                              calibration: ResponseCalibration,
                              user_tokens: int):
@@ -234,7 +438,9 @@ class AdaptiveResponseSystem:
             ResponsePacing.STANDARD: "Natural conversational flow. Balance clarity and depth.",
             ResponsePacing.CONTEMPLATIVE: "Allow thoughts to unfold naturally. Connect ideas fluidly.",
             ResponsePacing.EXPANSIVE: "Explore fully. Rich detail welcome. Multiple perspectives encouraged.",
-            ResponsePacing.REVERENT: "Witness without explaining. Honor without analyzing. Presence over content."
+            ResponsePacing.REVERENT: "Witness without explaining. Honor without analyzing. Presence over content.",
+            ResponsePacing.SYSTEMATIC: "Structured exploration. Step by step. Complete coverage.",
+            ResponsePacing.DISTILLED: "Essential insights only. Maximum compression. Core wisdom."
         }
         guidance_parts.append(pacing_guides.get(calibration.pacing, ""))
         

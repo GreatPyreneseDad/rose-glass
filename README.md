@@ -213,6 +213,20 @@ It represents a fundamental shift from measuring human expression to translating
 ### ❌ "Western academic style scores highest"
 ✅ Different lenses reveal different patterns - none are superior
 
+## Recent Enhancements
+
+### Context Detection System (October 2025)
+Four critical context detectors now resolve the ~10% of cases where coherence alone is insufficient:
+- **TrustSignalDetector**: Detects brief high-trust messages requiring reverent response
+- **MissionModeDetector**: Identifies research/analysis tasks needing systematic exploration
+- **TokenMultiplierLimiter**: Enforces safe response ratios (never > 3x user input)
+- **EssenceRequestDetector**: Recognizes summary requests requiring distilled insights
+
+See `CONTEXT_DETECTION_GUIDE.md` for complete documentation.
+
+### d/tokens Paradigm (October 2025)
+The framework now implements token-based derivatives (`dC/d(tokens)`) alongside traditional time derivatives, based on the insight that "Time = Token Flow Rate" in conversational dynamics. See `VALIDATION_ENHANCEMENTS.md` for details on improvements based on real conversation analysis.
+
 ## Future Directions
 
 - **More cultural calibrations** through community collaboration
