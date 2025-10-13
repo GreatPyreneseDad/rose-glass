@@ -12,3 +12,19 @@ __pycache__/
 .vscode/
 .idea/data/
 data/
+
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+virtualenv/
+**/venv/
+**/env/
+
+# Python specific
+*.egg-info/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
