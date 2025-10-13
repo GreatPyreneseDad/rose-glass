@@ -227,6 +227,9 @@ See `CONTEXT_DETECTION_GUIDE.md` for complete documentation.
 ### d/tokens Paradigm (October 2025)
 The framework now implements token-based derivatives (`dC/d(tokens)`) alongside traditional time derivatives, based on the insight that "Time = Token Flow Rate" in conversational dynamics. See `VALIDATION_ENHANCEMENTS.md` for details on improvements based on real conversation analysis.
 
+### Perceptual Framework Integration (October 2025)
+A comprehensive proposal for integrating Rose Glass perceptual capabilities into Claude's architecture, enabling synthetic intelligence to perceive emotional, social, and wisdom dimensions through intuitive pattern recognition rather than explicit calculation. See `docs/PERCEPTUAL_FRAMEWORK_INTEGRATION.md` for the full integration roadmap.
+
 ## Future Directions
 
 - **More cultural calibrations** through community collaboration
