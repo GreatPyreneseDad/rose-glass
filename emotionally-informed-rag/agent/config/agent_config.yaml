@@ -1,0 +1,42 @@
+agent:
+  name: "emotional-rag-agent"
+  version: "1.0.0"
+
+rose_glass:
+  default_lens: "modern_digital"
+  dimensions:
+    psi: "internal_consistency"
+    rho: "wisdom_depth"
+    q: "emotional_activation"
+    f: "social_belonging"
+    tau: "temporal_depth"
+
+retrieval:
+  qdrant_host: "localhost"
+  qdrant_port: 6333
+  elasticsearch_host: "localhost"
+  elasticsearch_port: 9200
+  hybrid_alpha: 0.7  # Vector weight in hybrid search
+  top_k: 10
+
+generation:
+  provider: "anthropic"  # or "ollama" for local
+  model: "claude-sonnet-4-20250514"
+  max_tokens: 4096
+  token_multiplier_limit: 3.0
+  # For Ollama:
+  # provider: "ollama"
+  # model: "mistral"
+  # base_url: "http://localhost:11434"
+
+monitoring:
+  gradient_tracking: true
+  escalation_threshold: 0.7
+  log_level: "INFO"
+  metrics_enabled: true
+
+cache:
+  enabled: true
+  redis_host: "localhost"
+  redis_port: 6379
+  ttl: 3600  # 1 hour
