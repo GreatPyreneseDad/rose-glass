@@ -148,6 +148,54 @@ Every interpretation includes:
 ## Usage Examples
 
 ### 1. Academic Text Analysis
+
+## Production Applications
+
+### Emotionally-Informed RAG Agent
+
+A complete Retrieval-Augmented Generation system built on Rose Glass, providing trauma-informed AI assistance for legal practice and crisis response.
+
+**Location:** [`/emotionally-informed-rag`](./emotionally-informed-rag/)
+
+**Features:**
+- 🔍 **Hybrid Search** - Qdrant vector + Elasticsearch keyword + RRF fusion
+- 🌹 **Rose Glass Integration** - Emotional signature analysis (Ψ, ρ, q, f, τ)
+- ⚖️ **Real-Time Litigation Support** - Contradiction detection, coherence tracking, cross-examination prompts
+- 🖥️ **Claude Desktop Integration** - MCP servers for seamless AI assistance
+- 📚 **2,600+ Documents** - Production legal document collection
+- 🛡️ **Trauma-Informed** - Context-aware responses adapting to emotional activation
+
+**Quick Start:**
+```bash
+cd emotionally-informed-rag
+python3 standalone_demo.py  # Zero-setup demo
+```
+
+**Status:** ✅ Production-ready, actively used in legal practice
+
+See [`emotionally-informed-rag/README.md`](./emotionally-informed-rag/README.md) for complete documentation.
+
+---
+
+### Real-Time Litigation Support
+
+Live courtroom intelligence combining transcription, Rose Glass analysis, and contradiction detection.
+
+**Location:** [`/src/litigation`](./src/litigation/) | **Docs:** [`/docs/REALTIME_LITIGATION_BUILD_GUIDE.md`](./docs/REALTIME_LITIGATION_BUILD_GUIDE.md)
+
+**Features:**
+- 🎤 **Live Transcription** - Whisper (local) or Deepgram (cloud)
+- 🔴 **Real-Time Analysis** - Per-utterance coherence tracking
+- ⚠️ **Contradiction Detection** - Automatic flagging with severity scoring
+- 💬 **Cross-Exam Generator** - Auto-generated impeachment questions
+- 📊 **Coherence Dashboard** - Live witness credibility tracking
+
+**Integration:** Available as MCP tools in Claude Desktop (see emotionally-informed-rag)
+
+**Status:** 🚧 Core engine complete, streaming UI in development
+
+---
+
 ```python
 # High wisdom, low emotion - typical academic pattern
 result = glass.translate_patterns(psi=0.9, rho=0.95, q=0.2, f=0.3)
