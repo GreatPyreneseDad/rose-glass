@@ -187,7 +187,7 @@ class RoseGlassV2:
     Embraces uncertainty, multiplicity, and cultural diversity.
     """
     
-    def __init__(self):
+    def __init__(self, invariance_threshold: float = 0.1):
         # Multiple pre-configured calibrations
         self.calibrations = {
             'medieval_islamic': CulturalCalibration.create_medieval_islamic(),
@@ -195,12 +195,15 @@ class RoseGlassV2:
             'digital_native': CulturalCalibration.create_digital_native(),
             'buddhist_contemplative': CulturalCalibration.create_buddhist_contemplative()
         }
-        
+
         # No default lens - must be explicitly chosen
         self.active_calibration = None
-        
+
         # Translation history (ephemeral, not stored)
         self.session_translations = []
+
+        # Truth invariance threshold for Fibonacci reset triggers
+        self.invariance_threshold = invariance_threshold
         
     def add_custom_calibration(self, calibration: CulturalCalibration):
         """Add a new cultural calibration developed with that community"""
@@ -412,6 +415,74 @@ expresses through spaciousness rather than accumulation."""
         """Clear all session data - privacy by design"""
         self.session_translations = []
         self.active_calibration = None
+
+    def calculate_lens_deviation(
+        self,
+        psi: float,
+        rho: float,
+        q: float,
+        f: float
+    ) -> float:
+        """
+        Calculate standard deviation of coherence across all cultural lenses.
+
+        Low deviation (σ_lens → 0) indicates lens-invariant truth:
+        the pattern reads the same across all cultural contexts.
+
+        High deviation (σ_lens → high) indicates context-dependence:
+        the pattern is interpreted differently by different cultures.
+
+        This implements the Veritas distortion index D(P) from Jade structure theory.
+
+        Args:
+            psi, rho, q, f: GCT variables
+
+        Returns:
+            Standard deviation of coherence values across all lenses
+        """
+        # Get coherence through all lenses
+        lens_results = self.compare_lenses(psi, rho, q, f)
+        coherences = [v.coherence_construction for v in lens_results.values()]
+
+        # Calculate standard deviation
+        if len(coherences) < 2:
+            return 0.0
+
+        mean_coherence = sum(coherences) / len(coherences)
+        variance = sum((c - mean_coherence) ** 2 for c in coherences) / len(coherences)
+        std_dev = variance ** 0.5
+
+        return std_dev
+
+    def should_reset_fibonacci(
+        self,
+        psi: float,
+        rho: float,
+        q: float,
+        f: float
+    ) -> Tuple[bool, float]:
+        """
+        Determine if Fibonacci sequence should reset based on lens-invariant truth detection.
+
+        Resets when lens deviation collapses to near-zero, indicating that
+        all cultural lenses agree on the coherence interpretation.
+        This signals translation-invariant truth - a Jade structure.
+
+        The Fibonacci spiral follows epistemological confidence, not just pattern detection.
+        Low distortion = truth stabilizes across frames = new origin point.
+
+        Args:
+            psi, rho, q, f: GCT variables
+
+        Returns:
+            Tuple of (should_reset: bool, lens_deviation: float)
+        """
+        lens_deviation = self.calculate_lens_deviation(psi, rho, q, f)
+
+        # If deviation below threshold, all lenses agree -> universal truth -> RESET
+        should_reset = lens_deviation < self.invariance_threshold
+
+        return should_reset, lens_deviation
 
 
 def demonstrate_pure_translation():

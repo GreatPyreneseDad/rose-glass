@@ -28,6 +28,7 @@ class TruthType(Enum):
     RESONANCE_ALIGNMENT = "resonance_alignment"
     PARADOX_RESOLUTION = "paradox_resolution"
     EMERGENT_INSIGHT = "emergent_insight"
+    LENS_INVARIANT = "lens_invariant"  # Universal truth across all cultural contexts
 
 
 @dataclass
@@ -49,12 +50,13 @@ class FibonacciLensRotation:
     Rotates rose glass viewing angles until truth becomes visible
     """
     
-    def __init__(self, initial_angle: float = 0.0):
+    def __init__(self, initial_angle: float = 0.0, rose_glass=None):
         """
         Initialize Fibonacci lens rotation system
-        
+
         Args:
             initial_angle: Starting angle in degrees (0-360)
+            rose_glass: Optional RoseGlassV2 instance for lens deviation calculation
         """
         # Extended Fibonacci sequence for deeper exploration
         self.fibonacci_sequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
@@ -63,10 +65,13 @@ class FibonacciLensRotation:
         self.truth_discoveries: List[TruthDiscovery] = []
         self.base_angle = initial_angle
         self.current_angle = initial_angle
-        
+
         # Track exploration history
         self.angle_history: List[Tuple[float, float]] = []  # (angle, coherence)
         self.exploration_map: Dict[int, List[float]] = {}  # angle_sector -> coherence_readings
+
+        # Rose Glass for cross-contextual truth detection
+        self.rose_glass = rose_glass
         
     def rotate_lens_angle(self, 
                          current_coherence: float,
@@ -254,16 +259,34 @@ class FibonacciLensRotation:
                               history: List[TruthDiscovery]) -> Tuple[bool, Optional[TruthType]]:
         """
         Detect if current angle revealed new truth/insight
-        
+
         Multi-factor detection based on:
+        - Lens invariance (cross-contextual truth - highest priority)
         - Absolute jump magnitude
         - Relative to baseline variance
         - Token efficiency (high dC per token)
         """
-        # No history - can't detect
+        # HIGHEST PRIORITY: Check for lens-invariant truth
+        # This is cross-contextual truth that transcends cultural frames
+        if self.rose_glass is not None and 'variables' in current_reading:
+            psi = current_reading['variables'].get('psi', 0)
+            rho = current_reading['variables'].get('rho', 0)
+            q = current_reading['variables'].get('q', 0)
+            f = current_reading['variables'].get('f', 0)
+
+            try:
+                should_reset, lens_deviation = self.rose_glass.should_reset_fibonacci(psi, rho, q, f)
+                if should_reset:
+                    # Universal truth detected - all cultural lenses agree
+                    return True, TruthType.LENS_INVARIANT
+            except Exception:
+                # If lens deviation check fails, continue with other checks
+                pass
+
+        # No history - can't detect other truth types
         if len(self.angle_history) < 1:
             return False, None
-        
+
         # Get current metrics
         current_coherence = current_reading['C']
         
@@ -473,4 +496,3 @@ class FibonacciLensRotation:
         
         # Suggest exploring ±30 degrees around best angle
         return (best_angle - 30) % 360, (best_angle + 30) % 360
-"""
