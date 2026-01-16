@@ -159,28 +159,41 @@ class ContradictionFlag:
     - logical: Mutually exclusive statements
     - coherence_drop: Significant credibility shift
     """
-    statement_a: TestimonyStatement
-    statement_b: TestimonyStatement
-    contradiction_type: str
-    severity: float  # 0.0 - 1.0
+    conflicting_statement: TestimonyStatement  # The earlier/prior statement
+    current_statement: TestimonyStatement      # The new statement that conflicts
+    flag_type: str                             # Type of contradiction
+    severity: float                            # 0.0 - 1.0
     suggested_question: str
     context: str
+    
+    # Aliases for backward compatibility
+    @property
+    def statement_a(self) -> TestimonyStatement:
+        return self.conflicting_statement
+    
+    @property
+    def statement_b(self) -> TestimonyStatement:
+        return self.current_statement
+    
+    @property
+    def contradiction_type(self) -> str:
+        return self.flag_type
     
     def to_prompt(self) -> str:
         """Generate formatted cross-examination prompt"""
         return f"""
 ════════════════════════════════════════════════════════════
-CONTRADICTION DETECTED [{self.contradiction_type.upper()}]
+CONTRADICTION DETECTED [{self.flag_type.upper()}]
 Severity: {self.severity:.0%}
 ════════════════════════════════════════════════════════════
 
-EARLIER ({self.statement_a.timestamp.strftime('%H:%M:%S')}):
-"{self.statement_a.text}"
-Coherence: {self.statement_a.coherence:.2f}
+EARLIER ({self.conflicting_statement.timestamp.strftime('%H:%M:%S')}):
+"{self.conflicting_statement.text}"
+Coherence: {self.conflicting_statement.coherence:.2f}
 
-NOW ({self.statement_b.timestamp.strftime('%H:%M:%S')}):
-"{self.statement_b.text}"
-Coherence: {self.statement_b.coherence:.2f}
+NOW ({self.current_statement.timestamp.strftime('%H:%M:%S')}):
+"{self.current_statement.text}"
+Coherence: {self.current_statement.coherence:.2f}
 
 ────────────────────────────────────────────────────────────
 SUGGESTED QUESTION:
@@ -199,26 +212,49 @@ class ContradictionDetector:
     new statements against prior testimony.
     """
     
-    def __init__(self, sensitivity: float = 0.7):
+    def __init__(self, rose_glass: Optional[RoseGlass] = None, sensitivity: float = 0.7):
         """
         Initialize detector.
         
+        rose_glass: Optional RoseGlass instance (creates one if not provided)
         sensitivity: How aggressive to flag potential contradictions (0-1)
         """
         self.statements_by_speaker: Dict[str, List[TestimonyStatement]] = {}
         self.contradictions: List[ContradictionFlag] = []
         self.sensitivity = sensitivity
-        self.rose_glass = RoseGlass()
+        self.rose_glass = rose_glass if rose_glass is not None else RoseGlass()
         
-    def add_statement(self, speaker: str, text: str,
-                      position: int) -> Optional[ContradictionFlag]:
+    def add_statement(self, statement: TestimonyStatement) -> List[ContradictionFlag]:
         """
-        Add new testimony statement and check for contradictions.
+        Add a pre-analyzed testimony statement and check for contradictions.
         
-        Returns ContradictionFlag if contradiction detected, else None.
+        Returns list of ContradictionFlags detected (may be empty).
+        """
+        speaker = statement.speaker
+        
+        if speaker not in self.statements_by_speaker:
+            self.statements_by_speaker[speaker] = []
+        
+        # Check against prior statements - collect all flags
+        new_flags = self._check_all_contradictions(speaker, statement)
+        
+        # Store statement
+        self.statements_by_speaker[speaker].append(statement)
+        
+        # Store contradictions
+        self.contradictions.extend(new_flags)
+            
+        return new_flags
+    
+    def add_raw_statement(self, speaker: str, text: str,
+                         position: int) -> List[ContradictionFlag]:
+        """
+        Create and add a testimony statement from raw text.
+        
+        Returns list of ContradictionFlags detected (may be empty).
         """
         if not text.strip():
-            return None
+            return []
             
         statement = TestimonyStatement.create(
             speaker=speaker,
@@ -227,43 +263,38 @@ class ContradictionDetector:
             rose_glass=self.rose_glass
         )
         
-        if speaker not in self.statements_by_speaker:
-            self.statements_by_speaker[speaker] = []
-        
-        # Check against prior statements
-        contradiction = self._check_contradictions(speaker, statement)
-        
-        # Store statement
-        self.statements_by_speaker[speaker].append(statement)
-        
-        if contradiction:
-            self.contradictions.append(contradiction)
-            
-        return contradiction
+        return self.add_statement(statement)
     
-    def _check_contradictions(self, speaker: str,
-                              new_statement: TestimonyStatement) -> Optional[ContradictionFlag]:
-        """Check new statement against speaker's history"""
+    def _check_all_contradictions(self, speaker: str,
+                                   new_statement: TestimonyStatement) -> List[ContradictionFlag]:
+        """Check new statement against speaker's history, returning all flags"""
         
+        flags = []
         prior_statements = self.statements_by_speaker.get(speaker, [])
         
         for prior in prior_statements:
             # Check direct contradictions
             result = self._check_direct_contradiction(prior, new_statement)
             if result:
-                return result
+                flags.append(result)
                 
             # Check temporal conflicts
             result = self._check_temporal_contradiction(prior, new_statement)
             if result:
-                return result
+                flags.append(result)
                 
             # Check coherence drops
             result = self._check_coherence_drop(prior, new_statement)
             if result:
-                return result
+                flags.append(result)
                 
-        return None
+        return flags
+    
+    def _check_contradictions(self, speaker: str,
+                              new_statement: TestimonyStatement) -> Optional[ContradictionFlag]:
+        """Check new statement against speaker's history (returns first match)"""
+        flags = self._check_all_contradictions(speaker, new_statement)
+        return flags[0] if flags else None
     
     def _check_direct_contradiction(self, prior: TestimonyStatement,
                                     current: TestimonyStatement) -> Optional[ContradictionFlag]:
@@ -284,9 +315,9 @@ class ContradictionDetector:
         
         if (prior_negates and current_affirms) or (current_negates and prior_affirms):
             return ContradictionFlag(
-                statement_a=prior,
-                statement_b=current,
-                contradiction_type='direct',
+                conflicting_statement=prior,
+                current_statement=current,
+                flag_type='direct',
                 severity=0.9,
                 suggested_question=self._generate_direct_question(prior, current),
                 context="Direct contradiction: negation vs affirmation"
@@ -304,9 +335,9 @@ class ContradictionDetector:
         if prior_locations and current_locations:
             if prior_locations.isdisjoint(current_locations):
                 return ContradictionFlag(
-                    statement_a=prior,
-                    statement_b=current,
-                    contradiction_type='temporal',
+                    conflicting_statement=prior,
+                    current_statement=current,
+                    flag_type='temporal',
                     severity=0.7,
                     suggested_question=self._generate_temporal_question(prior, current),
                     context="Potentially conflicting locations"
@@ -322,9 +353,9 @@ class ContradictionDetector:
         
         if drop > (0.3 * self.sensitivity):
             return ContradictionFlag(
-                statement_a=prior,
-                statement_b=current,
-                contradiction_type='coherence_drop',
+                conflicting_statement=prior,
+                current_statement=current,
+                flag_type='coherence_drop',
                 severity=min(1.0, drop * 1.5),
                 suggested_question=self._generate_coherence_question(prior, current),
                 context=f"Coherence dropped {drop:.0%} - possible evasion"
@@ -402,8 +433,9 @@ if __name__ == "__main__":
     ]
     
     for i, (speaker, text) in enumerate(test_statements):
-        result = detector.add_statement(speaker, text, i)
-        if result:
-            print(result.to_prompt())
+        # Use add_raw_statement for convenience in testing
+        flags = detector.add_raw_statement(speaker, text, i)
+        for flag in flags:
+            print(flag.to_prompt())
             
     print(f"\nTotal contradictions: {len(detector.contradictions)}")

@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 # Add paths
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent))  # agent directory for mcp_server_simple
 
 try:
     from mcp.server import Server
